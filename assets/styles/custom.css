@@ -914,7 +914,7 @@ nav {
 #menu1{
   position: relative;
   display: none;
-  margin-bottom: 8rem;
+  margin-bottom: 1rem;
 }
 
 .block{
@@ -932,4 +932,36 @@ nav {
 }
 .transform-txt{
   transform: translate3d(0px, 165px, 0px)!important;
+}
+
+.scroll-indicator {
+	position:fixed;
+	right:20px;
+	top:0;
+	bottom:50px;
+	width:1px;
+}
+.scroll-indicator:before {
+	content:"";
+	position:fixed;
+	right:20px;
+	top:0;
+	bottom:0;
+	width:1px;
+	background:#0FF;
+}
+.indicator {
+	top:0;
+	left:-5px;
+	position:absolute;
+	width:10px;
+	height:50px;
+	border-radius:5px;
+	background:red;
+	box-shadow:0 0 10px rgba(0,0,0,0.5);
+}
+.indicator span {
+	position:absolute;
+	padding-right:10px;
+	transform:translate(-100%, 50%);
 }
