@@ -1,0 +1,138 @@
+.tabsnav {
+	/*position: fixed;*/
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+}
+
+.tabsnav--hidden {
+	pointer-events: none;
+	visibility: hidden;
+}
+
+.tabsnav__item {
+	height: 50px;
+	position: relative;
+	cursor: pointer;
+}
+
+.tabsnav__bar {
+	/*background: currentColor;*/
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	pointer-events: none;
+}
+
+.tabsnav__title {
+	position: relative;
+	cursor: pointer;
+	margin: 0;
+	height: 100%;
+	font-weight: normal;
+	line-height: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	pointer-events: none;
+}
+
+/* Vertical Menu */
+.tabsnav--vertical {
+	display: flex;
+	width: auto;
+	height: 100%;
+	justify-content: center;
+	/*align-items: center;*/
+	height: 100vh;
+
+}
+
+.tabsnav--vertical .tabsnav__item {
+	flex: none;
+	width: auto;
+	height: 120px;
+}
+/*
+.tabsnav--vertical .tabsnav__title {
+	transform: rotate(-90deg);
+}*/
+
+/* Individual menu styles (Basque names) */
+
+/* Ander */
+.tabsnav--ander {
+	left: 45px;
+}
+/*
+.tabsnav--ander .tabsnav__bar {
+	background: #fff;
+}
+*/
+.tabsnav--ander .tabsnav__title {
+	color: #fff;
+	font-size: 21px;
+	margin-bottom: 0;
+	color: var(--white);
+	opacity: 0.7;
+	line-height: 1.2;
+	font-size: 1.5rem;
+	font-weight: bold;
+	
+}
+
+.tabsnav--ander .tabsnav__item:not(:last-child) {
+	margin: 0 10px 0 0;
+}
+
+/* Zeru */
+.tabsnav--zeru {
+	background: #222525;
+}
+
+.tabsnav--zeru .tabsnav__item:first-child .tabsnav__bar {
+	background: #161919;
+}
+
+.tabsnav--zeru .tabsnav__item:nth-child(2) .tabsnav__bar {
+	background: #222525;
+}
+
+.tabsnav--zeru .tabsnav__item:nth-child(3) .tabsnav__bar {
+	background: #2e3131;
+}
+
+.tabsnav--zeru .tabsnav__title {
+	color: #fff;
+}
+
+/* Ibai */
+.tabsnav--ibai {
+	top: 50%;
+	margin-top: -115px;
+}
+
+.tabsnav--ibai .tabsnav__item {
+	height: 70px;
+}
+
+.tabsnav--ibai .tabsnav__bar {
+	background: #414a52;
+}
+
+.tabsnav--ibai .tabsnav__title {
+	color: #fc0;
+}
+
+.tabsnav--ibai .tabsnav__item:not(:last-child) {
+	margin: 0 0 10px 0;
+}
+
+@media screen and (max-width: 40em) {
+	/* don't show a background if on mobile */
+	.tabsnav {
+		background: none;
+	}
+}

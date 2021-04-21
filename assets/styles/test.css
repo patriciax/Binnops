@@ -1,0 +1,225 @@
+
+/*.menu-item {
+  opacity: 0;
+}*/
+
+.menu-item {
+  opacity: 1;
+}
+
+
+
+.menu-open {
+  display: none;
+}
+.menu-hidde{
+  background: #e91e63;
+  border-radius: 100%;
+  width: 80px;
+  height: 80px;
+  margin-left: -137px;
+  position: absolute;
+  top: -30px;
+  color: white;
+  text-align: center;
+  line-height: 80px;
+  transform: translate3d(0, 0, 0);
+  transition: transform ease-out 200ms;
+}
+.hamburger {
+  width: 25px;
+  height: 3px;
+  background: white;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -12.5px;
+  margin-top: -1.5px;
+  transition: transform 200ms;
+}
+
+.hamburger-1 {
+  transform: translate3d(0, -8px, 0);
+}
+
+.hamburger-2 {
+  transform: translate3d(0, 0, 0);
+}
+
+.hamburger-3 {
+  transform: translate3d(0, 8px, 0);
+}
+
+.menu-open:checked+.menu-open-button .hamburger-1 {
+  transform: translate3d(0, 0, 0) rotate(45deg);
+}
+
+.menu-open:checked+.menu-open-button .hamburger-2 {
+  transform: translate3d(0, 0, 0) scale(0.1, 1);
+}
+
+.menu-open:checked+.menu-open-button .hamburger-3 {
+  transform: translate3d(0, 0, 0) rotate(-45deg);
+}
+.menu {
+  filter: url("#goo");
+}
+/*
+.menu {
+  position: absolute;
+  left: 50%;
+  margin-left: -190px;
+  padding-top: 20px;
+  padding-left: 190px;
+  width: 380px;
+  height: 250px;
+  box-sizing: border-box;
+  font-size: 20px;
+  text-align: left;
+}*/
+
+.menu-item:hover h3 {
+  color: #fff;
+  background-image: url(http://cdn.lowgif.com/small/ce2c4a388e83a154-pumpkin-pie-in-miami-thanksgiving-flight-patterns-the.gif);
+}
+
+
+.menu-item:nth-child(3) {
+  transition-duration: 180ms;
+}
+
+.menu-item:nth-child(4) {
+  transition-duration: 180ms;
+}
+
+.menu-item:nth-child(5) {
+  transition-duration: 180ms;
+}
+
+.menu-item:nth-child(6) {
+  transition-duration: 180ms;
+}
+
+.menu-item:nth-child(7) {
+  transition-duration: 180ms;
+}
+
+.menu-item:nth-child(8) {
+  transition-duration: 180ms;
+}
+
+.menu-item:nth-child(9) {
+  transition-duration: 180ms;
+}
+/*
+.menu-open-button {
+  z-index: 2;
+  transition-timing-function: cubic-bezier(0.175,
+          0.885,
+          0.32,
+          1.275);
+  transition-duration: 400ms;
+  transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+  cursor: pointer;
+}
+
+.menu-open-button:hover {
+  transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+}*/
+
+.menu-open:checked+.menu-open-button {
+  transition-timing-function: linear;
+  transition-duration: 200ms;
+  transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+}
+
+.menu-item {
+  transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
+}
+
+.menu-item:nth-child(3) {
+  transition-duration: 180ms;
+  transform: translate3d(1rem, 25rem, 0)!important;
+}
+.menu-item:nth-child(3) .tabsnav__title img {
+  width: 75px;
+}
+.menu-item:nth-child(2) {
+  transition-duration: 180ms;
+  transform: translate3d(-9rem, 28rem, 0)!important;
+}
+.menu-item:nth-child(2) .tabsnav__title img {
+     width: 75px;
+}
+
+
+.menu-item:nth-child(4) {
+  transition-duration: 280ms;
+  transform: translate3d(-10rem, 8rem, 0)!important;
+}
+.menu-item:nth-child(4) .tabsnav__title img {
+  width: 50px;
+}
+
+.menu-item:nth-child(5) {
+  transition-duration: 380ms;
+  transform: translate3d(95.9466px, 103.47586px, 0)!important;
+}
+.menu-item:nth-child(5) .tabsnav__title img {
+  width: 51px;
+}
+
+
+.menu-item:nth-child(6) {
+  transition-duration: 480ms;
+  transform: translate3d(-6rem, 29rem, 0)!important;
+}
+.menu-item:nth-child(6) .tabsnav__title img {
+ width: 60px;
+}
+
+
+.menu-item:nth-child(7) {
+  transition-duration: 580ms;
+  transform: translate3d(-6rem, 29rem, 0)!important;
+}
+
+.menu-item:nth-child(8) {
+  transition-duration: 680ms;
+  transform: translate3d(-91.03006px, -52.33095px, 0)!important;
+}
+
+.menu-item:nth-child(9) {
+  transition-duration: 780ms;
+  transform: translate3d(-0.25084px, -104.9997px, 0)!important;
+}
+
+.menu-item:nth-child(1) {
+  transition-duration: 780ms;
+  transform: translate3d(8rem, 96.9997px, 0)!important;
+
+ 
+}
+.menu-item:nth-child(1) .tabsnav__title img {
+  width: 50px;
+}
+
+.tabsnav__title img{
+  width: 30px;
+  height: auto;
+  margin-bottom: 15px;
+}
+.services-txt{
+  transform: translate3d(1rem, 0px, 0px)!important;
+  font-size: 7rem!important;
+}/*
+.txt-whites{
+  -webkit-text-stroke: 1px #14162d!important;
+    -webkit-text-stroke: 1px #14162d!important;
+    color: transparent;
+}
+.p-blue {
+
+  color: #14162d!important;
+}*/

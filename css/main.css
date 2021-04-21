@@ -677,14 +677,14 @@ body {
         height: auto; } }
     .navbar-a .navbar-menu-wrapper .nav-body {
       display: flex;
-      justify-content: flex-start;
+      justify-content: start;
       align-items: flex-start;
       flex-wrap: wrap;
       position: relative;
       width: 100%; }
       @media screen and (min-width: 992px) {
         .navbar-a .navbar-menu-wrapper .nav-body {
-          justify-content: flex-end;
+          justify-content: start;
           align-items: center; } }
     .navbar-a .navbar-menu-wrapper .nav-footer-md {
       position: relative;
@@ -733,9 +733,10 @@ body {
       .navbar-a .navbar-nav {
         width: initial; } }
     .navbar-a .navbar-nav .nav-link {
-      color: rgba(255, 255, 255, 0.7);
+      color: rgb(255 255 255);
       padding-left: 0;
-      padding-right: 0; }
+      padding-right: 0;
+      text-transform: uppercase; }
       .navbar-a .navbar-nav .nav-link.dropdown-toggle {
         padding-right: 2em !important; }
       .navbar-a .navbar-nav .nav-link:hover {
@@ -2729,6 +2730,7 @@ a.item-image-c {
     overflow: hidden;
     transition: 0.3s;
     transition-timing-function: cubic-bezier(0.25, 0.75, 0.2, 1); }
+    box-shadow: 0px 0px 20px #00000052;
     .item-image-e .item-img::before {
       content: '';
       position: absolute;
@@ -2758,11 +2760,11 @@ a.item-image-c {
     .item-image-e .item-body h4 {
       font-size: 2rem;
       font-weight: bold;
-      color: var(--white);
+      color: #14162d;;
       line-height: 1.2; }
     .item-image-e .item-body p {
       margin-bottom: 0;
-      color: var(--white);
+      color: #848484;
       opacity: 0.7;
       line-height: 1.2;
       font-size: 1.5rem;
@@ -3833,7 +3835,7 @@ a.item-image-e {
   @media screen and (min-width: 992px) {
     .section-a .title-desc.xl-text-size .text-p,
     .section-a .title-desc.xl-text-size p {
-      font-size: 3rem;
+      font-size: 2rem;
       line-height: 1.4; } }
   .section-a .title-desc.xl-text-size .text-p strong,
   .section-a .title-desc.xl-text-size .text-p .strong,
