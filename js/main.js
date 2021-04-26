@@ -87,7 +87,7 @@ window.addEventListener('load', function () {
             el: '.swiper-pagination',
             clickable: true,
         },
-        loop: true,
+        loop: true,  zoom: true,
         grabCursor: true,
         autoplay: {
             delay: 5000,

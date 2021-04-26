@@ -3280,15 +3280,15 @@ a.item-image-e {
   position: relative; }
   .slider-gallery-a .slider-btns {
     position: absolute;
-    top: auto;
+    top: 100px;
     bottom: var(--margin-y);
     width: 100%;
     max-width: 60rem;
-    right: 0;
+    right: 14%;
     left: 0;
     margin: auto;
     display: flex;
-    padding: 0 16px; }
+    padding: 0 16px;}
   .slider-gallery-a .slider-btn {
     pointer-events: visible;
     position: relative;
@@ -3319,7 +3319,8 @@ a.item-image-e {
       transition: 0.3s;
       opacity: 0.25; }
     .slider-gallery-a .slider-btn .icon {
-      font-size: 1.5rem; }
+      font-size: 1.5rem; margin-left: 23px;
+      margin-top: 11px;}
   .slider-gallery-a .swiper-button-prev,
   .slider-gallery-a .slider-prev {
     margin-right: 1rem; }
