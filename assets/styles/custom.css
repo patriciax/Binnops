@@ -1077,3 +1077,72 @@ nav {
 .pl-7{
   padding-left: 7rem!important;
 }
+.main-blog{
+position: relative;
+}
+.main-blog_item img{
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+}
+.main-blog_item{
+
+}
+.main-blog_item:nth-child(2n){
+  text-align: end;
+  padding-left: 38rem;
+
+}
+.main-blog_item:nth-child(2n+1){
+  padding-right: 38rem;
+}
+.main-blog_txt{
+  display: flex;
+  justify-content: space-between;
+}
+.main-blog_item:nth-child(2n) .main-blog_txt{
+  text-align: start;
+  margin-left: 10px;
+}
+.main-blog::before{
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 73%;
+  /* background: white; */
+  right: 49%;
+  border: 1px solid #ffffff54;
+}
+.main-blog_txt p{
+  font-size: 22px;
+  font-weight: 600;
+}
+.main-blog_txt-modal{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 22px;
+  padding-bottom: 0;
+  align-items: center;
+  color: #14162d;
+}
+.main-blog_txt-modal p {
+  font-size: 24px;
+  font-weight: 600;
+  color: #14162d;
+}
+.blog-modal .close{
+  position: absolute;
+  right: 3%;
+  top: 14px;
+}
+.main-blog_txt-modal span{
+  margin-right: 10%;
+}
+.blog-modal img{
+  width: 100%;
+}
+.blog-modal .modal-body p{
+  color: #14162d;
+    font-size: 19px;
+    font-weight: 500;
+}
