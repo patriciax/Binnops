@@ -37,7 +37,7 @@ window.addEventListener('load', function () {
         prevScrollpos = window.pageYOffset;
 
         // add scrolled class to body if document is scrolled
-        if (window.pageYOffset > 4) {
+        if (window.pageYOffset > 5) {
             if (!document.body.classList.contains('scrolled')) {
                 document.body.classList.add('scrolled');
             }
@@ -232,3 +232,7 @@ window.addEventListener('load', function () {
     document.body.classList.add('page-loaded');
 
 });
+
+
+
+
