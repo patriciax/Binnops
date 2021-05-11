@@ -890,7 +890,7 @@ nav {
   background-color: #ffffffde;
 }
 .img-modal  img{
-  width: 100px;
+  width: 50px;
   padding: 0 0 16px;
 }
 .icon-expand{
@@ -1153,7 +1153,7 @@ position: relative;
   margin: 0;
   padding: 0!important;
   z-index: 999;
-  width: 100px;
+  width: 80px;
 }
 .navbar-a .navbar-toggler{
   width: 80px!important;

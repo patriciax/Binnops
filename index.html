@@ -108,7 +108,7 @@
                                           consectetur adipisicing elit.
                                           Tempora.
                                         </p>
-                                        <p class="button" data-toggle="modal" data-target=".datavisualization">Expand
+                                        <p class="button button-card" data-toggle="modal" data-target=".datavisualization">Expand
                                           details
                                         </p>
                                       </div>
@@ -1672,6 +1672,16 @@
 
       })
     })
+
+    $(function() {
+
+$('[data-toggle="modal"]').hover(function() {
+  var modalId = $(this).data('target');
+  $(modalId).modal('show');
+
+});
+
+});
   </script>
 </body>
 
