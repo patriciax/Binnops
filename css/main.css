@@ -3100,13 +3100,13 @@ a.item-image-e {
         .slide-item-gallery-a .item-content .subtitle {
           font-size: 1rem; } }
     .slide-item-gallery-a .item-content .title {
-      font-size: 2.5rem;
+      font-size: 3rem;
       font-weight: bold;
       text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
       margin-bottom: 0.1em; }
       @media screen and (min-width: 992px) {
         .slide-item-gallery-a .item-content .title {
-          font-size: 2.5rem;
+          font-size: 3rem;
           margin-bottom: 0.5rem;
           line-height: 1; } }
     .slide-item-gallery-a .item-content .category {

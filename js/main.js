@@ -37,13 +37,13 @@ window.addEventListener('load', function () {
         prevScrollpos = window.pageYOffset;
 
         // add scrolled class to body if document is scrolled
-        if (window.pageYOffset > 5) {
+      /*  if (window.pageYOffset > 5) {
             if (!document.body.classList.contains('scrolled')) {
                 document.body.classList.add('scrolled');
             }
         } else {
             document.body.classList.remove('scrolled');
-        }
+        }*/
     });
 
     //3. custom vh (viewport height) unit to fix on resize or scroll on mobile

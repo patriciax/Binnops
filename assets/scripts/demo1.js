@@ -38,8 +38,9 @@
 
 			var contentItem = contentItems[idx],
 				content = {
-					img: contentItem.querySelector('img.poster__img'),
+					img: contentItem.querySelector('.poster__img'),
 					title: contentItem.querySelector('.poster__title'),
+					
 					subtitle: contentItem.querySelector('.sub__title'),
 					subtitletwo: contentItem.querySelector('.sub__title-two'),
 					deco: contentItem.querySelector('.poster__deco'),
@@ -86,7 +87,7 @@
 
 		var contentItem = contentItems[current],
 			content = {
-				img: contentItem.querySelector('img.poster__img'),
+				img: contentItem.querySelector('.poster__img'),
 				title: contentItem.querySelector('.poster__title'),
 				subtitle: contentItem.querySelector('.sub__title'),
 				subtitletwo: contentItem.querySelector('.sub__title-two'),

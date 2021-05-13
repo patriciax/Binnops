@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html class="is-smooth-scroll-compatible is-loading" lang="en">
+<html class="" lang="en">
+<!-------is-smooth-scroll-compatible is-loading-->
 
 <head>
   <meta charset="utf-8" />
@@ -33,7 +34,7 @@
 <body>
 
   <div class="o-scroll" id="js-scroll" data-scroll-container>
-    <section data-scroll-section="">
+    <div data-scroll-section="">
       <section class="viewport">
         <div id="scroll-container" class="scroll-container">
           <header class="navbar-top navbar navbar-a navbar-expand-lg">
@@ -94,10 +95,10 @@
                                 <div class="card-banner card-body_main ">
                                   <div class="wrapper " style="
                                           background: url(https://i.gifer.com/DVyK.gif)center/cover no-repeat; ">
-                                    <div class="header header-icon">
+                                    <div class="header header-icon" data-scroll>
                                       <!----- <img class="icon-3d icon-3d-1" src="assets/images/iconos/qrcode.png" alt="" />--->
-                                      <a class="menu-open-button menu-1 icon-expand"> <i class="fa fa-plus-circle "
-                                          aria-hidden="true"></i> </a>
+                                      <a href="#menu1" data-scroll-to class="menu-open-button menu-1 icon-expand"> <i
+                                          class="fa fa-plus-circle " aria-hidden="true"></i> </a>
                                     </div>
                                     <div class="overlay-banner"></div>
                                     <div class="data">
@@ -108,7 +109,8 @@
                                           consectetur adipisicing elit.
                                           Tempora.
                                         </p>
-                                        <p class="button button-card" data-toggle="modal" data-target=".datavisualization">Expand
+                                        <p class="button button-card" data-toggle="modal"
+                                          data-target=".datavisualization">Expand
                                           details
                                         </p>
                                       </div>
@@ -125,8 +127,8 @@
                                         background: url(https://media4.giphy.com/media/Jqyb0NPvzQpdx1uyK2/giphy.gif)
                                           center/cover no-repeat;
                                       ">
-                                    <div class="header">
-                                      <a class="menu-open-button menu-1 icon-expand"> <i class="fa fa-plus-circle "
+                                    <div class="header" data-scroll>
+                                      <a href="#menu2"  data-scroll-to  class="menu-open-button menu-1 icon-expand"> <i class="fa fa-plus-circle "
                                           aria-hidden="true"></i> </a>
                                     </div>
 
@@ -156,9 +158,9 @@
                                         background: url(https://static.wixstatic.com/media/bb7b70_d5fde322f7914060b7d997ba9d506a50~mv2.gif)
                                           center/cover no-repeat;
                                       ">
-                                    <div class="header">
-                                      <p class="menu-open-button menu-1 icon-expand"> <i class="fa fa-plus-circle "
-                                          aria-hidden="true"></i> </p>
+                                    <div class="header"  data-scroll >
+                                      <a href="#menu3"  data-scroll-to  class="menu-open-button menu-1 icon-expand"> <i class="fa fa-plus-circle "
+                                          aria-hidden="true"></i> </a>
                                     </div>
                                     <div class="data">
                                       <div class="content">
@@ -277,350 +279,357 @@
 
 
               </nav>
+            </section>
 
-              <div class="tabscontent">
-                <div class="tabscontent__item">
-                  <figure class="poster">
-                    <img class="poster__img"
-                      src="https://www.3dsl.com.au/wp-content/uploads/2018/05/Artec-Space-Spider-Flashing.gif"
-                      alt="Poster 1" />
-                    <figcaption class="poster__caption">
-                      <h2 class="poster__title">Field Laser Scanning</h2>
-                      <p class="sub__title">
-                        <strong class="title-info">Reality Capture Solution</strong> <br />
-                        Our reality capture services provide a solution which is capable of visualizing any environment
-                        as
-                        it is. This solution enables to create a 3D model with extreme precision and accuracy. <br />
-                        Reality Capture Solution can be used for following services:
-                        <br />
-                      <ul>
-                        <strong><span>Digital City / Building</span></strong> <br />
-                        <span>This solution is used to plan cities better with effective smart cities with following
-                          features:</span>
-                        <li>City Mapping (3D City Models) </li>
-                        <li>- Indoor Mapping</li>
-                        <li>BIM Modelling</li>
-                        <li>Street view Mapping (Navigation, Virtual Surveying, Asset Management,
-                          Subterrain)</li>
-                        <li>Building Design (Exterior, Facade, Heritage)</li>
-                        <li>City Planning (Traffic Planning, Noise Modelling)</li>
-                      </ul>
-                      <ul>
-                        <strong><span>Digital Infrastructure</span></strong> <br />
-                        <span>This solution enables to model and plan major infrastructures with wide range of details.
-                        </span>
-                        <li>Roads and Highways</li>
-                        <li>Railways</li>
-                        <li>Utilities (Power Lines Mapping, Inspection)</li>
-                      </ul>
+            
+            <div class="tabscontent">
+              <div class="tabscontent__item">
+                <figure class="poster">
+                  <div class="poster__img">
+                    <img class="" src="https://www.e-arc.com/wp-content/uploads/2018/01/arc-3d-laser-scanning.jpg" alt="Poster 1" />
+                  </div>
+                  <figcaption class="poster__caption">
+                    <h2 class="poster__title">Field Laser Scanning</h2>
+                    <p class="sub__title">
+                      <strong class="title-info">Reality Capture Solution</strong> <br />
+                      Our reality capture services provide a solution which is capable of visualizing any environment
+                      as
+                      it is. This solution enables to create a 3D model with extreme precision and accuracy. <br />
+                      Reality Capture Solution can be used for following services:
+                      <br />
+                  <div class="ul-grid">
+                    <ul>
+                      <strong><span>Digital City / Building</span></strong> <br />
+                      <span>This solution is used to plan cities better with effective smart cities with following
+                        features:</span>
+                      <li>City Mapping (3D City Models) </li>
+                      <li>- Indoor Mapping</li>
+                      <li>BIM Modelling</li>
+                      <li>Street view Mapping (Navigation, Virtual Surveying, Asset Management,
+                        Subterrain)</li>
+                      <li>Building Design (Exterior, Facade, Heritage)</li>
+                      <li>City Planning (Traffic Planning, Noise Modelling)</li>
+                    </ul>
+                    <ul>
+                      <strong><span>Digital Infrastructure</span></strong> <br />
+                      <span>This solution enables to model and plan major infrastructures with wide range of details.
+                      </span>
+                      <li>Roads and Highways</li>
+                      <li>Railways</li>
+                      <li>Utilities (Power Lines Mapping, Inspection)</li>
+                    </ul>
+                  
+                    <ul class="style-ul">
                       <strong class="title-strong">Oil and Gas Industry</strong>
                       <p class="subtitle-alt"> Our Laser Scanning technology provides a range of solutions for Oil and
                         Gas Industry.</p>
-                      <ul class="style-ul">
-                        <li>o Precision Deployment</li>
-                        <li>o Planning Maintenance</li>
-                        <li>o Planning Construction</li>
-                        <li>o Planning Expansion</li>
-                        <li>o Large Part Inspection</li>
-                        <li> o Decommissioning</li>
-                        <li>o Verification and Documentation</li>
-                        <li>o As-built </li>
-                      </ul>
-                      <!-------------------------------------->
-
+                      <li>o Precision Deployment</li>
+                      <li>o Planning Maintenance</li>
+                      <li>o Planning Construction</li>
+                      <li>o Planning Expansion</li>
+                      <li>o Large Part Inspection</li>
+                      <li> o Decommissioning</li>
+                      <li>o Verification and Documentation</li>
+                      <li>o As-built </li>
+                    </ul>
+                    <!-------------------------------------->
+                    <ul class="style-ul">
                       <strong class="title-strong"> Heavy Construction</strong>
                       <p class="subtitle-alt"> Our digital transformation technology enables to a better future of
                         Heavy Construction Industry.
                         o Airports</p>
+                      <strong> o Airports</strong>
+                      <p> We provide a wide range of solutions during and after airport construction.</p>
+                      <li>- Measuring (Measure Control, As-built verification, As-built survey)</li>
+                      <li> - Design (Creating DTM, Design & Visualize)</li>
+                      <li>- Construction (Drilling, Piling, Bulk Earthworks & Trench Work, Compaction & Fine
+                        Grading, Paving, Finishing & Compaction)</li>
+                      <li>- Maintenance</li>
+                    </ul>
+                  </div>
+
+                    </p>
+                    <div class="sub__title-two">
+
+                      <!------------------------------------>
+                     
                       <ul class="style-ul">
-                        <strong> o Airports</strong>
-                        <p> We provide a wide range of solutions during and after airport construction.</p>
-                        <li>- Measuring (Measure Control, As-built verification, As-built survey)</li>
-                        <li> - Design (Creating DTM, Design & Visualize)</li>
-                        <li>- Construction (Drilling, Piling, Bulk Earthworks & Trench Work, Compaction & Fine
-                          Grading, Paving, Finishing & Compaction)</li>
-                        <li>- Maintenance</li>
-                      </ul>
-
-                      </p>
-                      <div class="sub__title-two">
-
-                        <!------------------------------------>
                         <strong class="title-strong"> • Monitoring Solutions</strong>
                         <p class="subtitle-alt"> We provide real-time monitoring solutions for deformation monitoring.
                           Our services include
                           Planning, Project Execution and Structural Health Monitoring.</p>
-                        <ul class="style-ul">
-                          <li>o Building and Structure</li>
-                          <li>o Transportation Infrastructure</li>
-                          <li>o Environmental Monitoring</li>
-                          <li> o Energy Infrastructure</li>
-                          <li> o Mining</li>
-                        </ul>
-                        <!------------------------------------>
+                        <li>o Building and Structure</li>
+                        <li>o Transportation Infrastructure</li>
+                        <li>o Environmental Monitoring</li>
+                        <li> o Energy Infrastructure</li>
+                        <li> o Mining</li>
+                      </ul>
+                      <!------------------------------------>
+                     
+                      <ul class="style-ul">
                         <strong class="title-strong"> • Utilities</strong>
                         <p class="subtitle-alt"> Our solutions for utilities include services for electricity, gas,
                           water and clash avoidance & mapping.</p>
-                        <ul class="style-ul">
-                          <li> o Planning & Design (As-is Documentation, Underground Utility Location, Site / Corridor
-                            Study)</li>
-                          <li> o Construction (Earthworks, Construction Support, As-built Survey)</li>
-                          <li> o Operation & Maintenance (Asset Management, Resource Planning, Dam Monitoring,
-                            Repair / Replacement, Pre-fabrication, Regeneration / end of life)</li>
+                        <li> o Planning & Design (As-is Documentation, Underground Utility Location, Site / Corridor
+                          Study)</li>
+                        <li> o Construction (Earthworks, Construction Support, As-built Survey)</li>
+                        <li> o Operation & Maintenance (Asset Management, Resource Planning, Dam Monitoring,
+                          Repair / Replacement, Pre-fabrication, Regeneration / end of life)</li>
 
-                        </ul>
-                        <!------------------------------------>
+                      </ul>
+                      <!------------------------------------>
+                     
+                      <ul class="style-ul">
                         <strong class="title-strong"> • Mining</strong>
                         <p class="subtitle-alt"> Our solution for mining provides wide range of services in mining.</p>
-                        <ul class="style-ul">
-                          <li> o Exploration (Capture Natural Surface, Capture Features and Attributes)</li>
-                          <li> o Design & Construction (Design & Visualisation, Data Manage & Distribute, Control Survey
-                            – above ground & underground, Capture Natural Surface, Capture Features & Attributes,
-                            As-built Survey)</li>
-                          <li>
-                            o Operations (Capture Natural Surface, Calculate Production Volumes and Report
-                            Generation)</li>
+                        <li> o Exploration (Capture Natural Surface, Capture Features and Attributes)</li>
+                        <li> o Design & Construction (Design & Visualisation, Data Manage & Distribute, Control Survey
+                          – above ground & underground, Capture Natural Surface, Capture Features & Attributes,
+                          As-built Survey)</li>
+                        <li>
+                          o Operations (Capture Natural Surface, Calculate Production Volumes and Report
+                          Generation)</li>
 
-                        </ul>
-                        <!------------------------------------>
+                      </ul>
+                      <!------------------------------------>
+                     
+                      <ul class="style-ul">
                         <strong class="title-strong"> • Transportation</strong>
                         <p class="subtitle-alt"> Our services provide wide range of solutions for transportation
                           industry.</p>
-                        <ul class="style-ul">
-                          <span>o Highways / Rail / Bridges / Tunnels</span>
-                          <li>- Planning (Reality Capture)</li>
-                          <li> - Design (Creating DTM, Design & Visualize)</li>
-                          <li>- Construction (Drilling, Piling, Bulk Earthworks & Trench Work, Compaction & Fine
-                            Grading, Paving, Finishing & Compaction)</li>
-                          <li>- Operation & Maintenance (As-built surveying, Subsurface Mapping, Asset
-                            Mapping, Infrastructure Inspection, Decommissioning & Restoration)</li>
-                        </ul>
-                      </div>
-                      <p class="poster__deco"></p>
-                      <div class="poster__box"></div>
-                      <span class="poster__number">01</span>
-                    </figcaption>
-                  </figure>
-                </div>
-                <div class="tabscontent__item">
-                  <figure class="poster">
-                    <img class="poster__img"
-                      src="https://cdn.shopify.com/s/files/1/0436/5336/5914/products/j.gif?v=1596572405"
-                      alt="Poster 1" />
-                    <figcaption class="poster__caption">
-                      <h2 class="poster__title">Photogrammetry & Drones</h2>
-                      <p class="sub__title">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Aut magnam eum quaerat. Consequuntur corrupti
-                        dolorum minus amet sapiente rerum odit veritatis sed?
-                        Minima necessitatibus iste corrupti fugit temporibus
-                        molestias consequuntur. <br />
-                        <br />
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Numquam odit assumenda sunt magnam! Quaerat officia
-                        culpa itaque quasi assumenda deleniti quos nostrum
-                        suscipit officiis quidem exercitationem vitae,
-                        dignissimos saepe consequuntur. <br />
-                        <br />
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Numquam odit assumenda sunt magnam! Quaerat officia
-                        culpa itaque quasi assumenda deleniti quos nostrum
-                        suscipit officiis quidem exercitationem vitae,
-                        dignissimos saepe consequuntur.
-                      </p>
-                      <div class="sub__title-two">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Aut magnam eum quaerat.
-                        <ul>
-                          <li>Lorem ipsum</li>
-                          <li>Lorem ipsum</li>
-                          <li>Lorem ipsum</li>
-                        </ul>
-                      </div>
-
-                      <p class="poster__deco"></p>
-                      <div class="poster__box"></div>
-                      <span class="poster__number">02</span>
-                    </figcaption>
-                  </figure>
-                </div>
-                <div class="tabscontent__item">
-                  <figure class="poster">
-                    <img class="poster__img"
-                      src="https://www.vxchnge.com/hubfs/GIFs%20and%20Images%20-%20Sticky%20CTA/Data%20Center%20Migration%20Webinar%20Gif%20-%20Blog%20CTA.gif"
-                      alt="Poster 1" />
-                    <figcaption class="poster__caption">
-                      <h2 class="poster__title">Data Registration
-
-                      </h2>
-                      <p class="sub__title">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Aut magnam eum quaerat. Consequuntur corrupti
-                        dolorum minus amet sapiente rerum odit veritatis sed?
-                        Minima necessitatibus iste corrupti fugit temporibus
-                        molestias consequuntur. <br />
-                        <br />
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Numquam odit assumenda sunt magnam! Quaerat officia
-                        culpa itaque quasi assumenda deleniti quos nostrum
-                        suscipit officiis quidem exercitationem vitae,
-                        dignissimos saepe consequuntur. <br />
-                        <br />
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Numquam odit assumenda sunt magnam! Quaerat officia
-                        culpa itaque quasi assumenda deleniti quos nostrum
-                        suscipit officiis quidem exercitationem vitae,
-                        dignissimos saepe consequuntur.
-                      </p>
-                      <div class="sub__title-two">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Aut magnam eum quaerat.
-                        <ul>
-                          <li>Lorem ipsum</li>
-                          <li>Lorem ipsum</li>
-                          <li>Lorem ipsum</li>
-                        </ul>
-                      </div>
-                      <p class="poster__deco"></p>
-                      <div class="poster__box"></div>
-                      <span class="poster__number">03</span>
-                    </figcaption>
-                  </figure>
-                </div>
-                <div class="tabscontent__item">
-                  <figure class="poster">
-                    <img class="poster__img"
-                      src="https://www.3dsl.com.au/wp-content/uploads/2018/05/Artec-Space-Spider-Flashing.gif"
-                      alt="Poster 1" />
-                    <figcaption class="poster__caption">
-                      <h2 class="poster__title">Buble Views</h2>
-                      <p class="sub__title">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Aut magnam eum quaerat. Consequuntur corrupti
-                        dolorum minus amet sapiente rerum odit veritatis sed?
-                        Minima necessitatibus iste corrupti fugit temporibus
-                        molestias consequuntur. <br />
-                        <br />
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Numquam odit assumenda sunt magnam! Quaerat officia
-                        culpa itaque quasi assumenda deleniti quos nostrum
-                        suscipit officiis quidem exercitationem vitae,
-                        dignissimos saepe consequuntur. <br />
-                        <br />
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Numquam odit assumenda sunt magnam! Quaerat officia
-                        culpa itaque quasi assumenda deleniti quos nostrum
-                        suscipit officiis quidem exercitationem vitae,
-                        dignissimos saepe consequuntur.
-                      </p>
-                      <div class="sub__title-two">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Aut magnam eum quaerat.
-                        <ul>
-                          <li>Lorem ipsum</li>
-                          <li>Lorem ipsum</li>
-                          <li>Lorem ipsum</li>
-                        </ul>
-                      </div>
-                      <p class="poster__deco"></p>
-                      <div class="poster__box"></div>
-                      <span class="poster__number">03</span>
-                    </figcaption>
-                  </figure>
-                </div>
-                <div class="tabscontent__item">
-                  <figure class="poster">
-                    <img class="poster__img"
-                      src="https://www.3dsl.com.au/wp-content/uploads/2018/05/Artec-Space-Spider-Flashing.gif"
-                      alt="Poster 1" />
-                    <figcaption class="poster__caption">
-                      <h2 class="poster__title">Portal navigation</h2>
-                      <p class="sub__title">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Aut magnam eum quaerat. Consequuntur corrupti
-                        dolorum minus amet sapiente rerum odit veritatis sed?
-                        Minima necessitatibus iste corrupti fugit temporibus
-                        molestias consequuntur. <br />
-                        <br />
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Numquam odit assumenda sunt magnam! Quaerat officia
-                        culpa itaque quasi assumenda deleniti quos nostrum
-                        suscipit officiis quidem exercitationem vitae,
-                        dignissimos saepe consequuntur. <br />
-                        <br />
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Numquam odit assumenda sunt magnam! Quaerat officia
-                        culpa itaque quasi assumenda deleniti quos nostrum
-                        suscipit officiis quidem exercitationem vitae,
-                        dignissimos saepe consequuntur.
-                      </p>
-                      <div class="sub__title-two">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Aut magnam eum quaerat.
-                        <ul>
-                          <li>Lorem ipsum</li>
-                          <li>Lorem ipsum</li>
-                          <li>Lorem ipsum</li>
-                        </ul>
-                      </div>
-                      <p class="poster__deco"></p>
-                      <div class="poster__box"></div>
-                      <span class="poster__number">03</span>
-                    </figcaption>
-                  </figure>
-                </div>
-                <div class="tabscontent__item">
-                  <figure class="poster">
-                    <img class="poster__img" src="img/img1.jpg" alt="Poster 1" />
-                    <figcaption class="poster__caption">
-                      <h2 class="poster__title">Data applications</h2>
-                      <p class="sub__title">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Aut magnam eum quaerat. Consequuntur corrupti
-                        dolorum minus amet sapiente rerum odit veritatis sed?
-                        Minima necessitatibus iste corrupti fugit temporibus
-                        molestias consequuntur. <br />
-                        <br />
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Numquam odit assumenda sunt magnam! Quaerat officia
-                        culpa itaque quasi assumenda deleniti quos nostrum
-                        suscipit officiis quidem exercitationem vitae,
-                        dignissimos saepe consequuntur. <br />
-                        <br />
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Numquam odit assumenda sunt magnam! Quaerat officia
-                        culpa itaque quasi assumenda deleniti quos nostrum
-                        suscipit officiis quidem exercitationem vitae,
-                        dignissimos saepe consequuntur.
-                      </p>
-                      <div class="sub__title-two">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Aut magnam eum quaerat.
-                        <ul>
-                          <li>Lorem ipsum</li>
-                          <li>Lorem ipsum</li>
-                          <li>Lorem ipsum</li>
-                        </ul>
-                      </div>
-                      <p class="poster__deco"></p>
-                      <div class="poster__box"></div>
-                      <span class="poster__number">03</span>
-                    </figcaption>
-                  </figure>
-                </div>
-                <button class="btn btn--back">
-                  <i class="fa fa-arrow-left" aria-hidden="true"></i>
-
-                  <svg class="icon icon--caret">
-                    <use xlink:href="#icon-caret"></use>
-                  </svg>
-                </button>
+                        <span>o Highways / Rail / Bridges / Tunnels</span>
+                        <li>- Planning (Reality Capture)</li>
+                        <li> - Design (Creating DTM, Design & Visualize)</li>
+                        <li>- Construction (Drilling, Piling, Bulk Earthworks & Trench Work, Compaction & Fine
+                          Grading, Paving, Finishing & Compaction)</li>
+                        <li>- Operation & Maintenance (As-built surveying, Subsurface Mapping, Asset
+                          Mapping, Infrastructure Inspection, Decommissioning & Restoration)</li>
+                      </ul>
+                    </div>
+                    
+                    <p class="poster__deco"></p>
+                    <div class="poster__box"></div>
+                    <span class="poster__number">01</span>
+                  </figcaption>
+                </figure>
               </div>
-            </section>
+              <div class="tabscontent__item">
+                <figure class="poster">
+                  <img class="poster__img"
+                    src="https://cdn.shopify.com/s/files/1/0436/5336/5914/products/j.gif?v=1596572405"
+                    alt="Poster 1" />
+                  <figcaption class="poster__caption">
+                    <h2 class="poster__title">Photogrammetry & Drones</h2>
+                    <p class="sub__title">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing
+                      elit. Aut magnam eum quaerat. Consequuntur corrupti
+                      dolorum minus amet sapiente rerum odit veritatis sed?
+                      Minima necessitatibus iste corrupti fugit temporibus
+                      molestias consequuntur. <br />
+                      <br />
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Numquam odit assumenda sunt magnam! Quaerat officia
+                      culpa itaque quasi assumenda deleniti quos nostrum
+                      suscipit officiis quidem exercitationem vitae,
+                      dignissimos saepe consequuntur. <br />
+                      <br />
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Numquam odit assumenda sunt magnam! Quaerat officia
+                      culpa itaque quasi assumenda deleniti quos nostrum
+                      suscipit officiis quidem exercitationem vitae,
+                      dignissimos saepe consequuntur.
+                    </p>
+                    <div class="sub__title-two">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing
+                      elit. Aut magnam eum quaerat.
+                      <ul>
+                        <li>Lorem ipsum</li>
+                        <li>Lorem ipsum</li>
+                        <li>Lorem ipsum</li>
+                      </ul>
+                    </div>
 
+                    <p class="poster__deco"></p>
+                    <div class="poster__box"></div>
+                    <span class="poster__number">02</span>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="tabscontent__item">
+                <figure class="poster">
+                  <img class="poster__img"
+                    src="https://www.vxchnge.com/hubfs/GIFs%20and%20Images%20-%20Sticky%20CTA/Data%20Center%20Migration%20Webinar%20Gif%20-%20Blog%20CTA.gif"
+                    alt="Poster 1" />
+                  <figcaption class="poster__caption">
+                    <h2 class="poster__title">Data Registration
+
+                    </h2>
+                    <p class="sub__title">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing
+                      elit. Aut magnam eum quaerat. Consequuntur corrupti
+                      dolorum minus amet sapiente rerum odit veritatis sed?
+                      Minima necessitatibus iste corrupti fugit temporibus
+                      molestias consequuntur. <br />
+                      <br />
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Numquam odit assumenda sunt magnam! Quaerat officia
+                      culpa itaque quasi assumenda deleniti quos nostrum
+                      suscipit officiis quidem exercitationem vitae,
+                      dignissimos saepe consequuntur. <br />
+                      <br />
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Numquam odit assumenda sunt magnam! Quaerat officia
+                      culpa itaque quasi assumenda deleniti quos nostrum
+                      suscipit officiis quidem exercitationem vitae,
+                      dignissimos saepe consequuntur.
+                    </p>
+                    <div class="sub__title-two">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing
+                      elit. Aut magnam eum quaerat.
+                      <ul>
+                        <li>Lorem ipsum</li>
+                        <li>Lorem ipsum</li>
+                        <li>Lorem ipsum</li>
+                      </ul>
+                    </div>
+                    <p class="poster__deco"></p>
+                    <div class="poster__box"></div>
+                    <span class="poster__number">03</span>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="tabscontent__item">
+                <figure class="poster">
+                  <img class="poster__img"
+                    src="https://www.3dsl.com.au/wp-content/uploads/2018/05/Artec-Space-Spider-Flashing.gif"
+                    alt="Poster 1" />
+                  <figcaption class="poster__caption">
+                    <h2 class="poster__title">Buble Views</h2>
+                    <p class="sub__title">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing
+                      elit. Aut magnam eum quaerat. Consequuntur corrupti
+                      dolorum minus amet sapiente rerum odit veritatis sed?
+                      Minima necessitatibus iste corrupti fugit temporibus
+                      molestias consequuntur. <br />
+                      <br />
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Numquam odit assumenda sunt magnam! Quaerat officia
+                      culpa itaque quasi assumenda deleniti quos nostrum
+                      suscipit officiis quidem exercitationem vitae,
+                      dignissimos saepe consequuntur. <br />
+                      <br />
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Numquam odit assumenda sunt magnam! Quaerat officia
+                      culpa itaque quasi assumenda deleniti quos nostrum
+                      suscipit officiis quidem exercitationem vitae,
+                      dignissimos saepe consequuntur.
+                    </p>
+                    <div class="sub__title-two">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing
+                      elit. Aut magnam eum quaerat.
+                      <ul>
+                        <li>Lorem ipsum</li>
+                        <li>Lorem ipsum</li>
+                        <li>Lorem ipsum</li>
+                      </ul>
+                    </div>
+                    <p class="poster__deco"></p>
+                    <div class="poster__box"></div>
+                    <span class="poster__number">03</span>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="tabscontent__item">
+                <figure class="poster">
+                  <img class="poster__img"
+                    src="https://www.3dsl.com.au/wp-content/uploads/2018/05/Artec-Space-Spider-Flashing.gif"
+                    alt="Poster 1" />
+                  <figcaption class="poster__caption">
+                    <h2 class="poster__title">Portal navigation</h2>
+                    <p class="sub__title">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing
+                      elit. Aut magnam eum quaerat. Consequuntur corrupti
+                      dolorum minus amet sapiente rerum odit veritatis sed?
+                      Minima necessitatibus iste corrupti fugit temporibus
+                      molestias consequuntur. <br />
+                      <br />
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Numquam odit assumenda sunt magnam! Quaerat officia
+                      culpa itaque quasi assumenda deleniti quos nostrum
+                      suscipit officiis quidem exercitationem vitae,
+                      dignissimos saepe consequuntur. <br />
+                      <br />
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Numquam odit assumenda sunt magnam! Quaerat officia
+                      culpa itaque quasi assumenda deleniti quos nostrum
+                      suscipit officiis quidem exercitationem vitae,
+                      dignissimos saepe consequuntur.
+                    </p>
+                    <div class="sub__title-two">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing
+                      elit. Aut magnam eum quaerat.
+                      <ul>
+                        <li>Lorem ipsum</li>
+                        <li>Lorem ipsum</li>
+                        <li>Lorem ipsum</li>
+                      </ul>
+                    </div>
+                    <p class="poster__deco"></p>
+                    <div class="poster__box"></div>
+                    <span class="poster__number">03</span>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="tabscontent__item">
+                <figure class="poster">
+                  <img class="poster__img" src="img/img1.jpg" alt="Poster 1" />
+                  <figcaption class="poster__caption">
+                    <h2 class="poster__title">Data applications</h2>
+                    <p class="sub__title">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing
+                      elit. Aut magnam eum quaerat. Consequuntur corrupti
+                      dolorum minus amet sapiente rerum odit veritatis sed?
+                      Minima necessitatibus iste corrupti fugit temporibus
+                      molestias consequuntur. <br />
+                      <br />
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Numquam odit assumenda sunt magnam! Quaerat officia
+                      culpa itaque quasi assumenda deleniti quos nostrum
+                      suscipit officiis quidem exercitationem vitae,
+                      dignissimos saepe consequuntur. <br />
+                      <br />
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Numquam odit assumenda sunt magnam! Quaerat officia
+                      culpa itaque quasi assumenda deleniti quos nostrum
+                      suscipit officiis quidem exercitationem vitae,
+                      dignissimos saepe consequuntur.
+                    </p>
+                    <div class="sub__title-two">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing
+                      elit. Aut magnam eum quaerat.
+                      <ul>
+                        <li>Lorem ipsum</li>
+                        <li>Lorem ipsum</li>
+                        <li>Lorem ipsum</li>
+                      </ul>
+                    </div>
+                    <p class="poster__deco"></p>
+                    <div class="poster__box"></div>
+                    <span class="poster__number">03</span>
+                  </figcaption>
+                </figure>
+              </div>
+              <button class="btn btn--back">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+
+                <svg class="icon icon--caret">
+                  <use xlink:href="#icon-caret"></use>
+                </svg>
+              </button>
+            </div>
             <!--------------------Menu content------------------------>
 
-            <!-- Begin of about section -->
+
             <section id="about" class="section section-a pt-5 pb-5 ">
               <div class="section-title title-anim overflow-hidden">
                 <h2 class="text text-stroke text-lg rellax txt-whites" data-rellax-horizontal data-scroll-speed="5"
@@ -651,8 +660,8 @@
               </div>
               <!-- End of section body -->
             </section>
-            <!-- End of about section -->
-            <!-- Begin of works section -->
+
+
             <section id="projects" class="section section-a with-overflow section-white_content">
               <div class="section-title title-left text-vert z-top">
                 <div class="rellax" data-rellax-speed="6">
@@ -786,21 +795,14 @@
 
               <!-- End of section body -->
             </section>
-            <!-- End of works section -->
 
-            <!-- Begin of projects section -->
             <section id="gallery" class="section section-a ">
               <div class="section-title section-title_ex ">
                 <h2 class="text pt-5">Experience</h2>
               </div>
-              <!-- Begin of section body -->
               <div class="section-body p-0">
-                <!-- content -->
-
                 <div class="section-content content-full px-0 anim">
-                  <!-- Slider main container -->
                   <div class="swiper-container slider-gallery-a animated">
-                    <!-- Swiper wrapper -->
                     <div class="swiper-wrapper">
                       <!-- Slides -->
                       <div class="swiper-slide slide-item-gallery-a">
@@ -850,7 +852,7 @@
                               <div class="item-content content-width pl-7">
                                 <span>Ecopetrol
                                 </span>
-                                <h3 class="title">Modelación 3D unidad cracking-UOP II 
+                                <h3 class="title">Modelación 3D unidad cracking-UOP II
                                 </h3>
                                 <div class="items-exp">
                                   <span> <i class="fa fa-map-marker" aria-hidden="true"></i>
@@ -862,7 +864,8 @@
                                   </span>
                                 </div>
                                 <div class="btns-group">
-                                  <p>Servicio de escaneo laser y Modelación en la planta UOP II de la Refinería de Barrancabermeja - Ecopetrol 
+                                  <p>Servicio de escaneo laser y Modelación en la planta UOP II de la Refinería de
+                                    Barrancabermeja - Ecopetrol
 
                                   </p>
                                   <a href="https://www.ecopetrol.com.co/
@@ -901,7 +904,8 @@
                                   </span>
                                 </div>
                                 <div class="btns-group">
-                                  <p>Servicio de escaneo laser y generación de la nube de puntos las zonas interiores y exteriores de la Embajada de los Estados Unidos, ubicada en Bogotá Colombia.
+                                  <p>Servicio de escaneo laser y generación de la nube de puntos las zonas interiores y
+                                    exteriores de la Embajada de los Estados Unidos, ubicada en Bogotá Colombia.
 
                                   </p>
                                   <a href="https://co.usembassy.gov/es/
@@ -940,7 +944,9 @@
                                   </span>
                                 </div>
                                 <div class="btns-group">
-                                  <p>Registro de base de datos de nube de puntos, elaboración de modelo geometrico 3D y generación de modelo inteligente en AutoPlant, de la Planta de proceso de Bitumen (petroleos arenoso) de Suncor Mackay River, Alberta Canada. 
+                                  <p>Registro de base de datos de nube de puntos, elaboración de modelo geometrico 3D y
+                                    generación de modelo inteligente en AutoPlant, de la Planta de proceso de Bitumen
+                                    (petroleos arenoso) de Suncor Mackay River, Alberta Canada.
                                   </p>
                                   <a href="https://www.acuren.com/
                                   " target="_blank"> <img class="logo-expres"
@@ -978,7 +984,8 @@
                                   </span>
                                 </div>
                                 <div class="btns-group">
-                                  <p>Servicio de Escaneo Laser y Modelación 3D en la planta UOP I de la Refinería de Barrancabermeja de Ecopetrol
+                                  <p>Servicio de Escaneo Laser y Modelación 3D en la planta UOP I de la Refinería de
+                                    Barrancabermeja de Ecopetrol
                                   </p>
                                   <a href="https://www.ecopetrol.com.co/
 
@@ -1014,7 +1021,8 @@
                                   </span>
                                 </div>
                                 <div class="btns-group">
-                                  <p>Servicio de Escaneo Laser y Modelación 3D Inteligente de las áreas de almacenamiento de la Refinería de Shell Deer Park en Texas
+                                  <p>Servicio de Escaneo Laser y Modelación 3D Inteligente de las áreas de
+                                    almacenamiento de la Refinería de Shell Deer Park en Texas
                                   </p>
                                   <a href="https://www.shell.com/
 
@@ -1055,7 +1063,8 @@
                                   </span>
                                 </div>
                                 <div class="btns-group">
-                                  <p>Escaneo Láser y Modelación 3D de tres plantas de procesamiento de gas costa afuera ubicadas en el proyecto del Complejo Takula en la costa de Angola
+                                  <p>Escaneo Láser y Modelación 3D de tres plantas de procesamiento de gas costa afuera
+                                    ubicadas en el proyecto del Complejo Takula en la costa de Angola
 
                                   </p>
                                   <a href="https://www.chevron.com/ " target="_blank"> <img class="logo-expres"
@@ -1090,7 +1099,8 @@
                                   </span>
                                 </div>
                                 <div class="btns-group">
-                                  <p>Servicio de Modelación 3D de 42.000 metros lineales de racks de líneas de proceso para la refinería de Shell Deer Park en Texas
+                                  <p>Servicio de Modelación 3D de 42.000 metros lineales de racks de líneas de proceso
+                                    para la refinería de Shell Deer Park en Texas
                                   </p>
                                   <a href="https://www.shell.com/
                                   " target="_blank"> <img class="logo-expres"
@@ -1129,7 +1139,8 @@
                                   </span>
                                 </div>
                                 <div class="btns-group">
-                                  <p>Servicio de Inspección de Campo, medición y verificación de condiciones As Built de la planta de Crudo Bloque R de la Refinería de Cartagena
+                                  <p>Servicio de Inspección de Campo, medición y verificación de condiciones As Built de
+                                    la planta de Crudo Bloque R de la Refinería de Cartagena
 
                                   </p>
                                   <a href="https://www.ecopetrol.com.co/
@@ -1171,7 +1182,9 @@
                                   </span>
                                 </div>
                                 <div class="btns-group">
-                                  <p>Servicio de Inspección de Campo, medición y verificación de condiciones As Built de 1350 metros lineales de Racks de Tuberías de Proceso de diferentes niveles en la Refinería de Cartagena
+                                  <p>Servicio de Inspección de Campo, medición y verificación de condiciones As Built de
+                                    1350 metros lineales de Racks de Tuberías de Proceso de diferentes niveles en la
+                                    Refinería de Cartagena
 
 
                                   </p>
@@ -1208,7 +1221,8 @@
                                   </span>
                                 </div>
                                 <div class="btns-group">
-                                  <p>Servicio de Inspección de Campo, medición y verificación de condiciones As Built de la planta de Servicios Industriales de la Refinería de Cartagena
+                                  <p>Servicio de Inspección de Campo, medición y verificación de condiciones As Built de
+                                    la planta de Servicios Industriales de la Refinería de Cartagena
                                   </p>
                                   <a href="https://www.ecopetrol.com.co/ " target="_blank"> <img class="logo-expres"
                                       src="assets/images/experiencia/imagen3.png" alt="image" /></a>
@@ -1245,7 +1259,12 @@
                                   </span>
                                 </div>
                                 <div class="btns-group">
-                                  <p>Servicio de Escaneo Láser, evaluación subterránea, modelado inteligente en 3D de una instalación de procesamiento central identificada como el CPF 1 ubicada en los llanos orientales de Colombia. El trabajo incluyó toda la revisión de más de 75,000 documentos técnicos y su actualización después de una revisión de campo, el escaneo de todas las plantas y la carga de datos técnicos en un modelo inteligente 3D utilizando la plataforma Aveva 3D PDM.
+                                  <p>Servicio de Escaneo Láser, evaluación subterránea, modelado inteligente en 3D de
+                                    una instalación de procesamiento central identificada como el CPF 1 ubicada en los
+                                    llanos orientales de Colombia. El trabajo incluyó toda la revisión de más de 75,000
+                                    documentos técnicos y su actualización después de una revisión de campo, el escaneo
+                                    de todas las plantas y la carga de datos técnicos en un modelo inteligente 3D
+                                    utilizando la plataforma Aveva 3D PDM.
 
                                   </p>
                                   <a href="https://www.fronteraenergy.ca/es/
@@ -1280,7 +1299,7 @@
               </div>
               <!-- End of section body -->
             </section>
-            <!-- End of projects section -->
+
             <section id="services" class="section section-a section-white">
               <div class="section-title title-anim overflow-hidden">
                 <h2 class="text text-lg nowrap text-stroke rellax  title-blue" data-rellax-horizontal
@@ -1370,7 +1389,7 @@
               </div>
               <!-- End of section body -->
             </section>
-            <!-- Begin of home contact -->
+
             <section id="contact" class="section section-a fullscreen-h-lg">
               <div class="section-title title-anim">
                 <h2 class="text text-lg nowrap text-stroke rellax" data-rellax-vertical data-rellax-speed="-4"
@@ -1455,7 +1474,7 @@
               </div>
               <!-- End of section body -->
             </section>
-            <!-- End of contact section -->
+
           </main>
 
           <footer id="site-footer" class="footer-page">
@@ -1488,10 +1507,10 @@
               </nav>
             </div>
           </footer>
-          <!-- END OF site footer -->
+
         </div>
       </section>
-    </section>
+    </div>
   </div>
   <nav class="container-fluid px-0">
     <button style="" class="navbar-toggler menux" type="button" data-toggle="collapse" data-target="#navbarMenuCollapse"
@@ -1663,25 +1682,23 @@
   <script src="assets/scripts/demo1.js"></script>
   <!---<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>-->
   <script>
-    $(function () {
+  /*  $(function () {
       $('.menu-open-button').bind("click", function () {
-
         var dest = $("#menu1").offset().top;
-        $("html, body").animate({ scrollTop: dest }, 600);
-
+        $("html,body").animate({ scrollTop: dest }, 600);
 
       })
     })
+*/
+    $(function () {
 
-    $(function() {
+      $('[data-toggle="modal"]').hover(function () {
+        var modalId = $(this).data('target');
+        $(modalId).modal('show');
 
-$('[data-toggle="modal"]').hover(function() {
-  var modalId = $(this).data('target');
-  $(modalId).modal('show');
+      });
 
-});
-
-});
+    });
   </script>
 </body>
 
