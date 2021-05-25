@@ -1391,7 +1391,9 @@ position: relative;
   text-transform: capitalize;
 }
 .pricing-table__button:hover {
-  background-color: #4cae4f;
+  border: 1px solid #14162d;
+    color: #14162d;
+    background: transparent;
 }
 
 
