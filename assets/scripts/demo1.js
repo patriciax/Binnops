@@ -26,7 +26,9 @@
 
 		// The content items and the back control.
 		contentItems = [].slice.call(document.querySelectorAll('.tabscontent > .tabscontent__item')),
+		contentItemsTwo = [].slice.call(document.querySelectorAll('.tabscontent-2 > .tabscontent__item')),
 		backCtrl = document.querySelector('.tabscontent > button.btn--back'),
+		backCtrl = document.querySelector('.tabscontent-2 > button.btn--back'),
 		// menu ctrl for smaller screens (the tabs are not initially shown and toggling this button will show/hide the tabs)
 		menuCtrl = document.querySelector('button.btn--menu'),
 		isContentShown = false, current;
@@ -37,6 +39,7 @@
 			current = idx;
 
 			var contentItem = contentItems[idx],
+			var contentItemTwo = contentItemsTwo[idx],
 				content = {
 					img: contentItem.querySelector('.poster__img'),
 					title: contentItem.querySelector('.poster__title'),
@@ -45,7 +48,16 @@
 					subtitletwo: contentItem.querySelector('.sub__title-two'),
 					deco: contentItem.querySelector('.poster__deco'),
 					box: contentItem.querySelector('.poster__box'),
-					number: contentItem.querySelector('.poster__number')
+					number: contentItem.querySelector('.poster__number'),
+
+					img: contentItemTwo.querySelector('.poster__img'),
+					title: contentItemTwo.querySelector('.poster__title'),
+					
+					subtitle: contentItemTwo.querySelector('.sub__title'),
+					subtitletwo: contentItemTwo.querySelector('.sub__title-two'),
+					deco: contentItemTwo.querySelector('.poster__deco'),
+					box: contentItemTwo.querySelector('.poster__box'),
+					number: contentItemTwo.querySelector('.poster__number')
 				};
 
 			// Hide the content elements.
@@ -53,6 +65,7 @@
 			// Show content item.
 			contentItem.style.opacity = 1;
 			contentItem.classList.add('tabscontent__item--current');
+			contentItem.classList.add('tabscontent__item--current-2');
 
 			// Animate content elements in.
 			anime.remove([content.img, content.title,content.subtitle,content.subtitletwo, content.box, content.number, content.deco]);
@@ -129,6 +142,7 @@
 				// Hide content item.
 				contentItem.style.opacity = 0;
 				contentItem.classList.remove('tabscontent__item--current');
+				contentItem.classList.remove('tabscontent__item--current-2');
 			}
 		});
 

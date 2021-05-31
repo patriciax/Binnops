@@ -399,11 +399,95 @@ class Scene {
 }
 
 new Scene(document.querySelector(".c-scene"));
+
+/*
 $(".menu-item").hide();
 $(".menu-1").on("click", function () {
   $(".menu-item").toggle("show");
   $(".menu-hidde").addClass("menu-open-button");
   $("#menu1").addClass("block");
 })
+
+
+$(".menu-item").hide();
+$(".menu-2").on("click", function () {
+  $(".menu-item").toggle("show");
+  $(".menu-hidde").addClass("menu-open-button");
+  $("#menu2").addClass("block");
+})*/
+var Boxlayout = (function () {
+  var wrapper = document.body,
+    sections = Array.from(document.querySelectorAll(".section-navegation")),
+    closeButtons = Array.from(document.querySelectorAll(".close-section-navegation")),
+    expandedClass = "is-expanded",
+    hasExpandedClass = "has-expanded-item";
+
+  return { init: init };
+
+  function init() {
+    _initEvents();
+  }
+
+  function _initEvents() {
+    sections.forEach(function (element) {
+      element.onclick = function () {
+        _openSection(this);
+      };
+    });
+    closeButtons.forEach(function (element) {
+      element.onclick = function (element) {
+        element.stopPropagation();
+        _closeSection(this.parentElement);
+      };
+    });
+  }
+
+  function _openSection(element) {
+    if (!element.classList.contains(expandedClass)) {
+      element.classList.add(expandedClass);
+      wrapper.classList.add(hasExpandedClass);
+    }
+  }
+
+  function _closeSection(element) {
+    if (element.classList.contains(expandedClass)) {
+      element.classList.remove(expandedClass);
+      wrapper.classList.remove(hasExpandedClass);
+    }
+  }
+})();
+
+Boxlayout.init();
+
+
+$(document).on('ready', function() {
+  $(".main1,.main2,.main3").hide();
+  $(".menu1").on("click", function () {
+    $(".main1").toggle("show");
+    $(".menu1").addClass("block");
+  })
+  $(".menu2").on("click", function () {
+    $(".main2").toggle("show");
+    $(".menu2").addClass("block");
+  })
+  $(".menu3").on("click", function () {
+    $(".main3").toggle("show");
+    $(".menu3").addClass("block");
+  })
+
+ 
+  $(".click-digital").on("click", function () {
+    $(".main-content_navegation").addClass("alto");
+  })
+  $(".click-digital-2").on("click", function () {
+    $(".main-content_navegation").addClass("alto2");
+  })
+
+  $(".close-digital").on("click", function () {
+    $(".main-content_navegation").removeClass("alto");
+  })
+
+ 
+});
 
 
