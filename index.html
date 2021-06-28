@@ -59,11 +59,18 @@
           <main class="page-main sections-scroll scroll-anim " id="mainpage">
             <section id="banner" class="section section-a back-banner"
               style="background-image: url('assets/images/banner.jpg');">
-              <div class="middle">
-                <span class="text-type-animation">
-                  <span class="txt-rotate" data-period="2000"
-                    data-rotate='[ "Digital Transformation", "Artificial Intelligence", " Cyber Security"]'></span>
-                </span>
+              <div class="banner-ilu0 home-swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide home-1">Binnops builds Smart Digital Twins for existing and operating Industrial Assets to improve operational efficiency, reduce the O&M Cost and mitigate Assets risks.</div>
+                  <div class="swiper-slide home-1">We build the 3D Models of a Facility using Reverse engineering Techniques and then Link its virtual elements with its real time components in the field.</div>
+                  <div class="swiper-slide home-1">Big data collected from the operation is processed to generate rich and valuable information.</div>
+                  <div class="swiper-slide home-1">At Binnops we are experts at producing intelligent Digital Twins that address the needs of Engineering, Operations, Maintenance and Asset Management.</div>
+                  <div class="swiper-slide home-1">The technology, from laser scanning to Internet of Things and Management of Change, is mature, functional, cost-effective and proven.
+                    Using Digital Twins with centralized Engineering and Operations data For plant operations and asset management, is the “next big thing” .
+                    </div>
+                  <div class="swiper-slide home-1">Binnops have developed more than 50 projects for International Clients that generates lower operational costs, efficiency improvement and better reliability .  </div>
+                  <div class="swiper-slide home-1">Binnops IT Architecture — involving 3D virtual models of any type of Asset - is transforming the way we work, replacing 2D abstract representations such as layouts, isometric drawings, P&ID’s etc, with virtual elements. This is the most advanced way to implement a real Digital Transformation Process.</div>
+                </div>
               </div>
               <div class="s-hero" id="home">
                 <div class="s-hero__scene">
@@ -632,8 +639,8 @@
                 <div class="timeline-lg">
                   <div id="time-1" class="timeline_body">
                     <div class="timeline_title">
-                      <h3>Lorem ipsum</h3>
-                      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur.</p>
+                      <h3>Digitalización</h3>
+               
                     </div>
 
                     <div class="timeline_elements">
@@ -641,67 +648,68 @@
                         <img src="assets/images/card1.jpg" alt="">
                       </div>
                       <div class="timeline_icon">
-                        <i class="flaticon-video-conference"></i>
+                       <img src="assets/images/icons/touch.svg" alt="">
                       </div>
                     </div>
                   </div>
 
                   <div id="time-2" class="timeline_body">
                     <div class="timeline_title">
-                      <h3>Lorem ipsum</h3>
-                      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur.</p>
+                      <h3>Twin Digital </h3>
+                    
                     </div>
                     <div class="timeline_elements">
                       <div class="timeline_img">
                         <img src="assets/images/card2.jpg" alt="">
                       </div>
                       <div class="timeline_icon">
-                        <i class="flaticon-internet"></i>
+                        <img src="assets/images/icons/digital.svg" alt="">
                       </div>
                     </div>
                   </div>
 
                   <div id="time-3" class="timeline_body">
                     <div class="timeline_title">
-                      <h3>Lorem ipsum</h3>
-                      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur.</p>
+                      <h3>Captura de Data  </h3>
+                 
                     </div>
                     <div class="timeline_elements">
                       <div class="timeline_img">
                         <img src="assets/images/card3.jpg" alt="">
                       </div>
                       <div class="timeline_icon">
-                        <i class="flaticon-compass"></i>
+                        <img src="assets/images/icons/data.svg" alt="">
                       </div>
                     </div>
                   </div>
 
                   <div id="time-4" class="timeline_body">
                     <div class="timeline_title">
-                      <h3>Lorem ipsum</h3>
-                      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur.</p>
+                      <h3>Proceso de Data </h3>
+                   
                     </div>
                     <div class="timeline_elements">
                       <div class="timeline_img">
                         <img src="assets/images/card4.jpg" alt="">
                       </div>
                       <div class="timeline_icon">
-                        <i class="flaticon-qa"></i>
+                        <img src="assets/images/icons/database.svg" alt="">
                       </div>
                     </div>
                   </div>
 
                   <div id="time-5" class="timeline_body">
                     <div class="timeline_title">
-                      <h3>Lorem ipsum</h3>
-                      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur.</p>
+                      <h3>Inteligencia Artificial
+                      </h3>
+            
                     </div>
                     <div class="timeline_elements">
                       <div class="timeline_img">
                         <img src="assets/images/card1.jpg" alt="">
                       </div>
                       <div class="timeline_icon">
-                        <i class="flaticon-help"></i>
+                        <img src="assets/images/icons/puzzle.svg" alt="">
                       </div>
                     </div>
                   </div>
@@ -1971,6 +1979,19 @@
       theme: "light",
       arrow: true,
     })
+
+
+    var homeSwiper = new Swiper(".home-swiper-container", {
+  fadeEffect: { crossFade: true },
+  autoplayDisableOnInteraction: true,
+  slidersPerView: 1,
+  effect: "fade",
+speed: 1000,
+    autoplay: {
+        delay: 1000,
+      },
+});
+
   </script>
 
 </body>

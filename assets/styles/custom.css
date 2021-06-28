@@ -2,6 +2,7 @@
 body{
   background-color: #fff!important;
   font-family: 'Lato', sans-serif;
+  scroll-behavior: smooth;
 }
 .o-scroll {
   background-color: #fff!important;
@@ -2060,6 +2061,11 @@ div.middle{
   left: 35%;
   transition: .5s;
 }
+.timeline_icon img{
+  z-index: 1;
+    width: 60%;
+    height: 60%;
+}
 
 .timeline_icon::before {
   background: white;
@@ -2207,8 +2213,16 @@ color: #000;
   opacity: 0;
   transition: all 0.35s ease;
 }
+.timeline_body:hover .timeline_icon{
+  opacity: 0;
+  transition: all 0.35s ease;
+}
 
 .active-time i {
+  opacity: 0;
+  transition: all 0.35s ease;
+}
+.active-time .timeline_icon{
   opacity: 0;
   transition: all 0.35s ease;
 }
@@ -2264,18 +2278,18 @@ color: #000;
 }
 
 .timeline_body:hover .timeline_title::before {
-  top: 180%;
+  top: 100%;
   /* transform: translateY(1150%) translateX(-45%); */
   transition: .5s;
 }
 
 .timeline_body:hover:nth-child(1) .timeline_title::before {
-  top: 145%;
+  top: 100%;
 
 }
 
 .active-time .timeline_title::before {
-  top: 160%;
+  top: 100%;
   /* transform: translateY(1150%) translateX(-45%); */
   transition: .5s;
 }
@@ -2363,4 +2377,28 @@ color: #000;
   margin-top: 0;
   grid-template-columns: inherit;
   /* gap: 16px; */
+}
+.home-swiper-container{
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  max-width: 50%;
+  position: absolute;
+  top: 40%;
+}
+.home-1{
+  font-size: 1.3rem;
+}
+.c-header_line, .c-header_title {
+
+  bottom: -7%;
+
+}
+:focus-visible  {
+  outline:none;
+}
+.navbar-toggler:focus {
+
+  box-shadow: none;
+
 }
