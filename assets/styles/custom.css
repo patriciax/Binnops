@@ -1547,7 +1547,8 @@ cursor: pointer;
   z-index: 2;
   text-align: center;
   margin: 1rem 0;
-  
+  height: 15vh;
+  overflow: auto;
 }
 .demo-box:hover {
   color: #7ad7f6;
@@ -1928,9 +1929,8 @@ div.middle{
 }
 .btn-volver{
   position: absolute;
-    left: 0;
-    right: 25px;
-    text-align: end;
+  left: 22px;
+  text-align: start;
     top: 20px;
     font-size: .789rem;
     z-index: 1;
