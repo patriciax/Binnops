@@ -212,7 +212,8 @@
 }
 .services-txt{
   transform: translate3d(1rem, 0px, 0px)!important;
-  font-size: 7rem!important;
+  font-size: 4rem!important;
+  margin-top: 4rem;
 }/*
 .txt-whites{
   -webkit-text-stroke: 1px #14162d!important;

@@ -23,6 +23,10 @@
   <!-------------cositas menu------------------>
   <link rel="stylesheet" href="css/main.css" />
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css">
 </head>
 
 <body>
@@ -52,26 +56,24 @@
           <div class="cover-page">
             <div class="cover-bg bg-black"></div>
           </div>
-          <main class="page-main sections-scroll scroll-anim" id="mainpage">
-            <section id="banner" class="section section-a">
-              <div class="s-hero">
+          <main class="page-main sections-scroll scroll-anim " id="mainpage">
+            <section id="banner" class="section section-a back-banner"
+              style="background-image: url('assets/images/banner.jpg');">
+              <div class="middle">
+                <span class="text-type-animation">
+                  <span class="txt-rotate" data-period="2000"
+                    data-rotate='[ "Digital Transformation", "Artificial Intelligence", " Cyber Security"]'></span>
+                </span>
+              </div>
+              <div class="s-hero" id="home">
                 <div class="s-hero__scene">
                   <div class="c-scene">
-                    <div class="c-scene__frame">
-                      <div class="c-scene__perspective">
-                        <div class="c-scene__grid">
-                          <div class="c-scene__grid-x"></div>
-                          <div class="c-scene__grid-y"></div>
-                        </div>
-                      </div>
-                      <!-------- <div class="c-scene__cover c-scene__cover--frame"></div>---->
-                    </div>
                     <div class="c-scene__container">
                       <div class="o-container">
                         <div class="c-header" id="header">
                           <div class="c-header_heading" data-scroll data-scroll-speed="-8" data-scroll-position="top"
                             data-scroll-target="#header" data-scroll-repeat></div>
-                          <h1 class="pt-5" data-scroll>
+                          <h1 class="p8" data-scroll>
                             <span class="c-header_title_line text-center logo">
                               <span data-scroll data-scroll-speed="3" data-scroll-position="top">
                                 <img src="assets/images/logo.png" alt="" />
@@ -81,102 +83,71 @@
                           <div class="c-header_title o-h1" data-scroll>
                             <span class="c-header_title_line -version u-white">
                               <!-------------card servicio 1 ---------------->
-                              <span class="o-h1 animate__animated animate__backInDown" data-scroll data-scroll-speed="3"
-                                data-scroll-position="top" data-scroll-direction="horizontal" data-scroll-delay="0.05">
-                                <div class="card-banner card-body_main ">
-                                  <div class="wrapper " style="
-                                          background: url(https://i.gifer.com/DVyK.gif)center/cover no-repeat; ">
-                                    <div class="header header-icon" data-scroll>
-                                      <!----- <img class="icon-3d icon-3d-1" src="assets/images/iconos/qrcode.png" alt="" />--->
-                                      <a href="#menu1" data-scroll-to class="icon-expand menu1"> <i
-                                          class="fa fa-plus-circle " aria-hidden="true"></i> </a>
-                                    </div>
-                                    <div class="overlay-banner"></div>
-                                    <div class="data">
-                                      <div class="content">
-                                        <span class="author">Data Visualization</span>
-                                        <p class="title">
-                                          Lorem ipsum, dolor sit amet
-                                          consectetur adipisicing elit.
-                                          Tempora.
-                                        </p>
-                                        <p class="button button-card" data-toggle="modal"
-                                          data-target=".datavisualization">Expand
-                                          details
-                                        </p>
+                              <a href="#menu1" data-scroll-to class="icon-expand menu1 " data-scroll>
+                                <span class="o-h1 animate__animated animate__backInDown" data-scroll 
+                                  data-scroll-speed="5" data-scroll-position="top" data-scroll-delay="0.03">
+                                  <div class="card-banner card-body_main ">
+                                    <div class="wrapper " style="
+                                          background: url(assets/images/1.png)center/cover no-repeat; ">
+                                      <div class="data">
+                                        <div class="content">
+                                          <span class="author">Data Visualization</span>
+                                          <p class="button button-card" data-toggle="modal"
+                                            data-target=".datavisualization">Show more
+                                          </p>
+                                        </div>
                                       </div>
                                     </div>
                                   </div>
-                                </div>
 
-                              </span>
+                                </span></a>
                               <!-------------card servicio 2---------------->
-                              <span class="o-h1 animate__animated animate__backInUp" data-scroll data-scroll-speed="5"
-                                data-scroll-position="top" data-scroll-delay="0.05">
-                                <div class="card-banner card-body_main">
-                                  <div class="wrapper" style="
-                                        background: url(https://media4.giphy.com/media/Jqyb0NPvzQpdx1uyK2/giphy.gif)
+                              <a href="#menu2" data-scroll-to class="menu2 icon-expand" data-scroll>
+                                <span class="o-h1 animate__animated animate__backInUp" data-scroll data-scroll-speed="5"
+                                  data-scroll-position="top" data-scroll-delay="0.04">
+                                  <div class="card-banner card-body_main">
+                                    <div class="wrapper" style="
+                                        background: url(assets/images/card2.jpg)
                                           center/cover no-repeat;
                                       ">
-                                    <div class="header" data-scroll>
-                                      <a href="#menu2" data-scroll-to class="menu2 icon-expand"> <i
-                                          class="fa fa-plus-circle " aria-hidden="true"></i> </a>
-                                    </div>
-
-                                    <div class="data">
-                                      <div class="content">
-                                        <span class="author">Digital Twins</span>
-                                        <p class="title">
-                                          Lorem ipsum, dolor sit amet
-                                          consectetur adipisicing elit.
-                                          Tempora.
-                                        </p>
-                                        <a href="#" class="button" data-toggle="modal"
-                                          data-target=".datavisualization">Expand
-                                          details
-                                        </a>
+                                      <div class="data">
+                                        <div class="content">
+                                          <span class="author">Digital Twins</span>
+                                          <p href="#" class="button" data-toggle="modal"
+                                            data-target=".datavisualization">Show more
+                                          </p>
+                                        </div>
                                       </div>
                                     </div>
                                   </div>
-                                </div>
-                              </span>
+                                </span></a>
                               <!-------------card servicio 3---------------->
-                              <span class="o-h1 animate__animated animate__backInRight animated" data-scroll
-                                data-scroll-speed="4" data-scroll-position="top" data-scroll-direction="horizontal"
-                                data-scroll-delay="0.05">
-                                <div class="card-banner card-body_main">
-                                  <div class="wrapper" style="
+                              <a href="#menu3" data-scroll-to class="menu-open-button menu3 icon-expand" data-scroll>
+                                <span class="o-h1 animate__animated animate__backInRight animated" data-scroll
+                                  data-scroll data-scroll-speed="5" data-scroll-position="top" data-scroll-delay="0.05">
+                                  <div class="card-banner card-body_main">
+                                    <div class="wrapper" style="
                                         background: url(https://static.wixstatic.com/media/bb7b70_d5fde322f7914060b7d997ba9d506a50~mv2.gif)
                                           center/cover no-repeat;
                                       ">
-                                    <div class="header" data-scroll>
-                                      <a href="#menu3" data-scroll-to class="menu-open-button menu3 icon-expand"> <i
-                                          class="fa fa-plus-circle " aria-hidden="true"></i> </a>
-                                    </div>
-                                    <div class="data">
-                                      <div class="content">
-                                        <span class="author">Smart Digital</span>
-                                        <p class="title">
-                                          Lorem ipsum, dolor sit amet
-                                          consectetur adipisicing elit.
-                                          Tempora.
-                                        </p>
-                                        <a href="#" class="button" data-toggle="modal"
-                                          data-target=".datavisualization">Expand
-                                          details
-                                        </a>
+
+                                      <div class="data">
+                                        <div class="content">
+                                          <span class="author">Smart Digital</span>
+                                          <p href="#" class="button" data-toggle="modal"
+                                            data-target=".datavisualization">Show more
+                                          </p>
+                                        </div>
                                       </div>
                                     </div>
                                   </div>
-                                </div>
-                              </span>
+                                </span>
+                              </a>
                             </span>
                           </div>
                         </div>
                       </div>
                     </div>
-
-                    <div class="c-scene__cover c-scene__cover--scene"></div>
                   </div>
                 </div>
               </div>
@@ -184,434 +155,297 @@
             <!-- End of hero section -->
             <!--------------------Menu content------------------------>
             <section id="menu1" class="section section-a  main-content_navegation main1 " style="
-            background: url(https://i.gifer.com/DVyK.gif)center/cover no-repeat; ">
-              <div class="section-title title-anim  section-title-nav">
-                <h2 class="text text-stroke text-lg rellax services-txt" data-rellax-horizontal data-rellax-speed="-4"
-                  data-rellax-percentage="0.5">
-                  <img class="img_navs" src="assets/images/iconos/database2.svg" alt="">
-                  Data Visualization
-                </h2>
-                <p class="ttile-navegation">
-                  Lorem ipsum, dolor sit amet
-                  consectetur adipisicing elit.
-                  Tempora.
-                </p>
-              </div>
-              <div class="main-custom ">
-                <div class="section-navegation">
-                  <div class="close-section-navegation">&times;</div>
-                  <div class="demo-box">
-                    <img class="icon-demo" src="assets/images/iconos/scanner.svg" alt="">
-                    Field Laser Scanning
+            background: url()center/cover no-repeat; ">
+              <a class="btn-volver" data-scroll-to href="#home">&times; Volver a servicios</a>
+              <div class="menu-grid">
+                <div class="menu-grid_item">
+                  <div class="content-services">
+                    <div class="section-title title-anim  section-title-nav">
+                      <h2 class="text text-stroke text-lg rellax services-txt" data-rellax-horizontal
+                        data-rellax-speed="-4" data-rellax-percentage="0.5">
+                        <img class="img_navs" src="assets/images/iconos/database2.svg" alt="">
+                        Data Visualization
+                      </h2>
+                    </div>
+
+                    <p class="ttile-navegation">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam
+                      praesentium molestiae expedita in dicta quibusdam qui ea officia nulla, sed saepe quia hic et aut,
+                      ex atque eveniet molestias suscipit.
+                    </p>
+                    <!-------------------------------------sliders--------------------------------------------->
+                    <div class="row">
+                      <div class="demo-gallery">
+                        <a href="assets/images/1.png" data-size="1600x1600" data-med="assets/images/1.png"
+                          data-med-size="1024x1024" data-author="Folkert Gorter" class="demo-gallery__img--main">
+                          <img src="assets/images/1.png" alt="" />
+                        </a>
+                        <a href="assets/images/card1.jpg" data-size="1600x1068" data-med="assets/images/card1.jpg"
+                          data-med-size="1024x683" data-author="Samuel Rohl">
+                          <img src="assets/images/card1.jpg" alt="" />
+                        </a>
+                        <a href="assets/images/card2.jpg" data-size="1600x1067" data-med="assets/images/card2.jpg"
+                          data-med-size="1024x683" data-author="Ales Krivec">
+                          <img src="assets/images/card2.jpg" alt="" />
+                        </a>
+                        <a href="assets/images/card3.jpg" data-size="1600x1067" data-med="assets/images/card3.jpg"
+                          data-med-size="1024x683" data-author="Michael Hull">
+                          <img src="assets/images/card3.jpg" alt="" />
+                        </a>
+                        <a href="assets/images/card4.jpg" data-size="1600x1067" data-med="assets/images/card4.jpg"
+                          data-med-size="1024x683" data-author="Michael Hull">
+                          <img src="assets/images/card4.jpg" alt="" />
+                        </a>
+                        <a href="assets/images/4.JPG" data-size="1600x1067" data-med="assets/images/4.JPG"
+                          data-med-size="1024x683" data-author="Michael Hull">
+                          <img src="assets/images/4.JPG" alt="" />
+                        </a>
+                      </div>
+                    </div>
+                    <!---------------------------------------------------------------------------------->
                   </div>
                 </div>
-                <div class="section-navegation">
-                  <div class="close-section-navegation">&times;</div>
-                  <div class="demo-box">
-                    <img class="icon-demo" src="assets/images/iconos/drone.svg" alt="">
-                    Photogrammetry & Drones
-                  </div>
-                </div>
-                <div class="section-navegation">
-                  <div class="close-section-navegation">&times;</div>
-                  <div class="demo-box">
-                    <img class="icon-demo" src="assets/images/iconos/database.svg" alt="">
-                    Data Registration
-                  </div>
-                </div>
-                <div class="section-navegation">
-                  <div class="close-section-navegation">&times;</div>
-                  <div class="demo-box">
-                    <img class="icon-demo" src="assets/images/iconos/vision.svg" alt="">
-                    Bubble Views
-                  </div>
-                </div>
-                <div class="section-navegation">
-                  <div class="close-section-navegation">&times;</div>
-                  <div class="demo-box">
-                    <img class="icon-demo" src="assets/images/iconos/around-the-world.svg" alt="">
-                    Portal Navigation
-                  </div>
-                </div>
-                <div class="section-navegation">
-                  <div class="close-section-navegation">&times;</div>
-                  <div class="demo-box">
-                    <img class="icon-demo" src="assets/images/iconos/database2.svg" alt="">
-                    Data Applications
+                <div class="menu-grid_item">
+                  <div class="main-custom ">
+                    <div class="section-navegation">
+
+                      <div class="demo-box">
+                        <img class="icon-demo" src="assets/images/iconos/scanner.svg" alt="">
+                        Field Laser Scanning
+                      </div>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat laborum tempora rerum, sed
+                        quod harum labore voluptas dolorem asperiores perspiciatis beatae aspernatur illo, possimus
+                        soluta non temporibus vitae. Alias, nostrum?</p>
+                    </div>
+                    <div class="section-navegation">
+
+                      <div class="demo-box">
+                        <img class="icon-demo" src="assets/images/iconos/drone.svg" alt="">
+                        Photogrammetry & Drones
+                      </div>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat laborum tempora rerum, sed
+                        quod harum labore voluptas dolorem asperiores perspiciatis beatae aspernatur illo, possimus
+                        soluta non temporibus vitae. Alias, nostrum?</p>
+                    </div>
+
+
+                    <div class="section-navegation">
+
+                      <div class="demo-box">
+                        <img class="icon-demo" src="assets/images/iconos/around-the-world.svg" alt="">
+                        Portal Navigation
+                      </div>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat laborum tempora rerum, sed
+                        quod harum labore voluptas dolorem asperiores perspiciatis beatae aspernatur illo, possimus
+                        soluta non temporibus vitae. Alias, nostrum?</p>
+                    </div>
+                    <div class="section-navegation">
+
+                      <div class="demo-box">
+                        <img class="icon-demo" src="assets/images/iconos/database.svg" alt="">
+                        Data Applications
+                      </div>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat laborum tempora rerum, sed
+                        quod harum labore voluptas dolorem asperiores perspiciatis beatae aspernatur illo, possimus
+                        soluta non temporibus vitae. Alias, nostrum?</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </section>
+
             <section id="menu2" class="section section-a  main-content_navegation main2 " style="
-            background: url(https://media4.giphy.com/media/Jqyb0NPvzQpdx1uyK2/giphy.gif)center/cover no-repeat; ">
-              <div class="section-title title-anim  section-title-nav">
-                <h2 class="text text-stroke text-lg rellax services-txt" data-rellax-horizontal data-rellax-speed="-4"
-                  data-rellax-percentage="0.5">
-                  <img class="img_navs" src="assets/images/iconos/database2.svg" alt="">
-                  Digital Twins
-                </h2>
-                <p class="ttile-navegation">
-                  Lorem ipsum, dolor sit amet
-                  consectetur adipisicing elit.
-                  Tempora.
-                </p>
-              </div>
-              <div class="main-custom ">
-                <div class="section-navegation">
-                  <div class="close-section-navegation">&times;</div>
-                  <div class="demo-box">
-                    <img class="icon-demo" src="assets/images/iconos/scanner.svg" alt="">
-                    3D Geometrical Models
+            background: url()center/cover no-repeat; ">
+              <a class="btn-volver" data-scroll-to href="#home">&times; Volver a servicios</a>
+              <div class="menu-grid">
+                <div class="menu-grid_item">
+                  <div class="content-services">
+                    <div class="section-title title-anim  section-title-nav">
+                      <h2 class="text text-stroke text-lg rellax services-txt" data-rellax-horizontal
+                        data-rellax-speed="-4" data-rellax-percentage="0.5">
+                        <img class="img_navs" src="assets/images/iconos/database2.svg" alt="">
+                        Digital Twins
+                      </h2>
+                    </div>
+
+                    <p class="ttile-navegation">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam
+                      praesentium molestiae expedita in dicta quibusdam qui ea officia nulla, sed saepe quia hic et aut,
+                      ex atque eveniet molestias suscipit.
+                    </p>
+                    <!-------------------------------------sliders--------------------------------------------->
+                    <div class="row">
+                      <div class="demo-gallery">
+                        <a href="assets/images/1.png" data-size="1600x1600" data-med="assets/images/1.png"
+                          data-med-size="1024x1024" data-author="Folkert Gorter" class="demo-gallery__img--main">
+                          <img src="assets/images/1.png" alt="" />
+                        </a>
+                        <a href="assets/images/card1.jpg" data-size="1600x1068" data-med="assets/images/card1.jpg"
+                          data-med-size="1024x683" data-author="Samuel Rohl">
+                          <img src="assets/images/card1.jpg" alt="" />
+                        </a>
+                        <a href="assets/images/card2.jpg" data-size="1600x1067" data-med="assets/images/card2.jpg"
+                          data-med-size="1024x683" data-author="Ales Krivec">
+                          <img src="assets/images/card2.jpg" alt="" />
+                        </a>
+                        <a href="assets/images/card3.jpg" data-size="1600x1067" data-med="assets/images/card3.jpg"
+                          data-med-size="1024x683" data-author="Michael Hull">
+                          <img src="assets/images/card3.jpg" alt="" />
+                        </a>
+                        <a href="assets/images/card4.jpg" data-size="1600x1067" data-med="assets/images/card4.jpg"
+                          data-med-size="1024x683" data-author="Michael Hull">
+                          <img src="assets/images/card4.jpg" alt="" />
+                        </a>
+                        <a href="assets/images/4.JPG" data-size="1600x1067" data-med="assets/images/4.JPG"
+                          data-med-size="1024x683" data-author="Michael Hull">
+                          <img src="assets/images/4.JPG" alt="" />
+                        </a>
+                      </div>
+                    </div>
+                    <!---------------------------------------------------------------------------------->
                   </div>
                 </div>
-                <div class="section-navegation">
-                  <div class="close-section-navegation">&times;</div>
-                  <div class="demo-box">
-                    <img class="icon-demo" src="assets/images/iconos/drone.svg" alt="">
-                    3D Intelligent Models
-                  </div>
-                </div>
-                <div class="section-navegation">
-                  <div class="close-section-navegation">&times;</div>
-                  <div class="demo-box">
-                    <img class="icon-demo" src="assets/images/iconos/database.svg" alt="">
-                    The Digital Hub
-                  </div>
-                </div>
-                <div class="section-navegation">
-                  <div class="close-section-navegation">&times;</div>
-                  <div class="demo-box">
-                    <img class="icon-demo" src="assets/images/iconos/vision.svg" alt="">
-                    Maintenance
-                  </div>
-                </div>
-                <div class="section-navegation">
-                  <div class="close-section-navegation">&times;</div>
-                  <div class="demo-box">
-                    <img class="icon-demo" src="assets/images/iconos/around-the-world.svg" alt="">
-                    Portal Navigation
-                  </div>
-                </div>
-                <div class="section-navegation">
-                  <div class="close-section-navegation">&times;</div>
-                  <div class="demo-box">
-                    <img class="icon-demo" src="assets/images/iconos/database2.svg" alt="">
-                    Operations
+                <div class="menu-grid_item">
+                  <div class="main-custom ">
+                    <div class="section-navegation">
+
+                      <div class="demo-box">
+                        <img class="icon-demo" src="assets/images/iconos/scanner.svg" alt="">
+                        Field Laser Scanning
+                      </div>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat laborum tempora rerum, sed
+                        quod harum labore voluptas dolorem asperiores perspiciatis beatae aspernatur illo, possimus
+                        soluta non temporibus vitae. Alias, nostrum?</p>
+                    </div>
+                    <div class="section-navegation">
+
+                      <div class="demo-box">
+                        <img class="icon-demo" src="assets/images/iconos/drone.svg" alt="">
+                        Photogrammetry & Drones
+                      </div>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat laborum tempora rerum, sed
+                        quod harum labore voluptas dolorem asperiores perspiciatis beatae aspernatur illo, possimus
+                        soluta non temporibus vitae. Alias, nostrum?</p>
+                    </div>
+
+
+                    <div class="section-navegation">
+
+                      <div class="demo-box">
+                        <img class="icon-demo" src="assets/images/iconos/around-the-world.svg" alt="">
+                        Portal Navigation
+                      </div>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat laborum tempora rerum, sed
+                        quod harum labore voluptas dolorem asperiores perspiciatis beatae aspernatur illo, possimus
+                        soluta non temporibus vitae. Alias, nostrum?</p>
+                    </div>
+                    <div class="section-navegation">
+
+                      <div class="demo-box">
+                        <img class="icon-demo" src="assets/images/iconos/database.svg" alt="">
+                        Data Applications
+                      </div>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat laborum tempora rerum, sed
+                        quod harum labore voluptas dolorem asperiores perspiciatis beatae aspernatur illo, possimus
+                        soluta non temporibus vitae. Alias, nostrum?</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </section>
-            <section id="menu3" class="section section-a  main-content_navegation main3 "
-              style="
-            background: url(https://static.wixstatic.com/media/bb7b70_d5fde322f7914060b7d997ba9d506a50~mv2.gif)center/cover no-repeat; ">
-              <div class="section-title title-anim  section-title-nav">
-                <h2 class="text text-stroke text-lg rellax services-txt" data-rellax-horizontal data-rellax-speed="-4"
-                  data-rellax-percentage="0.5">
-                  <img class="img_navs" src="assets/images/iconos/database2.svg" alt="">
-                  Smart Digital
 
-                </h2>
-                <p class="ttile-navegation">
-                  Lorem ipsum, dolor sit amet
-                  consectetur adipisicing elit.
-                  Tempora.
-                </p>
-              </div>
-              <div class="main-custom ">
-                <div class="section-navegation">
-                  <div class="close-section-navegation">&times;</div>
-                  <div class="demo-box">
-                    <img class="icon-demo" src="assets/images/iconos/scanner.svg" alt="">
-                    Digital Transformation
-                    <div class="contendio-navegation container mt-5 pt-5">
-                      <div class="row">
-                        <div class="col-md-6 txt-navegation ">
-                          <p>
-                            Digital transformation (DT) is reinventing business as we know it every enterprise now faces
-                            a
-                            choice between innovation or extinction. DT is not specifically about IT or technology, it´s
-                            about redefining the entire business strategy, perhaps changing the corporate culture to
-                            succeed in digital the company should think of technology not just as a support function but
-                            as a strategic competency , digital transformation is not just about applying technology to
-                            your business , it is actually about creating entirely new business models on the backbone
-                            of
-                            technology.
-                            It is imperative for every business to adapt and take advantage of the ways the digital
-                            world
-                            has radically changed consumer behavior and expectations. The company customers, its
-                            channels its and its competition have already gone digital, therefore companies need to
-                            address these changes before your competition do.
-                          </p>
-                        </div>
-                        <div class="col-md-6">
-                          <img class="img-nav" src="assets/images/menu/digital.png" alt="">
-                        </div>
-                      </div>
+            <section id="menu3" class="section section-a  main-content_navegation main3 " style="
+            background: url()center/cover no-repeat; ">
+              <a class="btn-volver" data-scroll-to href="#home">&times; Volver a servicios</a>
+              <div class="menu-grid">
+                <div class="menu-grid_item">
+                  <div class="content-services">
+                    <div class="section-title title-anim  section-title-nav">
+                      <h2 class="text text-stroke text-lg rellax services-txt" data-rellax-horizontal
+                        data-rellax-speed="-4" data-rellax-percentage="0.5">
+                        <img class="img_navs" src="assets/images/iconos/database2.svg" alt="">
+                        Smart Digital
+                      </h2>
                     </div>
+
+                    <p class="ttile-navegation">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam
+                      praesentium molestiae expedita in dicta quibusdam qui ea officia nulla, sed saepe quia hic et aut,
+                      ex atque eveniet molestias suscipit.
+                    </p>
+                    <!-------------------------------------sliders--------------------------------------------->
+
+                    <!---------------------------------------------------------------------------------->
                   </div>
-
                 </div>
-                <div class="section-navegation section-navegation-2">
-                  <div class="close-section-navegation close-digital">&times;</div>
-                  <div class="demo-box click-digital">
-                    <img class="icon-demo" src="assets/images/iconos/drone.svg" alt="">
-                    Digital Twins
-                    <div class="contendio-navegation container mt-5 pt-5">
-                      <div class="row">
-                        <div class="col-md-6 txt-navegation ">
-                          <p>
-                            A digital twin is a digital or virtual copy of physical assets or products. The term digital
-                            twin was originally coined by Dr Michael Grieves in 2002. NASA was one of the first to use
-                            this technology for space exploration missions. Digital twins connect the real and virtual
-                            world by collecting real-time data from the installed sensors/devices.
-                            The collected data is either locally decentralized or centrally stored in a cloud, the data
-                            is
-                            then evaluated and simulated in virtual copy of the assets. After receiving the information
-                            from the simulation the parameters are applied to real assets. This integration of data in
-                            real and virtual representations helps in optimizing the performance of real assets.
-                            Digital twins can be used in various industries: manufacturing, automotive, constructions,
-                            utilities, healthcare, among others.
-                            Digital twins are the next big thing in Fourth Industrial Revolution for the development of
-                            new products and processes
-                          </p>
-                        </div>
-                        <div class="col-md-6">
-                          <img class="img-nav" style="width:100%" src="assets/images/menu/digital.jpg" alt="">
-                        </div>
-                        <div class="col-md-12 pb-5 pt-5">
-                          <div class="slider">
-                            <div class="slide-track">
-                              <div class="slide">
-                                <img src="assets/images/menu/Recurso 3.png" height="100" width="250" alt="" />
-                              </div>
-                              <div class="slide">
-                                <img src="assets/images/menu/Recurso 4.png" height="100" width="250" alt="" />
-                              </div>
-                              <div class="slide">
-                                <img src="assets/images/menu/Recurso 5.png" height="100" width="250" alt="" />
-                              </div>
-                              <div class="slide">
-                                <img src="assets/images/menu/Recurso 6.png" height="100" width="250" alt="" />
-                              </div>
-                              <div class="slide">
-                                <img src="assets/images/menu/Recurso 7.png" height="100" width="250" alt="" />
-                              </div>
-                              <div class="slide">
-                                <img src="assets/images/menu/Recurso 3.png" height="100" width="250" alt="" />
-                              </div>
-                              <div class="slide">
-                                <img src="assets/images/menu/Recurso 4.png" height="100" width="250" alt="" />
-                              </div>
-                              <div class="slide">
-                                <img src="assets/images/menu/Recurso 5.png" height="100" width="250" alt="" />
-                              </div>
-                              <div class="slide">
-                                <img src="assets/images/menu/Recurso 6.png" height="100" width="250" alt="" />
-                              </div>
-                              <div class="slide">
-                                <img src="assets/images/menu/Recurso 7.png" height="100" width="250" alt="" />
-                              </div>
+                <div class="menu-grid_item">
+                  <div class="main-custom ">
+                    <div class="section-navegation">
 
-                            </div>
+                      <div class="demo-box">
+                        <img class="icon-demo" src="assets/images/iconos/scanner.svg" alt="">
+                        Field Laser Scanning
+                      </div>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat laborum tempora rerum, sed
+                        quod harum labore voluptas dolorem asperiores perspiciatis beatae aspernatur illo, possimus
+                        soluta non temporibus vitae. Alias, nostrum?</p>
+                      <div class="demo-gallery swiper-miniaturas">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <a href="assets/images/1.png" data-size="1600x1600" data-med="assets/images/1.png"
+                              data-med-size="1024x1024" data-author="Folkert Gorter" class="demo-gallery__img--main ">
+                              <img src="assets/images/1.png" alt="" />
+                            </a>
                           </div>
-                        </div>
-                        <div class="col-md-4">
-                          <div class="p-navigation">
-                            <div class="row row-center">
-                              <div class="col-md-6">
-                                <p>IoT</p>
-                                <p>Ai/ML/DL</p>
-                                <p>Cyber security</p>
-                              </div>
-                              <div class="col-md-6">
-                                <p class="bordess">Simulation Visualization</p>
-                              </div>
-                            </div>
+                          <div class="swiper-slide">
+                            <a href="assets/images/1.png" data-size="1600x1600" data-med="assets/images/1.png"
+                              data-med-size="1024x1024" data-author="Folkert Gorter" class="demo-gallery__img--main ">
+                              <img src="assets/images/1.png" alt="" />
+                            </a>
                           </div>
-                        </div>
-                        <div class="col-md-4">
-                          <div class="p-navigation">
-                            <div class="row row-center">
-                              <div class="col-md-6 center--nav">
-                                <img width="50px" src="assets/images/menu/Recurso 8.png" alt="">
-                              </div>
-                              <div class="col-md-6">
-                                <div class="bordess">
-                                  <p>Orchetration</p>
-                                  <p>Dasboard</p>
-                                  <p>Plataform</p>
-                                </div>
-
-                              </div>
-                            </div>
-
+                          <div class="swiper-slide">
+                            <a href="assets/images/1.png" data-size="1600x1600" data-med="assets/images/1.png"
+                              data-med-size="1024x1024" data-author="Folkert Gorter" class="demo-gallery__img--main ">
+                              <img src="assets/images/1.png" alt="" />
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="assets/images/1.png" data-size="1600x1600" data-med="assets/images/1.png"
+                              data-med-size="1024x1024" data-author="Folkert Gorter" class="demo-gallery__img--main ">
+                              <img src="assets/images/1.png" alt="" />
+                            </a>
                           </div>
 
-
                         </div>
-                        <div class="col-md-4">
-                          <div class="p-navigation">
-                            <div class="row row-center">
-                              <div class="col-md-6 center--nav">
-                                <img width="100px" src="assets/images/menu/Recurso 10.png" alt="">
-                              </div>
-                              <div class="col-md-6">
-                                <p>Analysis</p>
-                                <p>Planning</p>
-                                <p>Agile metthodologies</p>
-                              </div>
-                            </div>
 
-                          </div>
-                        </div>
+
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div class="section-navegation section-navegation-data">
-                  <div class="close-section-navegation close-digital">&times;</div>
-                  <div class="demo-box click-digital-2">
-                    <img class="icon-demo" src="assets/images/iconos/database.svg" alt="">
-                    Big Data / Analytics
-                    <div class="contendio-navegation container mt-5 pt-5">
-                      <div class="row">
-                        <div class="col-md-6 txt-navegation ">
-                          <p>
-                            <strong> DATA:</strong> “Data is defined as the qualities, characters, or symbols on which
-                            operations are
-                            performed by a computer, which may be stored and transmitted in the form of electrical
-                            signals and recorded on magnetic, optical or mechanical recording media”. In simple
-                            words, it can be said that all the facts and figures which can be stored in digital format
-                            and be termed as data. All the texts, numbers, images, audios, videos, store in our
-                            phones and computers are some examples of data. They are digitally stored and
-                            comprise of zeros and ones. Thus, Big Data refers to a collection of data that is so huge
-                            and complex that none of the traditional data management tools are able to store it or
-                            process it efficiently. <br>
-                            <strong> ANALYTICS:</strong> Analytics is the language of data, it allows us to talk to data
-                            and more
-                            importantly listen to what the data has to tell us, this becomes especially critical in
-                            today’s workplace where we are surrounded by data. With analytics, an organization is
-                            better able to be descriptive, predictive and prescriptive but only if there’s a firm
-                            connection between what analytics can deliver and what business is trying to
-                            accomplish
-                          </p>
-                        </div>
-                        <div class="col-md-6">
-                          <img class="img-nav" src="assets/images/menu/Recurso 11.png" alt="">
-                        </div>
+                    <div class="section-navegation">
 
-                        <div class="col-md-12 mt-5">
-                          <center class="position-relative">
-
-                            <nav class="circular-menu">
-                              <input class="circular-menu__button" id="circular-menu" type="checkbox"
-                                href="javascript: void 0" checked="checked" />
-                              <label class="circular-menu__icon" for="circular-menu">
-                                Big <br> data
-                                <!---<div class="hamburger hamburger-bar"></div>
-                                <div class="hamburger hamburger-bar"></div>
-                                <div class="hamburger hamburger-bar"></div>-->
-                              </label>
-                              <a class="circular-menu__item" href="#"><img src="assets/images/menu/Recurso 20.png"
-                                  alt="">
-                                <p></p>
-                              </a><a class="circular-menu__item" href="#"><img src="assets/images/menu/Recurso 16.png"
-                                  alt=""></a><a class="circular-menu__item" href="#"><img
-                                  src="assets/images/menu/Recurso 17.png" alt=""></a><a class="circular-menu__item"
-                                href="#"><img src="assets/images/menu/Recurso 18.png" alt=""></a><a
-                                class="circular-menu__item" href="#"><img src="assets/images/menu/Recurso 19.png"
-                                  alt=""></a>
-                            </nav>
-                          </center>
-                        </div>
+                      <div class="demo-box">
+                        <img class="icon-demo" src="assets/images/iconos/drone.svg" alt="">
+                        Photogrammetry & Drones
                       </div>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat laborum tempora rerum, sed
+                        quod harum labore voluptas dolorem asperiores perspiciatis beatae aspernatur illo, possimus
+                        soluta non temporibus vitae. Alias, nostrum?</p>
                     </div>
-                  </div>
-                </div>
-                <div class="section-navegation">
-                  <div class="close-section-navegation">&times;</div>
-                  <div class="demo-box">
-                    <img class="icon-demo" src="assets/images/iconos/vision.svg" alt="">
-                    Artificial Intelligence
-
-                    <div class="contendio-navegation container mt-5 pt-5">
-                      <div class="row">
-                        <div class="col-md-6 txt-navegation ">
-                          <p>
-                            Artificial intelligence (AI) refers to the simulation of human intelligence in
-                            machines that are programmed to think like humans and mimic their actions. The
-                            term may also be applied to any machine that exhibits traits associated with a
-                            human mind such as learning and problem-solving
-                          </p>
-                        </div>
-                        <div class="col-md-6">
-                          <img class="img-nav" src="http://imgfz.com/i/ZNnjJRW.png" alt="">
-                        </div>
+                    <div class="section-navegation">
+                      <div class="demo-box">
+                        <img class="icon-demo" src="assets/images/iconos/around-the-world.svg" alt="">
+                        Portal Navigation
                       </div>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat laborum tempora rerum, sed
+                        quod harum labore voluptas dolorem asperiores perspiciatis beatae aspernatur illo, possimus
+                        soluta non temporibus vitae. Alias, nostrum?</p>
                     </div>
-                  </div>
-                </div>
-                <div class="section-navegation">
-                  <div class="close-section-navegation">&times;</div>
-                  <div class="demo-box">
-                    <img class="icon-demo" src="assets/images/iconos/around-the-world.svg" alt="">
-                    Robotic Process Automation (RPA)
-                    <div class="contendio-navegation container mt-5 pt-5">
-                      <div class="row">
-                        <div class="col-md-12 txt-navegation ">
-                          <p>
-                            RPA is the use of software with
-                            artificial intelligence (AI) and
-                            machine learning capabilities
-                            (ML) to handle high volume
-                            repetitive tasks that previously
-                            requires humans to perform. RPA
-                            is a feature of intelligent process
-                            automation (IPA) that describes
-                            logic driven robots executing preprogrammed rules on mostly
-                            structured data. RPA takes
-                            productivity optimization to the
-                            next level by redefining work and
-                            reassigning employees to execute
-                            higher-value activities. Process
-                            bots are capable of independently
-                            performing simple human-like
-                            functions such as interpreting,
-                            deciding, acting, and learning.
-                          </p>
-                        </div>
-                        <div class="col-md-4">
+                    <div class="section-navegation">
 
-                        </div>
-                        <div class="col-md-4">
-
-                        </div>
-                        <div class="col-md-4">
-
-                        </div>
+                      <div class="demo-box">
+                        <img class="icon-demo" src="assets/images/iconos/database.svg" alt="">
+                        Data Applications
                       </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="section-navegation">
-                  <div class="close-section-navegation">&times;</div>
-                  <div class="demo-box">
-                    <img class="icon-demo" src="assets/images/iconos/database2.svg" alt="">
-                    Cyber Security
-                    <div class="contendio-navegation container mt-5 pt-5">
-                      <div class="row">
-                        <div class="col-md-12 txt-navegation ">
-                          <p>
-                            Cyber Security is techniques and practices designed to protect data and when
-                            we talk about data, we are talking about digital data, so data that is store,
-                            transmitted or used on an information system.
-                            In an era of rapid digital transformation and the proliferation of ever increasing
-                            amounts of data, cyber risk is rising up the priority scale at organizations of all
-                            sizes and in all industries.
-                          </p>
-                        </div>
-
-                      </div>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat laborum tempora rerum, sed
+                        quod harum labore voluptas dolorem asperiores perspiciatis beatae aspernatur illo, possimus
+                        soluta non temporibus vitae. Alias, nostrum?</p>
                     </div>
                   </div>
                 </div>
@@ -620,20 +454,20 @@
 
 
             <!--------------------Menu content------------------------>
-            <section id="about" class="section section-a pt-5 pb-5 ">
+            <!--<section id="about" class="section section-a pt-5 pb-5 ">
               <div class="section-title title-anim overflow-hidden">
                 <h2 class="text text-stroke text-lg rellax txt-whites" data-rellax-horizontal data-scroll-speed="5"
                   data-scroll-position="top" data-scroll-delay="0.05">
                   About
                 </h2>
               </div>
-              <!-- Begin of section body -->
+              
               <div class="">
-                <!-- content -->
+            
                 <div class="section-content container content-width anim p30">
                   <div class="row">
                     <div class="col-12 col-lg-12 text-left">
-                      <!-- title and description -->
+                  
                       <div class="title-desc xl-text-size">
                         <p class="anim-1 inline-text p-blue " data-anim-visible="by-letter">
                           Lorem ipsum dolor sit amet consectetur adipisicing e
@@ -648,10 +482,10 @@
                   </div>
                 </div>
               </div>
-              <!-- End of section body -->
-            </section>
+           
+            </section>--->
 
-            <section id="projects" class="section section-a with-overflow section-white_content">
+            <section id="business" class="section section-a with-overflow section-white_content">
               <div class="section-title title-left text-vert z-top"></div>
               <!-- Begin of section body -->
               <div class="section-body section-white pb-12">
@@ -670,7 +504,7 @@
                     </div>
                     <div class="col-lg-5 text-right">
                       <a class="btn btn-outline-b btn-white text-spaced text-uppercase title-blue" href="#about">
-                        <span class="text">our services</span>
+                        <span class="text">Business Model</span>
                       </a>
                     </div>
                   </div>
@@ -690,7 +524,7 @@
                               <span class="pricing-table__save">lorem ipsum</span>
                             </p>
                             <ul class="pricing-table__products">
-                              <li data-tooltip="This link goes nowhere" data-tooltip-location="right"
+                              <!-----  <li data-tooltip="This link goes nowhere" data-tooltip-location="right"
                                 class="pricing-table__product"><a href="">Included item title</a></li>
                               <li class="pricing-table__product"><a href="">Included item title</a></li>
                               <li class="pricing-table__product pricing-table__product--excluded"><a href="">Excluded
@@ -698,33 +532,43 @@
                                   title</a></li>
                               <li class="pricing-table__product pricing-table__product--excluded"><a href="">Excluded
                                   item
-                                  title</a></li>
+                                  title</a></li>--->
                             </ul>
-                            <a href="" class="pricing-table__button"> GET STARTED</a>
+                            <!-------------------------------------sliders--------------------------------------------->
+                            <div class="row">
+                              <div class="demo-gallery mt-0">
+                                <a href="assets/images/1.png" data-size="1600x1600" data-med="assets/images/1.png"
+                                  data-med-size="1024x1024" data-author="Folkert Gorter"
+                                  class="demo-gallery__img--main">
+                                  <img src="assets/images/1.png" alt="" />
+                                </a>
+                                <a href="assets/images/card1.jpg" data-size="1600x1068"
+                                  data-med="assets/images/card1.jpg" data-med-size="1024x683" data-author="Samuel Rohl">
+                                  <img src="assets/images/card1.jpg" alt="" />
+                                </a>
+                                <a href="assets/images/card2.jpg" data-size="1600x1067"
+                                  data-med="assets/images/card2.jpg" data-med-size="1024x683" data-author="Ales Krivec">
+                                  <img src="assets/images/card2.jpg" alt="" />
+                                </a>
+                                <a href="assets/images/card3.jpg" data-size="1600x1067"
+                                  data-med="assets/images/card3.jpg" data-med-size="1024x683"
+                                  data-author="Michael Hull">
+                                  <img src="assets/images/card3.jpg" alt="" />
+                                </a>
+                                <a href="assets/images/card4.jpg" data-size="1600x1067"
+                                  data-med="assets/images/card4.jpg" data-med-size="1024x683"
+                                  data-author="Michael Hull">
+                                  <img src="assets/images/card4.jpg" alt="" />
+                                </a>
+                                <a href="assets/images/4.JPG" data-size="1600x1067" data-med="assets/images/4.JPG"
+                                  data-med-size="1024x683" data-author="Michael Hull">
+                                  <img src="assets/images/4.JPG" alt="" />
+                                </a>
+                              </div>
+                            </div>
+                            <!---------------------------------------------------------------------------------->
                           </li>
-                        </div>
-                        <div class="swiper-slide">
-                          <li class="pricing-table__item">
-                            <h3 class="pricing-table__title">Service Option # 2 Title</h3>
-                            <p class="pricing-table__description">
-                              <span class="pricing-table__tagline">The tagline goes here</span>
-                              <span class="pricing-table__price"></span>
 
-                              <span class="pricing-table__save">lorem ipsum</span>
-                            </p>
-                            <ul class="pricing-table__products">
-                              <li data-tooltip="This link goes nowhere" data-tooltip-location="right"
-                                class="pricing-table__product"><a href="">Included item title</a></li>
-                              <li class="pricing-table__product"><a href="">Included item title</a></li>
-                              <li class="pricing-table__product pricing-table__product--excluded"><a href="">Excluded
-                                  item
-                                  title</a></li>
-                              <li class="pricing-table__product pricing-table__product--excluded"><a href="">Excluded
-                                  item
-                                  title</a></li>
-                            </ul>
-                            <a href="" class="pricing-table__button"> GET STARTED</a>
-                          </li>
                         </div>
 
                       </div>
@@ -734,7 +578,7 @@
                       <div class="swiper-button-next"></div>
                       <div class="swiper-button-prev"></div>
                     </div>
-                    <li class="pricing-table__item pricing-table__item--popular item-card_size" data-popular="Popular">
+                    <li class="pricing-table__item pricing-table__item--popular item-card_size">
                       <h3 class="pricing-table__title">SAAS Service Option Title</h3>
                       <p class="pricing-table__description">
                         <span class="pricing-table__tagline">The tagline goes here</span>
@@ -753,93 +597,12 @@
 
                   </ul>
                 </div>
-                <!-----<div clas<s="section-content container content-xl anim">
-               
-                  <div class="part-wrapper">
-                    <div class="item-list row row-cols-1 row-cols-md-2 g-list shifted-odd">
-                      <div class="col">
-                      
-                        <div class="card-model" data-scroll data-scroll-speed="3">
-                          <div class="image">
-                            <img
-                              src="https://static.wixstatic.com/media/bb7b70_d5fde322f7914060b7d997ba9d506a50~mv2.gif" />
-                          </div>
-                          <div class="details">
-                            <div class="center">
-                              <h1>Lorem<br><span>title</span></h1>
-                              <p>Lorem ipsum is simple dummy text on the printing and typesetting industry.</p>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quas quisquam quidem
-                                consectetur vero et sapiente p praesentium recusandae quidem sit soluta ab. Modi.</p>
-                            </div>
-                          </div>
-                          <h4 class="title-model">SAAS Service Option Title</h4>
-                        </div>
-                       
-                      </div>
-                      <div class="col">
-                       
-                        <div class="card-model" data-scroll data-scroll-speed="3">
-                          <div class="image">
-                            <img src="https://i.gifer.com/DVyK.gif" />
-                          </div>
-                          <div class="details">
-                            <div class="center">
-                              <h1>Lorem<br><span>title</span></h1>
-                              <p>Lorem ipsum is simple dummy text on the printing and typesetting industry.</p>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quas quisquam quidem
-                                consectetur vero et sapiente p praesentium recusandae quidem sit soluta ab. Modi.</p>
-                            </div>
-                          </div>
-                          <h4 class="title-model">SAAS Service Option Title</h4>
-                        </div>
-                    
-                      </div>
-                      <div class="col">
-                      
-                        <div class="card-model" data-scroll data-scroll-speed="3">
-                          <div class="image">
-                            <img
-                              src="https://static.wixstatic.com/media/bb7b70_d5fde322f7914060b7d997ba9d506a50~mv2.gif" />
-                          </div>
-                          <div class="details">
-                            <div class="center">
-                              <h1>Lorem<br><span>title</span></h1>
-                              <p>Lorem ipsum is simple dummy text on the printing and typesetting industry.</p>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quas quisquam quidem
-                                consectetur vero et sapiente p praesentium recusandae quidem sit soluta ab. Modi.</p>
-                            </div>
-                          </div>
-                          <h4 class="title-model">SAAS Service Option Title</h4>
-                        </div>
-                     
-                      </div>
-                      <div class="col">
-                    
-                        <div class="card-model" data-scroll data-scroll-speed="3">
-                          <div class="image">
-                            <img src="https://media4.giphy.com/media/Jqyb0NPvzQpdx1uyK2/giphy.gif" />
-                          </div>
-                          <div class="details">
-                            <div class="center">
-                              <h1>Lorem<br><span>title</span></h1>
-                              <p>Lorem ipsum is simple dummy text on the printing and typesetting industry.</p>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quas quisquam quidem
-                                consectetur vero et sapiente p praesentium recusandae quidem sit soluta ab. Modi.</p>
-                            </div>
-                          </div>
-                          <h4 class="title-model">SAAS Service Option Title</h4>
-                        </div>
-                      
-                      </div>
-                    
-                    </div>
-                  </div>
-                </div>--->
+
               </div>
 
               <!-- End of section body -->
             </section>
-            <section id="team" class="section section-a with-overflow section-white_content">
+            <section id="aourroadmap" class="section section-a with-overflow section-white_content">
               <div class="section-title title-left text-vert z-top"></div>
               <!-- Begin of section body -->
               <div class="section-body section-white pb-12 m-1">
@@ -849,18 +612,97 @@
                     <div class="col-12 col-lg-7 text-left">
                       <!-- title and description -->
                       <div class="title-desc">
-                        <h2 class="display-3 anim-1 mb-4 title-blue">The experts</h2>
+                        <h2 class="display-3 anim-1 mb-4 title-blue" style="font-size: 3rem !important;">Digital
+                          Transformation Model</h2>
 
                       </div>
                     </div>
                     <div class="col-lg-5 text-right">
                       <a class="btn btn-outline-b btn-white text-spaced text-uppercase title-blue" href="#about">
-                        <span class="text">Binnops Team</span>
+                        <span class="text">Our road map</span>
                       </a>
                     </div>
                   </div>
                 </div>
-                <div class="team-grid">
+
+                <div class="timeline-lg">
+                  <div id="time-1" class="timeline_body">
+                    <div class="timeline_title">
+                      <h3>Lorem ipsum</h3>
+                      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur.</p>
+                    </div>
+
+                    <div class="timeline_elements">
+                      <div class="timeline_img">
+                        <img src="assets/images/card1.jpg" alt="">
+                      </div>
+                      <div class="timeline_icon">
+                        <i class="flaticon-video-conference"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div id="time-2" class="timeline_body">
+                    <div class="timeline_title">
+                      <h3>Lorem ipsum</h3>
+                      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur.</p>
+                    </div>
+                    <div class="timeline_elements">
+                      <div class="timeline_img">
+                        <img src="assets/images/card2.jpg" alt="">
+                      </div>
+                      <div class="timeline_icon">
+                        <i class="flaticon-internet"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div id="time-3" class="timeline_body">
+                    <div class="timeline_title">
+                      <h3>Lorem ipsum</h3>
+                      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur.</p>
+                    </div>
+                    <div class="timeline_elements">
+                      <div class="timeline_img">
+                        <img src="assets/images/card3.jpg" alt="">
+                      </div>
+                      <div class="timeline_icon">
+                        <i class="flaticon-compass"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div id="time-4" class="timeline_body">
+                    <div class="timeline_title">
+                      <h3>Lorem ipsum</h3>
+                      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur.</p>
+                    </div>
+                    <div class="timeline_elements">
+                      <div class="timeline_img">
+                        <img src="assets/images/card4.jpg" alt="">
+                      </div>
+                      <div class="timeline_icon">
+                        <i class="flaticon-qa"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div id="time-5" class="timeline_body">
+                    <div class="timeline_title">
+                      <h3>Lorem ipsum</h3>
+                      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur.</p>
+                    </div>
+                    <div class="timeline_elements">
+                      <div class="timeline_img">
+                        <img src="assets/images/card1.jpg" alt="">
+                      </div>
+                      <div class="timeline_icon">
+                        <i class="flaticon-help"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!----<div class="team-grid">
                   <div class="team-content">
                     <img class="img-team" src="http://imgfz.com/i/t4vQ6yE.png" alt="">
                     <p class="team-title">Jairo Fernández </p>
@@ -952,30 +794,30 @@
 
 
 
-                </div>
+                </div>-->
                 <!----grid-->
-
-
-
-
-
               </div>
-
               <!-- End of section body -->
             </section>
 
-            <section id="gallery" class="section section-a pt-10 ">
-              <div class="section-title section-title_ex ">
-                <h2 class="text pt-5">Experience</h2>
+            <section id="experience" class="section section-a  ">
 
-              </div>
-              <div class="title-desc mt--5">
-                <h2 class="display-3 anim-1 mb-4 ">Experience</h2>
-
-              </div>
               <div class="section-body p-0">
-                <div class="section-content content-full px-0 anim">
-                  <div class="swiper-container parent-slider">
+                <!-- content -->
+                <div class="section-content container content-width anim">
+                  <div class="row mb-4">
+                    <div class="col-12 col-lg-12 text-left">
+                      <!-- title and description -->
+                      <div class="title-desc">
+                        <h2 class="display-3 anim-1 mb-4 title-blue text-center">Experience</h2>
+
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="section-content content-full px-0 anim experience-main">
+                  <div class="swiper-container parent-slider ">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">
                         <div class="row">
@@ -998,22 +840,29 @@
                                   Barrancabermeja - Ecopetrol
 
                                 </p>
-                                <a href="https://www.ecopetrol.com.co/
-                                " target="_blank"> <img class="logo-expres" src="assets/images/experiencia/imagen3.png"
-                                    alt="image" /></a>
+
                               </div>
                             </div>
                           </div>
                           <div class="col-md-6">
-                            <div class="swiper-container child-slider">
+                            <div class="swiper-container child-slider demo-gallery">
                               <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                  <img src="assets/images/experiencia/images/Imagen 1.JPG" />
+                                  <a href="assets/images/experiencia/images/Imagen 1.JPG" data-size="1600x1600"
+                                    data-med="assets/images/experiencia/images/Imagen 1.JPG" data-med-size="1024x1024"
+                                    data-author="Folkert Gorter" class="demo-gallery__img--main">
+                                    <img src="assets/images/experiencia/images/Imagen 1.JPG" alt="" />
+                                  </a>
+
                                 </div>
                                 <div class="swiper-slide">
-                                  <img src="assets/images/experiencia/images/Imagen 2.JPG" />
-                                </div>
+                                  <a href="assets/images/experiencia/images/Imagen 2.JPG" data-size="1600x1600"
+                                    data-med="assets/images/experiencia/images/Imagen 2.JPG" data-med-size="1024x1024"
+                                    data-author="Folkert Gorter" class="demo-gallery__img--main">
+                                    <img src="assets/images/experiencia/images/Imagen 2.JPG" alt="" />
+                                  </a>
 
+                                </div>
                               </div>
                               <div class="swiper-pagination swiper-pagination-child"></div>
                               <div class="swiper-button-prev"></div>
@@ -1021,8 +870,6 @@
                             </div>
                           </div>
                         </div>
-
-
                       </div>
                       <div class="swiper-slide">
                         <div class="row">
@@ -1048,16 +895,20 @@
                                   Verificación de esfuerzos, análisis de golpe de ariete y surges permitidos en tiempo
                                   y presión teniendo en cuenta las condiciones de operación de la tubería.
                                 </p>
-                                <a href="http://www.brinsa.com.co/" target="_blank"> <img class="logo-expres"
-                                    src="assets/images/experiencia/Imagen2.png" alt="image" /></a>
+
                               </div>
                             </div>
                           </div>
                           <div class="col-md-6">
-                            <div class="swiper-container child-slider">
+                            <div class="swiper-container child-slider demo-gallery">
                               <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                  <img src="assets/images/1.png" />
+                                  <a href="assets/images/1.png" data-size="1600x1600" data-med="assets/images/1.png"
+                                    data-med-size="1024x1024" data-author="Folkert Gorter"
+                                    class="demo-gallery__img--main">
+                                    <img src="assets/images/1.png" alt="" />
+                                  </a>
+
                                 </div>
 
                               </div>
@@ -1068,7 +919,6 @@
                           </div>
                         </div>
                       </div>
-
                       <div class="swiper-slide">
                         <div class="row">
                           <div class="col-md-6">
@@ -1091,23 +941,36 @@
                                   generación de modelo inteligente en AutoPlant, de la Planta de proceso de Bitumen
                                   (petroleos arenoso) de Suncor Mackay River, Alberta Canada.
                                 </p>
-                                <a href="https://www.acuren.com/
-                                " target="_blank"> <img class="logo-expres" src="assets/images/experiencia/Imagen8.png"
-                                    alt="image" /></a>
+
                               </div>
                             </div>
                           </div>
                           <div class="col-md-6">
-                            <div class="swiper-container child-slider">
+                            <div class="swiper-container child-slider demo-gallery">
                               <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                  <img src="assets/images/experiencia/images/Imagen 3.JPG" />
+                                  <a href="assets/images/experiencia/images/Imagen 3.JPG" data-size="1600x1600"
+                                    data-med="assets/images/experiencia/images/Imagen 3.JPG" data-med-size="1024x1024"
+                                    data-author="Folkert Gorter" class="demo-gallery__img--main">
+                                    <img src="assets/images/experiencia/images/Imagen 3.JPG" alt="" />
+                                  </a>
+
                                 </div>
                                 <div class="swiper-slide">
-                                  <img src="assets/images/experiencia/images/Imagen 4.JPG" />
+                                  <a href="assets/images/experiencia/images/Imagen 4.JPG" data-size="1600x1600"
+                                    data-med="assets/images/experiencia/images/Imagen 4.JPG" data-med-size="1024x1024"
+                                    data-author="Folkert Gorter" class="demo-gallery__img--main">
+                                    <img src="assets/images/experiencia/images/Imagen 4.JPG" alt="" />
+                                  </a>
+
                                 </div>
                                 <div class="swiper-slide">
-                                  <img src="assets/images/experiencia/images/Imagen 5.JPG" />
+                                  <a href="assets/images/experiencia/images/Imagen 5.JPG" data-size="1600x1600"
+                                    data-med="assets/images/experiencia/images/Imagen 5.JPG" data-med-size="1024x1024"
+                                    data-author="Folkert Gorter" class="demo-gallery__img--main">
+                                    <img src="assets/images/experiencia/images/Imagen 5.JPG" alt="" />
+                                  </a>
+
                                 </div>
 
                               </div>
@@ -1139,26 +1002,45 @@
                                   Software.
 
                                 </p>
-                                <a href="https://www.acuren.com/
-                                " target="_blank"> <img class="logo-expres" src="assets/images/experiencia/Imagen8.png"
-                                    alt="image" /></a>
+
                               </div>
                             </div>
                           </div>
                           <div class="col-md-6">
-                            <div class="swiper-container child-slider">
+                            <div class="swiper-container child-slider demo-gallery">
                               <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                  <img src="assets/images/experiencia/Imagentanque.png" />
+                                  <a href="assets/images/experiencia/Imagentanque.png" data-size="1600x1600"
+                                    data-med="assets/images/experiencia/Imagentanque.png" data-med-size="1024x1024"
+                                    data-author="Folkert Gorter" class="demo-gallery__img--main">
+                                    <img src="assets/images/experiencia/Imagentanque.png" alt="" />
+                                  </a>
+
                                 </div>
                                 <div class="swiper-slide">
-                                  <img src="assets/images/experiencia/Imagentanque2.png" />
+                                  <a href="assets/images/experiencia/Imagentanque2.png" data-size="1600x1600"
+                                    data-med="assets/images/experiencia/Imagentanque2.png" data-med-size="1024x1024"
+                                    data-author="Folkert Gorter" class="demo-gallery__img--main">
+                                    <img src="assets/images/experiencia/Imagentanque2.png" alt="" />
+                                  </a>
+
+
                                 </div>
                                 <div class="swiper-slide">
-                                  <img src="assets/images/experiencia/Imagentanque3.png" />
+                                  <a href="assets/images/experiencia/Imagentanque3.png" data-size="1600x1600"
+                                    data-med="assets/images/experiencia/Imagentanque3.png" data-med-size="1024x1024"
+                                    data-author="Folkert Gorter" class="demo-gallery__img--main">
+                                    <img src="assets/images/experiencia/Imagentanque3.png" alt="" />
+                                  </a>
+
                                 </div>
                                 <div class="swiper-slide">
-                                  <img src="assets/images/experiencia/Imagentanque4.png" />
+                                  <a href="assets/images/experiencia/Imagentanque4.png" data-size="1600x1600"
+                                    data-med="assets/images/experiencia/Imagentanque4.png" data-med-size="1024x1024"
+                                    data-author="Folkert Gorter" class="demo-gallery__img--main">
+                                    <img src="assets/images/experiencia/Imagentanque4.png" alt="" />
+                                  </a>
+
                                 </div>
                               </div>
                               <div class="swiper-pagination swiper-pagination-child"></div>
@@ -1192,23 +1074,37 @@
                                 <p>Servicio de Escaneo Laser y Modelación 3D en la planta UOP I de la Refinería de
                                   Barrancabermeja de Ecopetrol
                                 </p>
-                                <a href="https://www.ecopetrol.com.co/
-                                " target="_blank"> <img class="logo-expres" src="assets/images/experiencia/imagen3.png"
-                                    alt="image" /></a>
+
                               </div>
                             </div>
                           </div>
                           <div class="col-md-6">
-                            <div class="swiper-container child-slider">
+                            <div class="swiper-container child-slider demo-gallery">
                               <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                  <img src="assets/images/experiencia/images/Imagen 9.JPG" />
+                                  <a href="assets/images/experiencia/Imagentanque4.png" data-size="1600x1600"
+                                    data-med="assets/images/experiencia/images/Imagen 9.JPG" data-med-size="1024x1024"
+                                    data-author="Folkert Gorter" class="demo-gallery__img--main">
+                                    <img src="assets/images/experiencia/images/Imagen 9.JPG" alt="" />
+                                  </a>
+
+
                                 </div>
                                 <div class="swiper-slide">
-                                  <img src="assets/images/experiencia/images/Imagen 10.JPG" />
+                                  <a href="assets/images/experiencia/images/Imagen 10.JPG" data-size="1600x1600"
+                                    data-med="assets/images/experiencia/images/Imagen 10.JPG" data-med-size="1024x1024"
+                                    data-author="Folkert Gorter" class="demo-gallery__img--main">
+                                    <img src="assets/images/experiencia/images/Imagen 10.JPG" alt="" />
+                                  </a>
+
                                 </div>
                                 <div class="swiper-slide">
-                                  <img src="assets/images/experiencia/images/Imagen 11.JPG" />
+
+                                  <a href="assets/images/experiencia/images/Imagen 11.JPG" data-size="1600x1600"
+                                    data-med="assets/images/experiencia/images/Imagen 11.JPG" data-med-size="1024x1024"
+                                    data-author="Folkert Gorter" class="demo-gallery__img--main">
+                                    <img src="assets/images/experiencia/images/Imagen 11.JPG" alt="" />
+                                  </a>
                                 </div>
 
                               </div>
@@ -1240,25 +1136,37 @@
                                 <p>Servicio de Escaneo Laser y Modelación 3D Inteligente de las áreas de
                                   almacenamiento de la Refinería de Shell Deer Park en Texas
                                 </p>
-                                <a href="https://www.shell.com/
-            
-            
-                                " target="_blank"> <img class="logo-expres"
-                                    src="assets/images/experiencia/Imagen11.png" alt="image" /></a>
+
                               </div>
                             </div>
                           </div>
                           <div class="col-md-6">
-                            <div class="swiper-container child-slider">
+                            <div class="swiper-container child-slider demo-gallery">
                               <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                  <img src="assets/images/experiencia/images/Imagen 12.JPG" />
+                                  <a href="assets/images/experiencia/images/Imagen 12.JPG" data-size="1600x1600"
+                                    data-med="assets/images/experiencia/images/Imagen 12.JPG" data-med-size="1024x1024"
+                                    data-author="Folkert Gorter" class="demo-gallery__img--main">
+                                    <img src="assets/images/experiencia/images/Imagen 12.JPG" alt="" />
+                                  </a>
+
                                 </div>
                                 <div class="swiper-slide">
-                                  <img src="assets/images/experiencia/images/Imagen 13.JPG" />
+                                  <a href="assets/images/experiencia/images/Imagen 13.JPG" data-size="1600x1600"
+                                    data-med="assets/images/experiencia/images/Imagen 13.JPG" data-med-size="1024x1024"
+                                    data-author="Folkert Gorter" class="demo-gallery__img--main">
+                                    <img src="assets/images/experiencia/images/Imagen 13.JPG" alt="" />
+                                  </a>
+
+
                                 </div>
                                 <div class="swiper-slide">
-                                  <img src="assets/images/experiencia/images/Imagen 14.JPG" />
+                                  <a href="assets/images/experiencia/images/Imagen 14.JPG" data-size="1600x1600"
+                                    data-med="assets/images/experiencia/images/Imagen 14.JPG" data-med-size="1024x1024"
+                                    data-author="Folkert Gorter" class="demo-gallery__img--main">
+                                    <img src="assets/images/experiencia/images/Imagen 14.JPG" alt="" />
+                                  </a>
+
                                 </div>
 
                               </div>
@@ -1291,20 +1199,29 @@
                                   ubicadas en el proyecto del Complejo Takula en la costa de Angola
 
                                 </p>
-                                <a href="https://www.chevron.com/ " target="_blank"> <img class="logo-expres"
-                                    src="assets/images/experiencia/Imagen12.png" alt="image" /></a>
+
                               </div>
                             </div>
                           </div>
                           <div class="col-md-6">
-                            <div class="swiper-container child-slider">
+                            <div class="swiper-container child-slider demo-gallery">
                               <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                  <img src="assets/images/experiencia/images/Imagen 15.JPG" />
+                                  <a href="assets/images/experiencia/images/Imagen 15.JPG" data-size="1600x1600"
+                                    data-med="assets/images/experiencia/images/Imagen 15.JPG" data-med-size="1024x1024"
+                                    data-author="Folkert Gorter" class="demo-gallery__img--main">
+                                    <img src="assets/images/experiencia/images/Imagen 15.JPG" alt="" />
+                                  </a>
+
                                 </div>
 
                                 <div class="swiper-slide">
-                                  <img src="assets/images/experiencia/images/Imagen 16.JPG" />
+                                  <a href="assets/images/experiencia/images/Imagen 16.JPG" data-size="1600x1600"
+                                    data-med="assets/images/experiencia/images/Imagen 16.JPG" data-med-size="1024x1024"
+                                    data-author="Folkert Gorter" class="demo-gallery__img--main">
+                                    <img src="assets/images/experiencia/images/Imagen 16.JPG" />
+                                  </a>
+
                                 </div>
                               </div>
                               <div class="swiper-pagination swiper-pagination-child"></div>
@@ -1336,17 +1253,20 @@
                                 <p>Servicio de Modelación 3D de 42.000 metros lineales de racks de líneas de proceso
                                   para la refinería de Shell Deer Park en Texas
                                 </p>
-                                <a href="https://www.shell.com/
-                                " target="_blank"> <img class="logo-expres"
-                                    src="assets/images/experiencia/Imagen11.png" alt="image" /></a>
+
                               </div>
                             </div>
                           </div>
                           <div class="col-md-6">
-                            <div class="swiper-container child-slider">
+                            <div class="swiper-container child-slider demo-gallery">
                               <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                  <img src="assets/images/experiencia/images/Imagen 17.JPG" />
+                                  <a href="assets/images/experiencia/images/Imagen 17.JPG" data-size="1600x1600"
+                                    data-med="assets/images/experiencia/images/Imagen 17.JPG" data-med-size="1024x1024"
+                                    data-author="Folkert Gorter" class="demo-gallery__img--main">
+                                    <img src="assets/images/experiencia/images/Imagen 17.JPG" />
+                                  </a>
+
                                 </div>
                               </div>
                               <div class="swiper-pagination swiper-pagination-child"></div>
@@ -1381,29 +1301,47 @@
                                   la planta de Crudo Bloque R de la Refinería de Cartagena
 
                                 </p>
-                                <a href="https://www.ecopetrol.com.co/
-            
-                                " target="_blank"> <img class="logo-expres" src="assets/images/experiencia/imagen3.png"
-                                    alt="image" /></a>
+
                               </div>
                             </div>
                           </div>
                           <div class="col-md-6">
-                            <div class="swiper-container child-slider">
+                            <div class="swiper-container child-slider demo-gallery">
                               <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                  <img src="assets/images/experiencia/images/Imagen 25.jpeg" />
+                                  <a href="assets/images/experiencia/images/Imagen 25.jpeg" data-size="1600x1600"
+                                    data-med="assets/images/experiencia/images/Imagen 25.jpeg" data-med-size="1024x1024"
+                                    data-author="Folkert Gorter" class="demo-gallery__img--main">
+                                    <img src="assets/images/experiencia/images/Imagen 25.jpeg" />
+                                  </a>
+
                                 </div>
                                 <div class="swiper-slide">
-                                  <img src="assets/images/experiencia/images/Imagen 26.jpeg" />
+                                  <a href="assets/images/experiencia/images/Imagen 26.jpeg" data-size="1600x1600"
+                                    data-med="assets/images/experiencia/images/Imagen 26.jpeg" data-med-size="1024x1024"
+                                    data-author="Folkert Gorter" class="demo-gallery__img--main">
+                                    <img src="assets/images/experiencia/images/Imagen 26.jpeg" />
+                                  </a>
+
                                 </div>
                                 <div class="swiper-slide">
-                                  <img src="assets/images/experiencia/images/Imagen 27.jpeg" />
+                                  <a href="assets/images/experiencia/images/Imagen 27.jpeg" data-size="1600x1600"
+                                    data-med="assets/images/experiencia/images/Imagen 27.jpeg" data-med-size="1024x1024"
+                                    data-author="Folkert Gorter" class="demo-gallery__img--main">
+                                    <img src="assets/images/experiencia/images/Imagen 27.jpeg" />
+                                  </a>
+
                                 </div>
                                 <div class="swiper-slide">
-                                  <img src="assets/images/experiencia/images/Imagen 28.jpeg" />
+                                  <a href="assets/images/experiencia/images/Imagen 28.jpeg" data-size="1600x1600"
+                                    data-med="assets/images/experiencia/images/Imagen 28.jpeg" data-med-size="1024x1024"
+                                    data-author="Folkert Gorter" class="demo-gallery__img--main">
+                                    <img src="assets/images/experiencia/images/Imagen 28.jpeg" />
+                                  </a>
+
                                 </div>
-                                <div class="swiper-slide">
+
+                                <!----- <div class="swiper-slide">
                                   <img src="assets/images/experiencia/images/Imagen 29.jpeg" />
                                 </div>
                                 <div class="swiper-slide">
@@ -1432,7 +1370,7 @@
                                 </div>
                                 <div class="swiper-slide">
                                   <img src="assets/images/experiencia/images/Imagen 38.jpeg" />
-                                </div>
+                                </div>-->
                               </div>
                             </div>
                             <div class="swiper-pagination swiper-pagination-child"></div>
@@ -1465,21 +1403,30 @@
                                   la planta de Crudo Bloque R de la Refinería de Cartagena
 
                                 </p>
-                                <a href="https://www.ecopetrol.com.co/
-            
-                                " target="_blank"> <img class="logo-expres" src="assets/images/experiencia/imagen3.png"
-                                    alt="image" /></a>
+
                               </div>
                             </div>
                           </div>
                           <div class="col-md-6">
-                            <div class="swiper-container child-slider">
+                            <div class="swiper-container child-slider demo-gallery">
                               <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                  <img src="assets/images/experiencia/images/Imagen 18.JPG" />
+                                  <a href="assets/images/experiencia/images/Imagen 18.JPG" data-size="1600x1600"
+                                    data-med="assets/images/experiencia/images/Imagen 18.JPG" data-med-size="1024x1024"
+                                    data-author="Folkert Gorter" class="demo-gallery__img--main">
+                                    <img src="assets/images/experiencia/images/Imagen 18.JPG" />
+                                  </a>
+
+
                                 </div>
                                 <div class="swiper-slide">
-                                  <img src="assets/images/experiencia/images/Imagen 19.JPG" />
+                                  <a href="assets/images/experiencia/images/Imagen 19.JPG" data-size="1600x1600"
+                                    data-med="assets/images/experiencia/images/Imagen 19.JPG" data-med-size="1024x1024"
+                                    data-author="Folkert Gorter" class="demo-gallery__img--main">
+                                    <img src="assets/images/experiencia/images/Imagen 19.JPG" />
+                                  </a>
+
+
                                 </div>
                               </div>
                               <div class="swiper-pagination swiper-pagination-child"></div>
@@ -1514,21 +1461,28 @@
                                   la planta de Crudo Bloque R de la Refinería de Cartagena
 
                                 </p>
-                                <a href="https://www.ecopetrol.com.co/
-            
-                                " target="_blank"> <img class="logo-expres" src="assets/images/experiencia/imagen3.png"
-                                    alt="image" /></a>
+
                               </div>
                             </div>
                           </div>
                           <div class="col-md-6">
-                            <div class="swiper-container child-slider">
+                            <div class="swiper-container child-slider demo-gallery">
                               <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                  <img src="assets/images/experiencia/images/Imagen 20.JPG" />
+                                  <a href="assets/images/experiencia/images/Imagen 20.JPG" data-size="1600x1600"
+                                    data-med="assets/images/experiencia/images/Imagen 20.JPG" data-med-size="1024x1024"
+                                    data-author="Folkert Gorter" class="demo-gallery__img--main">
+                                    <img src="assets/images/experiencia/images/Imagen 20.JPG" />
+                                  </a>
+
                                 </div>
                                 <div class="swiper-slide">
-                                  <img src="assets/images/experiencia/images/Imagen 21.JPG" />
+                                  <a href="assets/images/experiencia/images/Imagen 21.JPG" data-size="1600x1600"
+                                    data-med="assets/images/experiencia/images/Imagen 21.JPG" data-med-size="1024x1024"
+                                    data-author="Folkert Gorter" class="demo-gallery__img--main">
+                                    <img src="assets/images/experiencia/images/Imagen 21.JPG" />
+                                  </a>
+
                                 </div>
 
                               </div>
@@ -1568,20 +1522,28 @@
                                   utilizando la plataforma Aveva 3D PDM.
 
                                 </p>
-                                <a href="https://www.fronteraenergy.ca/es/
-                                " target="_blank"> <img class="logo-expres"
-                                    src="assets/images/experiencia/Imagen18.png" alt="image" /></a>
+
                               </div>
                             </div>
                           </div>
                           <div class="col-md-6">
-                            <div class="swiper-container child-slider">
+                            <div class="swiper-container child-slider demo-gallery_">
                               <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                  <img src="assets/images/experiencia/images/Imagen 22.JPG" />
+                                  <a href="assets/images/experiencia/images/Imagen 22.JPG" data-size="1600x1600"
+                                    data-med="assets/images/experiencia/images/Imagen 22.JPG" data-med-size="1024x1024"
+                                    data-author="Folkert Gorter" class="demo-gallery__img--main">
+                                    <img src="assets/images/experiencia/images/Imagen 22.JPG" />
+                                  </a>
+
                                 </div>
                                 <div class="swiper-slide">
-                                  <img src="assets/images/experiencia/images/Imagen 23.JPG" />
+                                  <a href="assets/images/experiencia/images/Imagen 23.JPG" data-size="1600x1600"
+                                    data-med="assets/images/experiencia/images/Imagen 23.JPG" data-med-size="1024x1024"
+                                    data-author="Folkert Gorter" class="demo-gallery__img--main">
+                                    <img src="assets/images/experiencia/images/Imagen 23.JPG" />
+                                  </a>
+
                                 </div>
 
                               </div>
@@ -1592,49 +1554,37 @@
                           </div>
                         </div>
                       </div>
-
-
-                      <div class="swiper-pagination swiper-pagination-parent"></div>
                     </div>
                   </div>
+
+                  <div class="swiper-pagination swiper-pagination-parent"></div>
                 </div>
               </div>
               <!-- End of section body -->
             </section>
 
-            <!-----    <section id="services" class="section section-a section-white">
-              <div class="section-title title-anim overflow-hidden">
-                <h2 class="text text-lg nowrap text-stroke rellax  title-blue" data-rellax-horizontal
-                  data-rellax-speed="-4" data-rellax-percentage="0.5">
-                  LAST BLOG
-                </h2>
-              </div>
+            <section id="blog" class="section section-a section-white">
+              <div class="section-body p-0">
 
-              <div class="section-body">
-          
                 <div class="section-content container content-width anim">
-                  <div class="row mb-5">
-                    <div class="col-12 col-lg-6 text-left">
-                    
+                  <div class="row mb-4">
+                    <div class="col-12 col-lg-7 text-left">
+                      <!-- title and description -->
                       <div class="title-desc">
-                        <h2 class="display-3 anim-1 mb-4  title-blue">Blog</h2>
-                        <p class="anim-2  title-blue">
-                          Lorem, ipsum dolor sit amet consectetur adipisicing
-                          elit. Dolore illum cum facilis ut aspernatur odi
-                        </p>
+                        <h2 class="display-3 anim-1 mb-4 title-blue" style="font-size: 3rem !important;">Blog</h2>
+
                       </div>
                     </div>
-                    <div class="col-lg-6 text-right">
-                      <a class="btn btn-outline-b btn-white text-spaced text-uppercase" href="#about">
-                        <span class="text  title-blue ">Contact</span>
+                    <div class="col-lg-5 text-right">
+                      <a class="btn btn-outline-b btn-white text-spaced text-uppercase title-blue" href="#about">
+                        <span class="text">blog</span>
                       </a>
                     </div>
                   </div>
 
-         
                   <div class="item-list row row-cols-1 row-cols-md-2 g-5">
                     <div class="col">
-                  
+
                       <a class="item item-feature-c" href="#">
                         <div class="item-img anim-hover">
                           <img class="fit" src="https://madatac.es/wp-content/uploads/2016/01/spiral.gif"
@@ -1650,9 +1600,9 @@
                       </a>
                     </div>
 
-          
+
                     <div class="col">
-                   
+
                       <a class="item item-feature-c" href="#">
                         <div class="item-img anim-hover">
                           <img class="fit" src="https://madatac.es/wp-content/uploads/2016/01/spiral.gif"
@@ -1668,9 +1618,9 @@
                       </a>
                     </div>
 
-                
+
                     <div class="col">
-                 
+
                       <a class="item item-feature-c" href="#">
                         <div class="item-img anim-hover">
                           <img class="fit" src="https://madatac.es/wp-content/uploads/2016/01/spiral.gif"
@@ -1686,11 +1636,11 @@
                       </a>
                     </div>
                   </div>
-               
+
                 </div>
               </div>
-            
-            </section>-->
+
+            </section>
 
             <section id="contact" class="section section-a fullscreen-h-lg">
               <div class="section-title title-anim">
@@ -1700,7 +1650,8 @@
                 </h2>
               </div>
               <!-- Begin of section body -->
-              <div class="section-body section-contact" itemscope itemtype="https://schema.org/Organization">
+              <div class="section-body section-contact" style="background-image: url('assets/images/card4.jpg');"
+                itemscope itemtype="https://schema.org/Organization">
                 <!-- content -->
                 <div class="section-content container content-width anim">
                   <div class="row justify-content-between">
@@ -1778,7 +1729,36 @@
 
                     </div>
                   </div>
-
+                  <footer id="site-footer" class="footer-page">
+                    <!-- Right content -->
+                    <div class="footer-right">
+                      <nav class="nav-social nav-social-a">
+                        <ul>
+                          <li class="nav-item">
+                            <a class="nav-link btn" href="#">
+                              <span class="icon">
+                                <i class="ion ion-logo-instagram"></i>
+                              </span>
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link btn" href="#">
+                              <span class="icon">
+                                <i class="ion ion-logo-twitter"></i>
+                              </span>
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link btn" href="#">
+                              <span class="icon">
+                                <i class="ion ion-logo-linkedin"></i>
+                              </span>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </footer>
                 </div>
               </div>
               <!-- End of section body -->
@@ -1786,43 +1766,15 @@
 
           </main>
 
-          <footer id="site-footer" class="footer-page">
-            <!-- Right content -->
-            <div class="footer-right">
-              <nav class="nav-social nav-social-a">
-                <ul>
-                  <li class="nav-item">
-                    <a class="nav-link btn" href="#">
-                      <span class="icon">
-                        <i class="ion ion-logo-instagram"></i>
-                      </span>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link btn" href="#">
-                      <span class="icon">
-                        <i class="ion ion-logo-twitter"></i>
-                      </span>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link btn" href="#">
-                      <span class="icon">
-                        <i class="ion ion-logo-linkedin"></i>
-                      </span>
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </footer>
+
 
         </div>
       </section>
     </div>
   </div>
+
   <nav class="container-fluid px-0">
-    <button style="" class="navbar-toggler menux" type="button" data-toggle="collapse" data-target="#navbarMenuCollapse"
+    <button class="navbar-toggler menux" type="button" data-toggle="collapse" data-target="#navbarMenuCollapse"
       aria-controls="navbarMenuCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="icon icon-menu icon-menu-c">
         <img src="assets/images/icon.png" alt="">
@@ -1836,158 +1788,102 @@
     <div class="collapse navbar-collapse order-lg-1" id="navbarMenuCollapse">
       <div class="navbar-menu-wrapper">
         <div class="nav-body">
-
-
           <div class="nav-fullscreen-lg">
             <ul class="navbar-nav nav">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="demo.html#home">Data Visualization</a>
+                <a class="nav-link" data-scroll-to aria-current="page" data-scroll href="#home"> Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="demo.html#gallery">Digital Twins</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="demo.html#item">Smart Digital
+                <a class="nav-link" data-scroll-to data-scroll href="#products">Products
                 </a>
               </li>
-
+              <li class="nav-item">
+                <a class="nav-link" data-scroll-to data-scroll href="#business">Business Model</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-scroll-to data-scroll href="#exprience">Experience
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-scroll-to data-scroll href="#aourroadmap">Our road map
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-scroll-to data-scroll href="#blog">Blog
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-scroll-to data-scroll href="#contact">Contact
+                </a>
+              </li>
             </ul>
           </div>
         </div>
       </div>
     </div>
   </nav>
-  <!-- Modal serviicio 1 -->
-  <div class="modal fade datavisualization" id="exampleModalCenter" tabindex="-1" role="dialog"
-    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-      <div class="modal-content">
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
 
-        <div class="modal-body modal-cards">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-          <div>
+    <div class="pswp__scroll-wrap">
 
-            <div class="container">
-              <div class="img-modal">
-                <img src="assets/images/iconos/database2.svg" alt="">
-              </div>
-              <div class="text-center">
-                <span class="title-modal">Data Visualization</span>
-              </div>
-              <p class="subtitle-modal mt-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum quidem
-                aspernatur architecto, temporibus quam minus voluptate laborum quisquam rem consequatur id, animi, totam
-                nostrum eaque eius ut nihil labore qui?
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
 
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum quidem aspernatur architecto, temporibus
-                quam minus voluptate laborum quisquam rem consequatur id, animi, totam nostrum eaque eius ut nihil
-                labore qui?
-              </p>
-              <div class="row">
-                <div id="carousel" class="carousel slide" data-ride="carousel">
-                  <ol class="carousel-indicators">
-                    <li data-target="#carousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel" data-slide-to="1"></li>
-                  </ol>
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <div class="d-none d-lg-block">
-                        <div class="slide-box">
-                          <img src="http://imgfz.com/i/b4kMUhH.jpeg" alt="First slide">
-                          <img src="http://imgfz.com/i/lykguRS.png" alt="First slide">
-                          <img src="http://imgfz.com/i/o43bhMN.png" alt="First slide">
-                          <img src="http://imgfz.com/i/LPH6WVY.jpeg" alt="First slide">
-                        </div>
-                      </div>
-                      <div class="d-none d-md-block d-lg-none">
-                        <div class="slide-box">
-                          <img src="http://imgfz.com/i/b4kMUhH.jpeg" alt="First slide">
-                          <img src="http://imgfz.com/i/lykguRS.png" alt="First slide">
-                          <img src="http://imgfz.com/i/o43bhMN.png" alt="First slide">
-                        </div>
-                      </div>
-                      <div class="d-none d-sm-block d-md-none">
-                        <div class="slide-box">
-                          <img src="http://imgfz.com/i/o43bhMN.png" alt="First slide">
-                          <img src="http://imgfz.com/i/LPH6WVY.jpeg" alt="First slide">
-                        </div>
-                      </div>
-                      <div class="d-block d-sm-none">
-                        <img class="d-block w-100" src="https://picsum.photos/600/400/?image=0&random"
-                          alt="First slide">
-                      </div>
-                    </div>
-                    <div class="carousel-item">
-                      <div class="d-none d-lg-block">
-                        <div class="slide-box">
-                          <img src="http://imgfz.com/i/b4kMUhH.jpeg" alt="First slide">
-                          <img src="http://imgfz.com/i/lykguRS.png" alt="First slide">
-                          <img src="http://imgfz.com/i/o43bhMN.png" alt="First slide">
-                          <img src="http://imgfz.com/i/LPH6WVY.jpeg" alt="First slide">
-                        </div>
-                      </div>
-                      <div class="d-none d-md-block d-lg-none">
-                        <div class="slide-box">
-                          <img src="http://imgfz.com/i/b4kMUhH.jpeg" alt="First slide">
-                          <img src="http://imgfz.com/i/lykguRS.png" alt="First slide">
-                          <img src="http://imgfz.com/i/o43bhMN.png" alt="First slide">
-                          <img src="http://imgfz.com/i/LPH6WVY.jpeg" alt="First slide">
-                        </div>
-                      </div>
-                      <div class="d-none d-sm-block d-md-none">
-                        <div class="slide-box">
-                          <img src="http://imgfz.com/i/o43bhMN.png" alt="First slide">
-                          <img src="http://imgfz.com/i/LPH6WVY.jpeg" alt="First slide">
-                        </div>
-                      </div>
-                      <div class="d-block d-sm-none">
-                        <img class="d-block w-100" src="https://picsum.photos/600/400/?image=1&random"
-                          alt="Second slide">
-                      </div>
-                    </div>
-                  </div>
-                  <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                  <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                  </a>
-                </div>
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
               </div>
             </div>
           </div>
-
-
         </div>
 
+
+        <!-- <div class="pswp__loading-indicator"><div class="pswp__loading-indicator__line"></div></div> -->
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip">
+            <!-- <a href="#" class="pswp__share--facebook"></a>
+            <a href="#" class="pswp__share--twitter"></a>
+            <a href="#" class="pswp__share--pinterest"></a>
+            <a href="#" download class="pswp__share--download"></a> -->
+          </div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+        <div class="pswp__caption">
+          <div class="pswp__caption__center">
+          </div>
+        </div>
       </div>
+
     </div>
+
+
   </div>
   <script src="assets/scripts/polyfill.min.js"></script>
   <script src="assets/scripts/main.js"></script>
-  <!---<script src="assets/scripts/jquery.min.js"></script>-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      $(".col").click(function () {
-        $("#info-col").toggle();
-      });
-
-      $(".usa").click(function () {
-        $('#info-usa').show();
-        $('#info-col').hide();
-      });
-    });
-
-  </script>
-
-  <script src="assets/scripts/custom.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/rellax-custom.js"></script>
@@ -1995,19 +1891,19 @@
   <script src="js/scroll-slider.js"></script>
   <script src="js/section-scroll.js"></script>
   <script src="js/scroll-anim.js"></script>
+
+
   <!-- Javascript main files -->
   <script src="js/main.js"></script>
+  <script src="https://unpkg.com/tippy.js@3/dist/tippy.all.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+  <script src="assets/scripts/custom.js"></script>
+
   <script>
 
 
-    /*  $(function () {
-        $('.menu-open-button').bind("click", function () {
-          var dest = $("#menu1").offset().top;
-          $("html,body").animate({ scrollTop: dest }, 600);
-  
-        })
-      })
-  */
+
     $(function () {
 
       $('[data-toggle="modal"]').hover(function () {
@@ -2044,6 +1940,8 @@
       pagination: {
         el: '.swiper-pagination-parent',
         clickable: true,
+        pagination: '.swiper-pagination',
+        paginationType: "bullets",
       },
     });
 
@@ -2058,8 +1956,17 @@
       },
     });
 
-
-
+    /*******************************slider zoom*************************************************/
+    tippy('.swiper-button-prev', {
+      content: "Prev",
+      theme: "light",
+      arrow: true,
+    })
+    tippy('.swiper-button-next', {
+      content: "Next",
+      theme: "light",
+      arrow: true,
+    })
   </script>
 
 </body>

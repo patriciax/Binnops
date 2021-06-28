@@ -129,350 +129,25 @@
       init(item);
     });
 })();
-class Scene {
-  /**
-   * Animate the scene
-   * @param {element} surface The scene container element
-   */
-  constructor(surface) {
-    this.surface = surface;
-
-    this.indi = {
-      container: surface.querySelector(".svg-synthwave-indi"),
-      underline: surface.querySelector(".svg-synthwave-indi__underline-clip"),
-      all: surface.querySelector(".svg-synthwave-indi__all-clip"),
-    };
-
-    if (!this.indi.container || !this.indi.underline || !this.indi.all) {
-      return;
-    }
-
-    this.frame = surface.querySelector(".c-scene__frame");
-    if (!this.frame) {
-      return;
-    }
-
-    this.gridX = surface.querySelector(".c-scene__grid-x");
-    if (!this.gridX) {
-      return;
-    }
-
-    this.overlay = surface.querySelector(".c-scene__overlay");
-    if (!this.overlay) {
-      return;
-    }
-
-    this.init();
-  }
-
-  isCapable() {
-    if (typeof window.CSS === "undefined") {
-      return false;
-    }
-
-    if (!window.CSS.supports("will-change", "transform")) {
-      return false;
-    }
-
-    return true;
-  }
-
-  /**
-   * Start the script
-   */
-  async init() {
-    try {
-      await this.loadScript(
-        `https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js`
-      );
-      await this.loadScript(
-        `https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js`
-      );
-      await this.createTimelineIntro();
-    } catch (error) {
-      console.error(error);
-    }
-
-    if (this.isCapable()) {
-      try {
-        await this.createTweenFrame();
-        await this.createTweenOverlay();
-        await this.createTweenGridX();
-        await this.bindMousemove();
-        await this.bindDeviceOrientation();
-      } catch (error) {
-        console.error(error);
-      }
-    }
-
-    // For when the browser is a bit naff as native animation (eg. IE/Edge)
-    if (!this.isCapable()) {
-      try {
-        await this.createTimelineTextTicker();
-      } catch (error) {
-        console.error(error);
-      }
-    }
-  }
-
-  /**
-   * Asyncronously load and embed a script
-   * @param  {string}  main A url to the desired script
-   * @return {Promise}
-   */
-  async loadScript(main) {
-    return new Promise((resolve, reject) => {
-      const s = document.createElement("script");
-      s.src = main;
-      s.onload = resolve;
-      s.onerror = reject;
-      document.body.appendChild(s);
-    });
-  }
-
-  /**
-   * Create the intro timeline animation
-   * @return {Promise}
-   */
-  async createTimelineIntro() {
-    return new Promise((resolve, reject) => {
-      // Create timeline
-      this.timelineIntro = new TimelineMax({
-        repeat: -1,
-        delay: this.isCapable() ? 4 : 1,
-        repeatDelay: 2,
-      });
-
-      this.timelineIntro.to(this.indi.underline, 0, { xPercent: -100 });
-
-      this.timelineIntro.to(this.indi.container, 0, { opacity: 1 });
-
-      this.timelineIntro.to(this.indi.underline, 0.3, {
-        xPercent: 0,
-        delay: 0.9,
-      });
-
-      this.timelineIntro.to(this.indi.all, 0.3, { xPercent: -100, delay: 9 });
-
-      console.log(this.indi.underline);
-
-      resolve();
-    });
-  }
-
-  /**
-   * Create the horizontal grid animation
-   * @return {Promise}
-   */
-  async createTweenGridX() {
-    return new Promise((resolve, reject) => {
-      // Create tween
-      this.tweenGridX = TweenMax.fromTo(
-        this.gridX,
-        1,
-        { xPercent: -8 },
-        { xPercent: 0, repeat: -1, ease: "linear" }
-      );
-
-      this.tweenGridX.seek(1);
-      this.tweenGridX.timeScale(0);
-
-      TweenMax.ticker.addEventListener("tick", () => {
-        // Advance waaaaay into the future as `timeScale` stops at 0 rather than go in reverse.
-        if (this.tweenGridX.time() <= 0) {
-          this.tweenGridX.seek(10);
-        }
-      });
-
-      resolve();
-    });
-  }
-
-  /**
-   * Create the frame animation
-   * @return {Promise}
-   */
-  async createTweenFrame() {
-    return new Promise((resolve, reject) => {
-      // Create tween
-      this.tweenFrame = TweenMax.fromTo(
-        this.frame,
-        1,
-        { rotationZ: 8 },
-        { rotationZ: -8, repeat: 0, ease: "linear" }
-      );
-
-      this.tweenFrame.seek(0.5);
-      this.tweenFrame.timeScale(0);
-
-      resolve();
-    });
-  }
-
-  /**
-   * Crate the overlay animation
-   * @return {Promise}
-   */
-  async createTweenOverlay() {
-    return new Promise((resolve, reject) => {
-      // Create tween
-      this.tweenOverlay = TweenMax.fromTo(
-        this.overlay,
-        1,
-        { rotationZ: 1 },
-        { rotationZ: -1, repeat: 0, ease: "linear" }
-      );
-
-      this.tweenOverlay.seek(0.5);
-      this.tweenOverlay.timeScale(0);
-
-      resolve();
-    });
-  }
-
-  /**
-   * Bind the mousemove event
-   * @return {Promise}
-   */
-  async bindMousemove() {
-    return new Promise((resolve, reject) => {
-      // Cheap test for IE
-      if (
-        typeof CSS.supports === "undefined" ||
-        !CSS.supports ||
-        !CSS.supports("will-change: transform")
-      ) {
-        resolve();
-      }
-
-      window.addEventListener(
-        "mousemove",
-        (event) => {
-          const centerX = this.surface.offsetWidth / 2;
-          const mouseCenterX = event.clientX - centerX;
-          const percentageFromCenterX = (mouseCenterX / centerX) * 100;
-          this.tweenGridX.timeScale(-(percentageFromCenterX / 2 / 20));
-
-          const mouseX = event.clientX / this.surface.offsetWidth;
-          this.tweenFrame.seek(mouseX);
-          this.tweenOverlay.seek(mouseX);
-        },
-        {
-          passive: true,
-        }
-      );
-
-      resolve();
-    });
-  }
-
-  /**
-   * Bind the device tilt event
-   * @return {Promise}
-   */
-  async bindDeviceOrientation() {
-    return new Promise((resolve, reject) => {
-      // Cheap test for IE
-      if (
-        typeof CSS.supports === "undefined" ||
-        !CSS.supports ||
-        !CSS.supports("will-change: transform")
-      ) {
-        resolve();
-      }
-
-      window.addEventListener(
-        "deviceorientation",
-        (event) => {
-          this.tweenGridX.timeScale(event.gamma / 10);
-          this.tweenFrame.seek((event.gamma + 100) / 200);
-          this.tweenOverlay.seek((event.gamma + 100) / 200);
-        },
-        {
-          passive: true,
-        }
-      );
-
-      resolve();
-    });
-  }
-}
-
-new Scene(document.querySelector(".c-scene"));
-
-/*
-$(".menu-item").hide();
-$(".menu-1").on("click", function () {
-  $(".menu-item").toggle("show");
-  $(".menu-hidde").addClass("menu-open-button");
-  $("#menu1").addClass("block");
-})
-
-
-$(".menu-item").hide();
-$(".menu-2").on("click", function () {
-  $(".menu-item").toggle("show");
-  $(".menu-hidde").addClass("menu-open-button");
-  $("#menu2").addClass("block");
-})*/
-var Boxlayout = (function () {
-  var wrapper = document.body,
-    sections = Array.from(document.querySelectorAll(".section-navegation")),
-    closeButtons = Array.from(document.querySelectorAll(".close-section-navegation")),
-    expandedClass = "is-expanded",
-    hasExpandedClass = "has-expanded-item";
-
-  return { init: init };
-
-  function init() {
-    _initEvents();
-  }
-
-  function _initEvents() {
-    sections.forEach(function (element) {
-      element.onclick = function () {
-        _openSection(this);
-      };
-    });
-    closeButtons.forEach(function (element) {
-      element.onclick = function (element) {
-        element.stopPropagation();
-        _closeSection(this.parentElement);
-      };
-    });
-  }
-
-  function _openSection(element) {
-    if (!element.classList.contains(expandedClass)) {
-      element.classList.add(expandedClass);
-      wrapper.classList.add(hasExpandedClass);
-    }
-  }
-
-  function _closeSection(element) {
-    if (element.classList.contains(expandedClass)) {
-      element.classList.remove(expandedClass);
-      wrapper.classList.remove(hasExpandedClass);
-    }
-  }
-})();
-
-Boxlayout.init();
-
 
 $(document).on('ready', function() {
   $(".main1,.main2,.main3").hide();
   $(".menu1").on("click", function () {
+    $(".main2").hide;
+    $(".main3").hide;
     $(".main1").toggle("show");
-    $(".menu1").addClass("block");
   })
   $(".menu2").on("click", function () {
+    $(".main1").hide;
+    $(".main3").hide;
     $(".main2").toggle("show");
-    $(".menu2").addClass("block");
+
   })
   $(".menu3").on("click", function () {
+    $(".main1").hide;
+      $(".main2").hide;
     $(".main3").toggle("show");
-    $(".menu3").addClass("block");
+ 
   })
 
  
@@ -487,7 +162,426 @@ $(document).on('ready', function() {
     $(".main-content_navegation").removeClass("alto");
   })
 
- 
+
+ $(".btn-volver").on("click", function () {
+  $(".main1,.main2,.main3").hide();
+  })
+
 });
 
 
+
+var TxtRotate = function(el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 100) || 1000;
+  this.txt = '';
+  this.tick();
+  this.isDeleting = false;
+};
+
+TxtRotate.prototype.tick = function() {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+  var that = this;
+  var delta = 150 - Math.random() * 100;
+
+  if (this.isDeleting) { delta /= 2; }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 1000;
+  }
+
+  setTimeout(function() {
+    that.tick();
+  }, delta);
+};
+
+window.onload = function() {
+  var elements = document.getElementsByClassName('txt-rotate');
+  for (var i=0; i<elements.length; i++) {
+    var toRotate = elements[i].getAttribute('data-rotate');
+    var period = elements[i].getAttribute('data-period');
+    if (toRotate) {
+      new TxtRotate(elements[i], JSON.parse(toRotate), period);
+    }
+  }
+  // INJECT CSS
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.06em solid #fff }";
+  document.body.appendChild(css);
+};
+
+
+/************************************************* */
+try{Typekit.load();}catch(e){} 
+
+(function() {
+
+   var initPhotoSwipeFromDOM = function(gallerySelector) {
+
+     var parseThumbnailElements = function(el) {
+       var thumbElements = el.childNodes,
+         numNodes = thumbElements.length,
+         items = [],
+         el,
+         childElements,
+         thumbnailEl,
+         size,
+         item;
+
+       for (var i = 0; i < numNodes; i++) {
+         el = thumbElements[i];
+
+         // include only element nodes 
+         if (el.nodeType !== 1) {
+           continue;
+         }
+
+         childElements = el.children;
+
+         size = el.getAttribute('data-size').split('x');
+
+         // create slide object
+         item = {
+           src: el.getAttribute('href'),
+           w: parseInt(size[0], 10),
+           h: parseInt(size[1], 10),
+           author: el.getAttribute('data-author')
+         };
+
+         item.el = el; // save link to element for getThumbBoundsFn
+
+         if (childElements.length > 0) {
+           item.msrc = childElements[0].getAttribute('src'); // thumbnail url
+           if (childElements.length > 1) {
+             item.title = childElements[1].innerHTML; // caption (contents of figure)
+           }
+         }
+
+         var mediumSrc = el.getAttribute('data-med');
+         if (mediumSrc) {
+           size = el.getAttribute('data-med-size').split('x');
+           // "medium-sized" image
+           item.m = {
+             src: mediumSrc,
+             w: parseInt(size[0], 10),
+             h: parseInt(size[1], 10)
+           };
+         }
+         // original image
+         item.o = {
+           src: item.src,
+           w: item.w,
+           h: item.h
+         };
+
+         items.push(item);
+       }
+
+       return items;
+     };
+
+     // find nearest parent element
+     var closest = function closest(el, fn) {
+       return el && (fn(el) ? el : closest(el.parentNode, fn));
+     };
+
+     var onThumbnailsClick = function(e) {
+       e = e || window.event;
+       e.preventDefault ? e.preventDefault() : e.returnValue = false;
+
+       var eTarget = e.target || e.srcElement;
+
+       var clickedListItem = closest(eTarget, function(el) {
+         return el.tagName === 'A';
+       });
+
+       if (!clickedListItem) {
+         return;
+       }
+
+       var clickedGallery = clickedListItem.parentNode;
+
+       var childNodes = clickedListItem.parentNode.childNodes,
+         numChildNodes = childNodes.length,
+         nodeIndex = 0,
+         index;
+
+       for (var i = 0; i < numChildNodes; i++) {
+         if (childNodes[i].nodeType !== 1) {
+           continue;
+         }
+
+         if (childNodes[i] === clickedListItem) {
+           index = nodeIndex;
+           break;
+         }
+         nodeIndex++;
+       }
+
+       if (index >= 0) {
+         openPhotoSwipe(index, clickedGallery);
+       }
+       return false;
+     };
+
+     var photoswipeParseHash = function() {
+       var hash = window.location.hash.substring(1),
+         params = {};
+
+       if (hash.length < 5) { // pid=1
+         return params;
+       }
+
+       var vars = hash.split('&');
+       for (var i = 0; i < vars.length; i++) {
+         if (!vars[i]) {
+           continue;
+         }
+         var pair = vars[i].split('=');
+         if (pair.length < 2) {
+           continue;
+         }
+         params[pair[0]] = pair[1];
+       }
+
+       if (params.gid) {
+         params.gid = parseInt(params.gid, 10);
+       }
+
+       return params;
+     };
+
+     var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+       var pswpElement = document.querySelectorAll('.pswp')[0],
+         gallery,
+         options,
+         items;
+
+       items = parseThumbnailElements(galleryElement);
+
+       // define options (if needed)
+       options = {
+
+         galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+
+         getThumbBoundsFn: function(index) {
+           // See Options->getThumbBoundsFn section of docs for more info
+           var thumbnail = items[index].el.children[0],
+             pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+             rect = thumbnail.getBoundingClientRect();
+
+           return {
+             x: rect.left,
+             y: rect.top + pageYScroll,
+             w: rect.width
+           };
+         },
+
+         addCaptionHTMLFn: function(item, captionEl, isFake) {
+           if (!item.title) {
+             captionEl.children[0].innerText = '';
+             return false;
+           }
+           captionEl.children[0].innerHTML = item.title + '<br/><small>Photo: ' + item.author + '</small>';
+           return true;
+         },
+
+       };
+
+       if (fromURL) {
+         if (options.galleryPIDs) {
+           // parse real index when custom PIDs are used 
+           // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
+           for (var j = 0; j < items.length; j++) {
+             if (items[j].pid == index) {
+               options.index = j;
+               break;
+             }
+           }
+         } else {
+           options.index = parseInt(index, 10) - 1;
+         }
+       } else {
+         options.index = parseInt(index, 10);
+       }
+
+       // exit if index not found
+       if (isNaN(options.index)) {
+         return;
+       }
+
+       var radios = document.getElementsByName('gallery-style');
+       for (var i = 0, length = radios.length; i < length; i++) {
+         if (radios[i].checked) {
+           if (radios[i].id == 'radio-all-controls') {
+
+           } else if (radios[i].id == 'radio-minimal-black') {
+             options.mainClass = 'pswp--minimal--dark';
+             options.barsSize = {
+               top: 0,
+               bottom: 0
+             };
+             options.captionEl = false;
+             options.fullscreenEl = false;
+             options.shareEl = false;
+             options.bgOpacity = 0.85;
+             options.tapToClose = true;
+             options.tapToToggleControls = false;
+           }
+           break;
+         }
+       }
+
+       if (disableAnimation) {
+         options.showAnimationDuration = 0;
+       }
+
+       // Pass data to PhotoSwipe and initialize it
+       gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+
+       // see: http://photoswipe.com/documentation/responsive-images.html
+       var realViewportWidth,
+         useLargeImages = false,
+         firstResize = true,
+         imageSrcWillChange;
+
+       gallery.listen('beforeResize', function() {
+
+         var dpiRatio = window.devicePixelRatio ? window.devicePixelRatio : 1;
+         dpiRatio = Math.min(dpiRatio, 2.5);
+         realViewportWidth = gallery.viewportSize.x * dpiRatio;
+
+         if (realViewportWidth >= 1200 || (!gallery.likelyTouchDevice && realViewportWidth > 800) || screen.width > 1200) {
+           if (!useLargeImages) {
+             useLargeImages = true;
+             imageSrcWillChange = true;
+           }
+
+         } else {
+           if (useLargeImages) {
+             useLargeImages = false;
+             imageSrcWillChange = true;
+           }
+         }
+
+         if (imageSrcWillChange && !firstResize) {
+           gallery.invalidateCurrItems();
+         }
+
+         if (firstResize) {
+           firstResize = false;
+         }
+
+         imageSrcWillChange = false;
+
+       });
+
+       gallery.listen('gettingData', function(index, item) {
+         if (useLargeImages) {
+           item.src = item.o.src;
+           item.w = item.o.w;
+           item.h = item.o.h;
+         } else {
+           item.src = item.m.src;
+           item.w = item.m.w;
+           item.h = item.m.h;
+         }
+       });
+
+       gallery.init();
+     };
+
+     // select all gallery elements
+     var galleryElements = document.querySelectorAll(gallerySelector);
+     for (var i = 0, l = galleryElements.length; i < l; i++) {
+       galleryElements[i].setAttribute('data-pswp-uid', i + 1);
+       galleryElements[i].onclick = onThumbnailsClick;
+     }
+
+     // Parse URL and open gallery if it contains #&pid=3&gid=1
+     var hashData = photoswipeParseHash();
+     if (hashData.pid && hashData.gid) {
+       openPhotoSwipe(hashData.pid, galleryElements[hashData.gid - 1], true, true);
+     }
+   };
+
+   initPhotoSwipeFromDOM('.demo-gallery');
+
+ })();
+
+ var mySwiper = new Swiper ('.swiper-miniaturas', {
+  speed: 400,
+  spaceBetween: 10,
+  initialSlide: 0,
+  //truewrapper adoptsheight of active slide
+  autoHeight: false,
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  // delay between transitions in ms
+  autoplay: 5000,
+  autoplayStopOnLast: false, // loop false also
+  // If we need pagination
+  pagination: '.swiper-pagination',
+  paginationType: "bullets",
+  
+  // Navigation arrows
+  nextButton: '.swiper-button-next',
+  prevButton: '.swiper-button-prev',
+  
+  // And if we need scrollbar
+  //scrollbar: '.swiper-scrollbar',
+  // "slide", "fade", "cube", "coverflow" or "flip"
+  effect: 'slide',
+  // Distance between slides in px.
+  spaceBetween: 60,
+  //
+  slidesPerView: 3,
+  //
+  centeredSlides: true,
+  //
+  slidesOffsetBefore: 0,
+  //
+  grabCursor: true,
+})      
+
+
+var showActive = true
+
+
+
+function changeActive(){
+  
+  showActive=false
+}
+
+setInterval(() => {
+  $('#time-1').removeClass('active-time')
+  $('#time-2').removeClass('active-time')
+  $('#time-3').removeClass('active-time')
+  $('#time-4').removeClass('active-time')
+  $('#time-5').removeClass('active-time')
+  let random = Math.floor(Math.random() * 6) + 1;
+  $('#time-' + random).addClass("active-time ")
+  if(showActive==true){
+
+  }
+}, 2000)
