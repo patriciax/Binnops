@@ -2365,7 +2365,7 @@ color: #000;
 }
 .experience-main .swiper-pagination{
   width: 100%;
-  bottom: 3rem;
+  bottom: 1rem;
   text-align: center;
 }
 
@@ -2505,4 +2505,14 @@ color: #000;
 }
 .content__items-modal span:hover {
   color: #ef1d1d;
+}
+.bg-blue{
+  background: #12162d;
+}
+.item-feature-c .item-body:hover h4 {
+  
+  color: #ffff!important;
+}
+#experience .parent-slider {
+  margin: 5rem 0;
 }
