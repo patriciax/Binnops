@@ -167,6 +167,12 @@ $(document).on('ready', function() {
   $(".main1,.main2,.main3").hide();
   })
 
+  $(".viewmore-p").hide();
+  $(".viewmore").on("click", function () {
+    $(".viewmore-p").show();
+    $(".viewmore").hide();
+    })
+
 });
 
 
