@@ -600,11 +600,7 @@ var mySwiper = new Swiper ('.swiper-partners', {
   //
   grabCursor: true,
 })      
-
 var showActive = true
-
-
-
 function changeActive(){
   
   showActive=false
@@ -622,3 +618,80 @@ setInterval(() => {
 
   }
 }, 2000)
+
+$(function () {
+  $('.content-services [data-toggle="modal"]').hover(function () {
+    var modalId = $(this).data('target');
+    $(modalId).modal('show');
+
+  });
+
+});
+const swiper = new Swiper(".swiper-bussines", {
+  loop: true,
+  lazy: {
+    loadPrevNext: true
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  }
+});
+
+new Swiper(".parent-slider", {
+  loop: true,
+  slidesPerView: 1,
+  noSwiping: true,
+  // autoplay: {
+  //   delay: 3000,
+  // },
+  //  centeredSlides: true,
+  //   spaceBetween: 30,
+  pagination: {
+    el: '.swiper-pagination-parent',
+    clickable: true,
+    pagination: '.swiper-pagination',
+    paginationType: "bullets",
+  },
+});
+
+new Swiper(".child-slider", {
+  loop: true,
+  slidesPerView: 1,
+  noSwiping: false,
+  pagination: '.swiper-pagination-child',
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+
+
+/*******************************slider zoom*************************************************/
+tippy('.swiper-button-prev', {
+  content: "Prev",
+  theme: "light",
+  arrow: true,
+})
+tippy('.swiper-button-next', {
+  content: "Next",
+  theme: "light",
+  arrow: true,
+})
+
+
+var homeSwiper = new Swiper(".home-swiper-container", {
+  fadeEffect: { crossFade: true },
+  autoplayDisableOnInteraction: true,
+  slidersPerView: 1,
+  effect: "fade",
+  speed: 3000,
+  autoplay: {
+    delay: 1000,
+  },
+});

@@ -116,9 +116,10 @@ a {
 
 }
 .card-body_main .author {
-  font-size: 20px;
+  font-size: 1.8rem;
   font-weight: bold;
-      padding-bottom: 2rem;
+  padding-bottom: 2rem;
+  text-transform: none;
 }
 .card-body_main .title {
   margin-top: 5px;
@@ -1182,7 +1183,8 @@ position: relative;
 .pricing-table__tagline {
   margin: 0;
   color: #9ea0a3;
-  text-align: center;
+  text-align: start;
+  margin: 2rem 0;
 }
 .pricing-table__price {
   color: var(--pricing-table-color);
@@ -1908,14 +1910,21 @@ div.middle{
   right: 50%;
   top: 15%;
 }
-.section-navegation p{
+.section-navegation p {
   transition: .9s;
   height: 0px;
   margin-bottom: 0;
   color: transparent;
-
 }
-.section-navegation:hover p{
+ .btn-minicard{
+  transition: .9s;
+  height: 0px;
+  margin-bottom: 0;
+  color: transparent;
+  background: transparent;
+  width: 100px;
+}
+.section-navegation:hover p {
   opacity: 1;
   position: relative;
   transition: .9s;
@@ -1923,6 +1932,22 @@ div.middle{
   height: 100px;
   margin-top: 1rem;
   color: #12152a;
+}
+.section-navegation-height:hover p {
+  height: 190px;
+}
+.section-navegation:hover .btn-minicard{
+  opacity: 1;
+  position: relative;
+  transition: .9s;
+  transform: translate(0, 0%);
+  height: auto;
+  color: #fafafb;
+  background: #12152a;
+  width: 100px;
+  border-radius: 10px;
+  padding: .3rem 0;
+  text-align: center;
 } 
 .section-navegation:hover .demo-box {
 
@@ -2457,4 +2482,22 @@ color: #000;
 .subtitless{
   color: #ef1e1e;
     text-align: center;
+}
+.swiper-partners img{
+  width: 155px;
+  filter: grayscale(1);
+}
+
+.span-style{
+  color: #14162d;
+    margin: 1rem 0;
+}
+.content__items-modal span{
+  font-weight: 600;
+  text-decoration: underline;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+.content__items-modal span:hover {
+  color: #ef1d1d;
 }

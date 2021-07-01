@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html class="is-smooth-scroll-compatible is-loading" lang="en">
+<html lang="en">
 
 <head>
   <meta charset="utf-8" />
   <title>Binnops</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#ffffff" />
-  <meta name="msapplication-TileColor" content="#ffffff" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css  " />
   <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicons/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
@@ -15,40 +14,29 @@
   <link rel="stylesheet" href="assets/styles/main.css" />
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="js/swiper-bundle.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="js/vegas.min.css" />
   <link rel="stylesheet" href="assets/styles/custom.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css.map
-  ">
-  <!-------------cositas menu------------------>
-
   <link rel="stylesheet" type="text/css" href="assets/styles/demo.css" />
   <link rel="stylesheet" type="text/css" href="assets/styles/component.css" />
   <link rel="stylesheet" href="assets/styles/test.css" />
   <!-------------cositas menu------------------>
   <link rel="stylesheet" href="css/main.css" />
-
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css">
 </head>
 
-<body>
+<body style="  background: #12162d;">
   <div class="o-scroll" id="js-scroll" data-scroll-container>
-    <section data-scroll-section="">
+    <div data-scroll-section="">
       <section class="viewport">
         <div id="scroll-container" class="scroll-container">
           <header class="navbar-top navbar navbar-a navbar-expand-lg">
             <nav class="container-fluid px-0">
-              <button class="navbar-toggler order-lg-2 ml-5" type="button" data-toggle="collapse"
-                data-target="#navbarMenuCollapse" aria-controls="navbarMenuCollapse" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="icon icon-menu icon-menu-c">
-                  <span class="bars">
-                    <span class="bar1"></span>
-                    <span class="bar2"></span>
-                  </span>
-                </span>
-              </button>
-
-              <div class="collapse navbar-collapse order-lg-1" id="navbarMenuCollapse">
+              <div class="collapse navbar-collapse order-lg-1">
                 <div class="navbar-menu-wrapper">
                   <div class="nav-body">
                     <ul class="navbar-nav nav-menu-top">
@@ -59,23 +47,6 @@
                         <a class="nav-link" aria-current="page" href="#projects">EN</a>
                       </li>
                     </ul>
-
-                    <div class="nav-fullscreen-lg">
-                      <ul class="navbar-nav nav">
-                        <li class="nav-item">
-                          <a class="nav-link" aria-current="page" href="demo.html#home">Home</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="demo.html#gallery">Gallery</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="demo.html#item">Item</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="demo.html">Demo</a>
-                        </li>
-                      </ul>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -85,151 +56,138 @@
           <div class="cover-page">
             <div class="cover-bg bg-black"></div>
           </div>
-
-          <section>
-            <div class="c-header_heading mb-5" data-scroll data-scroll-speed="-8" data-scroll-position="top" data-scroll-repeat>
-              <h1 class="pt-5 pb-12 " data-scroll>
-                <span class="c-header_title_line text-center logo">
-                  <span data-scroll data-scroll-speed="3" data-scroll-position="top">
-                    <img src="assets/images/logo.png" alt="" />
-                  </span>
-                </span>
-              </h1>
-            </div>
-              <div class="main-blog container">
-                <div class="main-blog_item " data-toggle="modal" data-target=".blog-modal"  data-scroll data-scroll-speed="5"
-                data-scroll-position="top" data-scroll-delay="0.05">
-                  <div class="main-blog_txt">
-                    <p>Lorem ipsum asmet</p>
-                    <span>19/4/2021 <i class="fa fa-calendar" aria-hidden="true"></i>
+          <main class="page-main sections-scroll scroll-anim " id="mainpage">
+            <section>
+              <div class="c-header_heading mb-5" data-scroll data-scroll-speed="-8" data-scroll-position="top" data-scroll-repeat>
+                <h1 class="pt-5 pb-12 " data-scroll>
+                  <span class="c-header_title_line text-center logo">
+                    <span data-scroll data-scroll-speed="3" data-scroll-position="top">
+                      <img src="assets/images/logo.png" alt="" />
                     </span>
-                  </div>
-                  <img src="assets/images/1.png" alt="">
-                </div>
-                <div class="main-blog_item" data-toggle="modal" data-target=".blog-modal"  data-scroll data-scroll-speed="5"
-                data-scroll-position="top" data-scroll-delay="0.05">
-                <div class="main-blog_txt">
-                  <p>Lorem ipsum asmet</p>
-                  <span>19/4/2021 <i class="fa fa-calendar" aria-hidden="true"></i>
                   </span>
-                </div>
-                  <img src="assets/images/3.PNG" alt="">
-                </div>
-                <div class="main-blog_item" data-toggle="modal" data-target=".blog-modal"  data-scroll data-scroll-speed="5"
-                data-scroll-position="top" data-scroll-delay="0.05">
-                <div class="main-blog_txt">
-                  <p>Lorem ipsum asmet</p>
-                  <span>19/4/2021 <i class="fa fa-calendar" aria-hidden="true"></i>
-                  </span>
-                </div>
-                  <img src="assets/images/4.JPG" alt="">
-                </div>
-                <div class="main-blog_item " data-toggle="modal" data-target=".blog-modal"   data-scroll data-scroll-speed="5"
-                data-scroll-position="top" data-scroll-delay="0.05">
-                  <div class="main-blog_txt">
-                    <p>Lorem ipsum asmet</p>
-                    <span>19/4/2021 <i class="fa fa-calendar" aria-hidden="true"></i>
-                    </span>
-                  </div>
-                  <img src="assets/images/1.png" alt="">
-                </div>
-                <div class="main-blog_item" data-toggle="modal" data-target=".blog-modal"  data-scroll data-scroll-speed="5"
-                data-scroll-position="top" data-scroll-delay="0.05">
-                <div class="main-blog_txt">
-                  <p>Lorem ipsum asmet</p>
-                  <span>19/4/2021 <i class="fa fa-calendar" aria-hidden="true"></i>
-                  </span>
-                </div>
-                  <img src="assets/images/3.PNG" alt="">
-                </div>
+                </h1>
               </div>
-          </section>
-
-
-          <footer id="site-footer" class="footer-page">
-            <!-- Right content -->
-            <div class="footer-right">
-              <nav class="nav-social nav-social-a">
-                <ul>
-                  <li class="nav-item">
-                    <a class="nav-link btn" href="#">
-                      <span class="icon">
-                        <i class="ion ion-logo-instagram"></i>
+                <div class="main-blog container">
+                  <div class="main-blog_item " data-toggle="modal" data-target=".blog-modal"  data-scroll data-scroll-speed="5"
+                  data-scroll-position="top" data-scroll-delay="0.05">
+                    <div class="main-blog_txt">
+                      <p>Lorem ipsum asmet</p>
+                      <span>19/4/2021 <i class="fa fa-calendar" aria-hidden="true"></i>
                       </span>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link btn" href="#">
-                      <span class="icon">
-                        <i class="ion ion-logo-twitter"></i>
+                    </div>
+                    <img src="assets/images/1.png" alt="">
+                  </div>
+                  <div class="main-blog_item" data-toggle="modal" data-target=".blog-modal"  data-scroll data-scroll-speed="5"
+                  data-scroll-position="top" data-scroll-delay="0.05">
+                  <div class="main-blog_txt">
+                    <p>Lorem ipsum asmet</p>
+                    <span>19/4/2021 <i class="fa fa-calendar" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                    <img src="assets/images/3.PNG" alt="">
+                  </div>
+                  <div class="main-blog_item" data-toggle="modal" data-target=".blog-modal"  data-scroll data-scroll-speed="5"
+                  data-scroll-position="top" data-scroll-delay="0.05">
+                  <div class="main-blog_txt">
+                    <p>Lorem ipsum asmet</p>
+                    <span>19/4/2021 <i class="fa fa-calendar" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                    <img src="assets/images/4.JPG" alt="">
+                  </div>
+                  <div class="main-blog_item " data-toggle="modal" data-target=".blog-modal"   data-scroll data-scroll-speed="5"
+                  data-scroll-position="top" data-scroll-delay="0.05">
+                    <div class="main-blog_txt">
+                      <p>Lorem ipsum asmet</p>
+                      <span>19/4/2021 <i class="fa fa-calendar" aria-hidden="true"></i>
                       </span>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link btn" href="#">
-                      <span class="icon">
-                        <i class="ion ion-logo-linkedin"></i>
-                      </span>
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </footer>
-          <!-- END OF site footer -->
+                    </div>
+                    <img src="assets/images/1.png" alt="">
+                  </div>
+                  <div class="main-blog_item" data-toggle="modal" data-target=".blog-modal"  data-scroll data-scroll-speed="5"
+                  data-scroll-position="top" data-scroll-delay="0.05">
+                  <div class="main-blog_txt">
+                    <p>Lorem ipsum asmet</p>
+                    <span>19/4/2021 <i class="fa fa-calendar" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                    <img src="assets/images/3.PNG" alt="">
+                  </div>
+                </div>
+            </section>
+          </main>
         </div>
       </section>
-    </section>
-  </div>
- <!-- Modal blog-->
-<div class="modal fade blog-modal" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-    <div class="modal-content">
-      <div class="">
-        <div class="main-blog_txt-modal">
-          <p>Lorem ipsum asmet</p>
-          <span>19/4/2021 <i class="fa fa-calendar" aria-hidden="true"></i>
-          </span>
-        </div>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-    
-        <img src="assets/images/1.png" alt="">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident sint est laboriosam doloribus? Sequi atque est blanditiis impedit. Distinctio labore inventore beatae dolor quia assumenda voluptates molestias id ipsa neque.</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident sint est laboriosam doloribus? Sequi atque est blanditiis impedit. Distinctio labore inventore beatae dolor quia assumenda voluptates molestias id ipsa neque.</p>
-      </div>
-    
     </div>
   </div>
-</div>
-  <script src="assets/scripts/polyfill.min.js"></script>
+
+  <nav class="container-fluid px-0">
+    <button class="navbar-toggler menux" type="button" data-toggle="collapse" data-target="#navbarMenuCollapse"
+      aria-controls="navbarMenuCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="icon icon-menu icon-menu-c">
+        <img src="assets/images/icon.png" alt="">
+        <!--<span class="bars">
+          <span class="bar1"></span>
+          <span class="bar2"></span>
+        </span>-->
+      </span>
+    </button>
+
+    <div class="collapse navbar-collapse order-lg-1" id="navbarMenuCollapse">
+      <div class="navbar-menu-wrapper">
+        <div class="nav-body">
+          <div class="nav-fullscreen-lg">
+            <ul class="navbar-nav nav">
+              <li class="nav-item">
+                <a class="nav-link" data-scroll-to aria-current="page" data-scroll href="#home"> Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-scroll-to data-scroll href="#products">Products
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-scroll-to data-scroll href="#business">Business Model</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-scroll-to data-scroll href="#exprience">Experience
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-scroll-to data-scroll href="#aourroadmap">Our road map
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-scroll-to data-scroll href="#blog">Blog
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-scroll-to data-scroll href="#contact">Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  
   <script src="assets/scripts/main.js"></script>
-  <script src="assets/scripts/jquery.min.js"></script>
-
-  <script src="assets/scripts/custom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <!-- All vendor scripts -->
   <script src="js/swiper-bundle.min.js"></script>
-  <script src="js/rellax-custom.js"></script>
-
-  <!-- Custom made script -->
-  <script src="js/scroll-slider.js"></script>
-  <script src="js/section-scroll.js"></script>
-  <script src="js/scroll-anim.js"></script>
 
   <!-- Javascript main files -->
   <script src="js/main.js"></script>
+  <script src="https://unpkg.com/tippy.js@3/dist/tippy.all.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+  <script src="assets/scripts/custom.js"></script>
 
-  <!--------------------------MENU EFFECT--------------------------->
-  <script src="assets/scripts/anime.min.js"></script>
-  <script src="assets/scripts/enquire.min.js"></script>
-  <script src="assets/scripts/tabsnav.js"></script>
-  <script src="assets/scripts/demo1.js"></script>
 
-  
+
 </body>
 
 </html>
