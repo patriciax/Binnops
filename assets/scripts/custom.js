@@ -696,8 +696,8 @@ var homeSwiper = new Swiper(".home-swiper-container", {
   autoplayDisableOnInteraction: true,
   slidersPerView: 1,
   effect: "fade",
-  speed: 3000,
-  autoplay: {
-    delay: 1000,
+  //speed: 8000,
+autoplay: {
+    delay: 8000,
   },
 });
