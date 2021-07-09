@@ -650,7 +650,7 @@ const swiper = new Swiper(".swiper-bussines", {
 
 new Swiper(".parent-slider", {
   loop: true,
-  slidesPerView: 1,
+  slidesPerView: 2,
   noSwiping: true,
   // autoplay: {
   //   delay: 3000,
@@ -658,13 +658,13 @@ new Swiper(".parent-slider", {
   //  centeredSlides: true,
   //   spaceBetween: 30,
   pagination: {
-    el: '.swiper-pagination-parent',
+   // el: '.swiper-pagination-parent',
     clickable: true,
     pagination: '.swiper-pagination',
     paginationType: "bullets",
   },
 });
-
+/*
 new Swiper(".child-slider", {
   loop: true,
   slidesPerView: 1,
@@ -676,7 +676,7 @@ new Swiper(".child-slider", {
   },
 });
 
-
+*/
 
 /*******************************slider zoom*************************************************/
 tippy('.swiper-button-prev', {
