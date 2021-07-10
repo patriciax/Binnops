@@ -657,12 +657,13 @@ new Swiper(".parent-slider", {
   // },
   //  centeredSlides: true,
   //   spaceBetween: 30,
-  pagination: {
-   // el: '.swiper-pagination-parent',
-    clickable: true,
-    pagination: '.swiper-pagination',
-    paginationType: "bullets",
-  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+},
+pagination: {
+    el: '.swiper-pagination',
+},
 });
 /*
 new Swiper(".child-slider", {
