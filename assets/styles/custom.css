@@ -1633,6 +1633,7 @@ cursor: pointer;
 .icon-demo{
   width: 40px!important;
   height: 40px!important;
+  margin-right: 1rem;
 }
 .p-navigation{
   font-size: 1.1rem;
@@ -2582,4 +2583,14 @@ color: #000;
 }
 .item-content span{
   color: #14162d;
+}
+.section-navegation-height-modif:hover p {
+  height: 143px;
+}
+.main-blog_txt span{
+  display: flex;
+    justify-content: center;
+}
+.main-blog_txt i{
+  margin-top: .2rem;
 }
