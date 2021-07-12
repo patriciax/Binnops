@@ -976,7 +976,7 @@ position: relative;
 .main-blog_txt-modal{
   display: flex;
   justify-content: space-between;
-  padding: 10px 22px;
+  padding: 10px 15px;
   padding-bottom: 0;
   align-items: center;
   color: #14162d;
@@ -985,6 +985,7 @@ position: relative;
   font-size: 24px;
   font-weight: 600;
   color: #14162d;
+  margin-bottom: 0;
 }
 .blog-modal .close{
   position: absolute;
