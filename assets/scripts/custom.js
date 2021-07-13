@@ -669,6 +669,7 @@ new Swiper(".parent-slider", {
 },
 pagination: {
     el: '.swiper-pagination',
+    clickable: true,
 },
 });
 /*
