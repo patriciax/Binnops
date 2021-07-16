@@ -56,10 +56,30 @@
 @media (min-width: 576px) { 
 }
 
-@media (min-width: 768px) { ... }
+@media (min-width: 768px) {  }
 
 
-@media (min-width: 992px) { ... }
+@media (min-width: 992px) {  }
 
 
-@media (min-width: 1200px) { ... }
+@media (min-width: 1200px) {  }
+@media (min-width: 2000px) { 
+
+  .cards-banner_grids {
+
+    grid-auto-rows: 22rem;
+    grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+}
+.home-1 {
+  font-size: 2rem;
+
+}
+.p8 {
+
+  padding-bottom: 4rem;
+}
+.logo img {
+  width: 380px;
+
+}
+}

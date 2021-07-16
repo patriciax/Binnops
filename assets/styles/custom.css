@@ -1,11 +1,11 @@
 
 body{
-  background-color: #fff!important;
+  background-color: #ECEDEF!important;
   font-family: 'Lato', sans-serif;
   scroll-behavior: smooth;
 }
 .o-scroll {
-  background-color: #fff!important;
+  background-color: #ECEDEF!important;
  
 }
 .c-header {
@@ -2480,7 +2480,7 @@ color: #000;
  
 }
 #blog{
-  background: #f9f9f9;
+
     padding: 5rem 0;
 }
 .subtitless{
@@ -2488,7 +2488,7 @@ color: #000;
     text-align: center;
 }
 .swiper-partners img{
-  width: 155px;
+  width: 100px;
   filter: grayscale(1);
 }
 
