@@ -72,7 +72,7 @@ a {
   position: relative;
   overflow: hidden;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
-  height: 200px;
+  height: 170px;
   /*width: 340px;*/
  transition: .8s;
  display: flex;
@@ -1837,7 +1837,7 @@ div.middle{
   text-align:center;
 }
 .p8{
-  padding-top: 4rem!important;
+  padding-top: 0rem!important;
 }
 .text-type-animation{
   text-transform:uppercase;
@@ -2368,7 +2368,7 @@ color: #000;
 }
 .experience-main .swiper-pagination{
   width: 100%;
-
+  bottom: -3px;
   text-align: center;
 }
 
@@ -2386,7 +2386,7 @@ color: #000;
 .section-contact::before {
   content: "";
   position: absolute;
-  background: #011935cc;
+  background: #011935;
   width: 100%;
   height: 100%;
   top: 0;
@@ -2421,7 +2421,7 @@ color: #000;
 }
 .c-header_line, .c-header_title {
 
-  bottom: 5%;
+  bottom: -3%;
 
 }
 :focus-visible  {
@@ -2596,4 +2596,173 @@ color: #000;
 }
 .main-blog_txt i{
   margin-top: .2rem;
+}
+.pre-footer{
+  height: 40vh;
+  width: 100%;
+  margin-top: 1rem;
+  position: relative;
+  background-size: 100%;
+  background-position: center;
+  background-attachment: fixed;
+}
+.pre-footer::before{
+  background: #14162dd4;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+#experience .demo-gallery{
+  display: grid;
+grid-template-columns: 1fr 1fr;
+}
+#menu3 .section-navegation {
+    margin: 1.5rem 0;
+    padding: .5rem .4rem;
+}
+#menu3 .demo-box {
+  font-size: 1.2rem;
+}
+
+.video-play-button {
+  position: absolute;
+  z-index: 10;
+  top: 54%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  box-sizing: content-box;
+  display: block;
+  width: 32px;
+  height: 44px;
+  /* background: #fa183d; */
+  border-radius: 50%;
+  padding: 18px 20px 18px 28px;
+}
+
+.video-play-button:before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  width: 80px;
+  height: 80px;
+  background: #ef1111;
+  border-radius: 50%;
+  animation: pulse-border 1500ms ease-out infinite;
+}
+
+.video-play-button:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  width: 80px;
+  height: 80px;
+  background: #ef1111;
+  border-radius: 50%;
+  transition: all 200ms;
+}
+
+.video-play-button:hover:after {
+  background-color: darken(#ef1111, 10%);
+}
+
+.video-play-button img {
+  position: relative;
+  z-index: 3;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+.video-play-button span {
+  display: block;
+  position: relative;
+  z-index: 3;
+  width: 0;
+  height: 0;
+  border-left: 32px solid #fff;
+	border-top: 22px solid transparent;
+	border-bottom: 22px solid transparent;
+}
+
+@keyframes pulse-border {
+  0% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+    opacity: 0;
+  }
+}
+
+
+
+.video-overlay {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.80);
+  opacity: 0;
+  transition: all ease 500ms;
+}
+
+.video-overlay.open {
+  position: fixed;
+  z-index: 1000;
+  opacity: 1;
+}
+
+.video-overlay-close {
+  position: absolute;
+  z-index: 1000;
+  top: 15px;
+  right: 20px;
+  font-size: 36px;
+  line-height: 1;
+  font-weight: 400;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 200ms;
+}
+
+.video-overlay-close:hover {
+  color: #ef1111;
+}
+
+.video-overlay iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  /* width: 90%; */
+  /* height: auto; */
+  box-shadow: 0 0 15px rgba(0,0,0,0.75);
+}
+.flex-contact{
+  z-index: 1;
+text-align: center;
+display: flex;
+align-items: center;
+flex-direction: column;
+justify-content: center;
+}
+.main-content_navegation{
+  z-index: 1;
 }
