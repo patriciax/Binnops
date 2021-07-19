@@ -2604,7 +2604,7 @@ color: #000;
   position: relative;
   background-size: 100%;
   background-position: center;
-  background-attachment: fixed;
+ 
 }
 .pre-footer::before{
   background: #14162dd4;
