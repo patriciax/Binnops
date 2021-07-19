@@ -709,7 +709,7 @@ autoplay: {
     delay: 8000,
   },
 });
-
+/*
 $('#play-video').on('click', function(e){
   e.preventDefault();
   $('#video-overlay').addClass('open');
@@ -727,4 +727,8 @@ $(document).keyup(function(e){
 
 function close_video() {
   $('.video-overlay.open').removeClass('open').find('iframe').remove();
-};
+};*/
+
+$( document ).ready(function() {
+  $('.videoo').modal('toggle')
+});

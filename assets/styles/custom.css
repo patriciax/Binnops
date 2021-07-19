@@ -2458,7 +2458,7 @@ color: #000;
 .modal-backdrop {
   background-color: transparent;
   -webkit-backdrop-filter: blur(10px);
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.67);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
@@ -2765,4 +2765,13 @@ justify-content: center;
 }
 .main-content_navegation{
   z-index: 1;
+}
+.videoo .close{
+  color: #fff;
+opacity: 1;
+width: 100%;
+text-align: end;
+margin-bottom: 3rem;
+font-size: 2rem;
+cursor: pointer;
 }
