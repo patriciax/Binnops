@@ -2598,7 +2598,7 @@ color: #000;
   margin-top: .2rem;
 }
 .pre-footer{
-  height: 40vh;
+  height: 100vh;
   width: 100%;
   margin-top: 1rem;
   position: relative;
@@ -2616,6 +2616,15 @@ color: #000;
   left: 0;
   right: 0;
   z-index: 1;
+}
+.fix-sect{
+  height: 40vh;
+}
+.txt-fix{
+  position: absolute;
+  top: 28%;
+  width: 100%;
+}
 }
 #experience .demo-gallery{
   display: grid;
